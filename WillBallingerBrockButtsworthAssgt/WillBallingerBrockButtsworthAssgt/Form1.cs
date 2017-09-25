@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 /*
 -INFT2012 - Assignment 1 - Plus Mois
--Authors Brock Buttsworth and Ballinger.
+-Authors Brock Buttsworth and Will Ballinger.
 -Created 20/9/2017
 -Brief Description :
     PlusMoins is a rather unforgiving and frustrating dice game. 
@@ -22,9 +22,11 @@ namespace WillBallingerBrockButtsworthAssgt
     public partial class FormGameScreen : Form
     {
         int totalRolls = 0;
+        
         public FormGameScreen()
         {
             InitializeComponent();
+            
         }
 
         private void btnRoll_Click(object sender, EventArgs e)
@@ -33,56 +35,80 @@ namespace WillBallingerBrockButtsworthAssgt
 
             totalRolls = 0;
             int numberOfRolls = 3;
-            //Draws First Dice
             int tempX = 50;
             int tempY = 50;
-            for (int i = 0; i < numberOfRolls; i++)
+            if (ckbHoldDice1.Checked != true)
             {
-                drawBox(graPaper, tempX, tempY);
-                rollDice(graPaper, i, tempX, tempY);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(1500);
+                //Draws First Dice
+                for (int i = 0; i < numberOfRolls; i++)
+                {
+                    drawBox(graPaper, tempX, tempY);
+                    rollDice(graPaper, i, tempX, tempY);
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(1500);
+                }
             }
-            //Draws Second Dice
-            tempX = 150;
-            tempY = 50;
-            for (int i = 0; i < numberOfRolls; i++)
+
+            if (ckbHoldDice2.Checked != true)
             {
-                drawBox(graPaper, tempX, tempY);
-                rollDice(graPaper, i, tempX, tempY);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(1500);
+                //Draws Second Dice
+                tempX = 150;
+                tempY = 50;
+                for (int i = 0; i < numberOfRolls; i++)
+                {
+                    drawBox(graPaper, tempX, tempY);
+                    rollDice(graPaper, i, tempX, tempY);
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(1500);
+                }
             }
-            //Draws Third Dice
-            tempX = 250;
-            tempY = 50;
-            for (int i = 0; i < numberOfRolls; i++)
+
+            if (ckbHoldDice3.Checked != true)
             {
-                drawBox(graPaper, tempX, tempY);
-                rollDice(graPaper, i, tempX, tempY);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(1500);
+
+                //Draws Third Dice
+                tempX = 250;
+                tempY = 50;
+                for (int i = 0; i < numberOfRolls; i++)
+                {
+                    drawBox(graPaper, tempX, tempY);
+                    rollDice(graPaper, i, tempX, tempY);
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(1500);
+                }
             }
-            //Draws Fourth Dice
-            tempX = 350;
-            tempY = 50;
-            for (int i = 0; i < numberOfRolls; i++)
+
+            if (ckbHoldDice4.Checked != true)
             {
-                drawBox(graPaper, tempX, tempY);
-                rollDice(graPaper, i, tempX, tempY);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(1500);
+                //Draws Fourth Dice
+                tempX = 350;
+                tempY = 50;
+                for (int i = 0; i < numberOfRolls; i++)
+                {
+                    drawBox(graPaper, tempX, tempY);
+                    rollDice(graPaper, i, tempX, tempY);
+                    Application.DoEvents();
+                    System.Threading.Thread.Sleep(1500);
+                }
             }
-            //Draws Fifth Dice
-            tempX = 450;
-            tempY = 50;
-            for (int i = 0; i < numberOfRolls; i++)
+
+            if (ckbHoldDice5.Checked != true)
             {
-                drawBox(graPaper, tempX, tempY);
-                rollDice(graPaper, i, tempX, tempY);
-                Application.DoEvents();
-                System.Threading.Thread.Sleep(1500);
+                //Draws Fifth Dice
+                if (ckbHoldDice5.Checked != true)
+                {
+                    tempX = 450;
+                    tempY = 50;
+                    for (int i = 0; i < numberOfRolls; i++)
+                    {
+                        drawBox(graPaper, tempX, tempY);
+                        rollDice(graPaper, i, tempX, tempY);
+                        Application.DoEvents();
+                        System.Threading.Thread.Sleep(1500);
+                    }
+                }
             }
+            
         }
 
         private void rollDice(Graphics tempCanvas, int loopValue, int xValue, int yValue)
@@ -234,6 +260,124 @@ namespace WillBallingerBrockButtsworthAssgt
             tempCanvas.FillEllipse(Brushes.White, tempTargetX, tempTargetY, 10, 10);
         }
 
-        
+        //When Clicked if checkbox is checked=
+        //  True: draws 4 rectangles forming a border the color of the background and unchecks checkbox.
+        //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
+        private void btnHold1_Click(object sender, EventArgs e)
+        {
+            Graphics graPaper = picbxDrawing.CreateGraphics();
+            if (ckbHoldDice1.Checked != true)
+            {
+                graPaper.FillRectangle(Brushes.Yellow, 40, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 40, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Yellow, 50, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 125, 50, 10, 75);
+                ckbHoldDice1.Checked = true;
+            }
+            else
+            {
+                graPaper.FillRectangle(Brushes.Gainsboro, 40, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 40, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Gainsboro, 50, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 125, 50, 10, 75);
+                ckbHoldDice1.Checked = false;
+            }  
+        }
+
+        //When Clicked if checkbox is checked=
+        //  True: draws 4 rectangles forming a border the color of the background and unchecks checkbox.
+        //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
+        private void btnHold2_Click(object sender, EventArgs e)
+        {
+            Graphics graPaper = picbxDrawing.CreateGraphics();
+            if (ckbHoldDice2.Checked != true)
+            {
+                graPaper.FillRectangle(Brushes.Yellow, 140, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 140, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Yellow, 150, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 225, 50, 10, 75);
+                ckbHoldDice2.Checked = true;
+            }
+            else
+            {
+                graPaper.FillRectangle(Brushes.Gainsboro, 140, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 140, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Gainsboro, 150, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 225, 50, 10, 75);
+                ckbHoldDice2.Checked = false;
+            }
+        }
+
+        //When Clicked if checkbox is checked=
+        //  True: draws 4 rectangles forming a border the color of the background and unchecks checkbox.
+        //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
+        private void btnHold3_Click(object sender, EventArgs e)
+        {
+            Graphics graPaper = picbxDrawing.CreateGraphics();
+            if (ckbHoldDice3.Checked != true)
+            {
+                graPaper.FillRectangle(Brushes.Yellow, 240, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 240, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Yellow, 250, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 325, 50, 10, 75);
+                ckbHoldDice3.Checked = true;
+            }
+            else
+            {
+                graPaper.FillRectangle(Brushes.Gainsboro, 240, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 240, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Gainsboro, 250, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 325, 50, 10, 75);
+                ckbHoldDice3.Checked = false;
+            }
+        }
+
+        //When Clicked if checkbox is checked=
+        //  True: draws 4 rectangles forming a border the color of the background and unchecks checkbox.
+        //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
+        private void btnHold4_Click(object sender, EventArgs e)
+        {
+            Graphics graPaper = picbxDrawing.CreateGraphics();
+            if (ckbHoldDice4.Checked != true)
+            {
+                graPaper.FillRectangle(Brushes.Yellow, 340, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 340, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Yellow, 350, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 425, 50, 10, 75);
+                ckbHoldDice4.Checked = true;
+            }
+            else
+            {
+                graPaper.FillRectangle(Brushes.Gainsboro, 340, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 340, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Gainsboro, 350, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 425, 50, 10, 75);
+                ckbHoldDice4.Checked = false;
+            }
+        }
+
+        //When Clicked if checkbox is checked=
+        //  True: draws 4 rectangles forming a border the color of the background and unchecks checkbox.
+        //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
+        private void btnHold5_Click(object sender, EventArgs e)
+        {
+            Graphics graPaper = picbxDrawing.CreateGraphics();
+            if (ckbHoldDice5.Checked != true)
+            {
+                graPaper.FillRectangle(Brushes.Yellow, 440, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 440, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Yellow, 450, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Yellow, 525, 50, 10, 75);
+                ckbHoldDice5.Checked = true;
+            }
+            else
+            {
+                graPaper.FillRectangle(Brushes.Gainsboro, 440, 40, 95, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 440, 50, 10, 85);
+                graPaper.FillRectangle(Brushes.Gainsboro, 450, 125, 85, 10);
+                graPaper.FillRectangle(Brushes.Gainsboro, 525, 50, 10, 75);
+                ckbHoldDice5.Checked = false;
+            }
+        }
     }
 }
