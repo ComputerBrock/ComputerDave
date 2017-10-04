@@ -155,6 +155,7 @@
             this.btnStartGame.TabIndex = 13;
             this.btnStartGame.Text = "Start Game";
             this.btnStartGame.UseVisualStyleBackColor = true;
+            this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
             // cbx1v1
             // 

@@ -19,9 +19,17 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
 
         private void btnGameRules_Click(object sender, EventArgs e)
         {
-            var form = new Game_Rules();
+            Form form = new Game_Rules();
             form.StartPosition = FormStartPosition.CenterParent;
             form.Show();
+        }
+
+        private void btnStartGame_Click(object sender, EventArgs e)
+        {
+            Form form2 = new FormGameScreen();
+            form2.StartPosition = FormStartPosition.CenterParent;
+            this.Hide();
+            form2.ShowDialog();
         }
     }
 }
