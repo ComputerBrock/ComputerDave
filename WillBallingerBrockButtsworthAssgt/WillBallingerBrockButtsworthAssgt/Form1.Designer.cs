@@ -52,9 +52,9 @@
             this.lblHeaderPlusMois.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHeaderPlusMois.Location = new System.Drawing.Point(538, 9);
             this.lblHeaderPlusMois.Name = "lblHeaderPlusMois";
-            this.lblHeaderPlusMois.Size = new System.Drawing.Size(231, 55);
+            this.lblHeaderPlusMois.Size = new System.Drawing.Size(258, 55);
             this.lblHeaderPlusMois.TabIndex = 1;
-            this.lblHeaderPlusMois.Text = "Plus Mois";
+            this.lblHeaderPlusMois.Text = "Plus Moins";
             this.lblHeaderPlusMois.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // lblGoalScore
@@ -217,7 +217,7 @@
             this.Controls.Add(this.lblGoalScore);
             this.Controls.Add(this.lblHeaderPlusMois);
             this.Name = "FormGameScreen";
-            this.Text = "Plus Mois";
+            this.Text = "Plus Moins";
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

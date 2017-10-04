@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace WillBallingerBrockButtsworthAssgt.Forms
 {
-    public partial class welcomeScreen : Form
+    public partial class Game_Rules : Form
     {
-        public welcomeScreen()
+        public Game_Rules()
         {
             InitializeComponent();
-        }
-
-        private void btnGameRules_Click(object sender, EventArgs e)
-        {
-            var form = new Game_Rules();
-            form.StartPosition = FormStartPosition.CenterParent;
-            form.Show();
         }
     }
 }

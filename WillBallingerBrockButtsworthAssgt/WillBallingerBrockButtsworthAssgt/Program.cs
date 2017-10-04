@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using WillBallingerBrockButtsworthAssgt.Forms;
 namespace WillBallingerBrockButtsworthAssgt
 {
     static class Program
@@ -16,7 +16,7 @@ namespace WillBallingerBrockButtsworthAssgt
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormGameScreen());
+            Application.Run(new welcomeScreen());
         }
     }
 }

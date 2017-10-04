@@ -103,4 +103,6 @@ namespace WillBallingerBrockButtsworthAssgt
             currentScore = 0;
             dice = new Int32[] { 0, 0, 0, 0, 0 };
         }
+
+    }
 }
