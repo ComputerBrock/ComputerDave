@@ -24,11 +24,50 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
     public partial class GameScreen : Form
     {
         int totalRolls = 0;
-        Game player1Game = new Game(1, "Human");
-        Player player1 = new Player("Dave");
-        public GameScreen()
+        Game player1Game = new Game(1, "Human", true);
+        Game player2Game = new Game(2, "Human", false);
+        Player player1;
+        Player player2;
+        Graphics graPaper;
+        public GameScreen(Player tempPlayer1, Player tempPlayer2)
         {
             InitializeComponent();
+            player1= tempPlayer1;
+            Int32 tempPlayerID = player1.getPlayerID();
+            player2 = tempPlayer2;
+            Int32 tempPlayerID2 = player2.getPlayerID();
+            refresh();
+        }
+        public void refresh()
+        {
+            //Player1
+            lblPlayer1Name.Text = player1.getPlayerName();
+            lblPlayer1TotalScore.Text = player1Game.getTotalScore().ToString();
+            if(player1Game.getCurrentTurn())
+            {
+                pbxPlayer1Background.BackColor = Color.LightSeaGreen;
+                //Current Player
+                lblTurnResult.Text = player1Game.getTurn().ToString();
+                lblRollsRemaingResult.Text = player1Game.getRoll().ToString();
+            }
+            else
+            {
+                pbxPlayer1Background.BackColor = Color.OrangeRed;
+            }
+            //Player 2
+            lblPlayer2Name.Text = player2.getPlayerName();
+            lblPlayer2TotalScore.Text = player2Game.getTotalScore().ToString();
+            if (player2Game.getCurrentTurn())
+            {
+                pbxPlayer2Background.BackColor = Color.LightSeaGreen;
+                //Current Player
+                lblTurnResult.Text = player2Game.getTurn().ToString();
+                lblRollsRemaingResult.Text = player2Game.getRoll().ToString();
+            }
+            else
+            {
+                pbxPlayer2Background.BackColor = Color.OrangeRed;
+            }
         }
 
         private void rollDice(Graphics tempCanvas, int diceIndex, int xValue, int yValue)
@@ -44,7 +83,15 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             //txbTotalRoll.AppendText(String.Format("{0:d} {1:d}\n\r"), loopValue, appendValue);
             //txbTotalRoll.Text = (appendValue);
             //Adds the roll to the array.
-            player1Game.setDice(diceIndex, rollValue);
+            if (player1Game.getCurrentTurn())
+            {
+                player1Game.setDice(diceIndex, rollValue);
+            }
+            else
+            {
+                player2Game.setDice(diceIndex, rollValue);
+            }
+            
             //Used to Draw the Dice that was Rolled.
             switch (rollValue)
             {
@@ -184,87 +231,147 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            Graphics graPaper = picbxDrawing.CreateGraphics();
+            graPaper = picbxDrawing.CreateGraphics();
 
             totalRolls = 0;
             int numberOfRolls = 3;
             int tempX = 50;
             int tempY = 50;
             int j = 1;
-            if (ckbHoldDice1.Checked != true)
+            if ((player1Game.getRoll() != 0) && (player2Game.getRoll() != 0))
             {
-                //Draws First Dice
-                for (int i = 0; i < numberOfRolls; i++)
+                if (ckbHoldDice1.Checked != true)
                 {
-                    drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, j, tempX, tempY);
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(1500);
+                    //Draws First Dice
+                    for (int i = 0; i < numberOfRolls; i++)
+                    {
+                        drawBox(graPaper, tempX, tempY);
+                        rollDice(graPaper, j, tempX, tempY);
+                        Application.DoEvents();
+                        System.Threading.Thread.Sleep(500);
+                    }
                 }
-            }
-            j++;
-            if (ckbHoldDice2.Checked != true)
-            {
-                //Draws Second Dice
-                tempX = 150;
-                tempY = 50;
-                for (int i = 0; i < numberOfRolls; i++)
+                j++;
+                if (ckbHoldDice2.Checked != true)
                 {
-                    drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, j, tempX, tempY);
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(1500);
-                }
-            }
-            j++;
-            if (ckbHoldDice3.Checked != true)
-            {
-
-                //Draws Third Dice
-                tempX = 250;
-                tempY = 50;
-                for (int i = 0; i < numberOfRolls; i++)
-                {
-                    drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, j, tempX, tempY);
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(1500);
-                }
-            }
-            j++;
-            if (ckbHoldDice4.Checked != true)
-            {
-                //Draws Fourth Dice
-                tempX = 350;
-                tempY = 50;
-                for (int i = 0; i < numberOfRolls; i++)
-                {
-                    drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, j, tempX, tempY);
-                    Application.DoEvents();
-                    System.Threading.Thread.Sleep(1500);
-                }
-            }
-            j++;
-            if (ckbHoldDice5.Checked != true)
-            {
-                //Draws Fifth Dice
-                if (ckbHoldDice5.Checked != true)
-                {
-                    tempX = 450;
+                    //Draws Second Dice
+                    tempX = 150;
                     tempY = 50;
                     for (int i = 0; i < numberOfRolls; i++)
                     {
                         drawBox(graPaper, tempX, tempY);
                         rollDice(graPaper, j, tempX, tempY);
                         Application.DoEvents();
-                        System.Threading.Thread.Sleep(1500);
+                        System.Threading.Thread.Sleep(500);
+                    }
+                }
+                j++;
+                if (ckbHoldDice3.Checked != true)
+                {
+
+                    //Draws Third Dice
+                    tempX = 250;
+                    tempY = 50;
+                    for (int i = 0; i < numberOfRolls; i++)
+                    {
+                        drawBox(graPaper, tempX, tempY);
+                        rollDice(graPaper, j, tempX, tempY);
+                        Application.DoEvents();
+                        System.Threading.Thread.Sleep(500);
+                    }
+                }
+                j++;
+                if (ckbHoldDice4.Checked != true)
+                {
+                    //Draws Fourth Dice
+                    tempX = 350;
+                    tempY = 50;
+                    for (int i = 0; i < numberOfRolls; i++)
+                    {
+                        drawBox(graPaper, tempX, tempY);
+                        rollDice(graPaper, j, tempX, tempY);
+                        Application.DoEvents();
+                        System.Threading.Thread.Sleep(500);
+                    }
+                }
+                j++;
+                if (ckbHoldDice5.Checked != true)
+                {
+                    //Draws Fifth Dice
+                    if (ckbHoldDice5.Checked != true)
+                    {
+                        tempX = 450;
+                        tempY = 50;
+                        for (int i = 0; i < numberOfRolls; i++)
+                        {
+                            drawBox(graPaper, tempX, tempY);
+                            rollDice(graPaper, j, tempX, tempY);
+                            Application.DoEvents();
+                            System.Threading.Thread.Sleep(500);
+                        }
                     }
                 }
             }
-            player1Game.nextTurn();
-            lblTurnResult.Text = player1Game.getTurn().ToString();
-            lblRollsRemaingResult.Text = player1Game.getRoll().ToString();
+            else
+            {
+                //SaveCurrentScore
+                if (player1Game.getCurrentTurn())
+                {
+                    Int32 totalScore = player1Game.getTotalScore();
+                    Int32 currentScore = player1Game.getCurrentScore();
+                    totalScore = totalScore + currentScore;
+                    player1Game.setTotalScore(totalScore);
+                }
+                else
+                {
+                    Int32 totalScore = player2Game.getTotalScore();
+                    Int32 currentScore = player2Game.getCurrentScore();
+                    totalScore = totalScore + currentScore;
+                    player2Game.setTotalScore(totalScore);
+                }
+                    
+            }
+            if (player1Game.getCurrentTurn())
+            {
+                if (player1Game.getRoll() > 0)
+                {
+                    player1Game.nextRoll();
+                }
+                else
+                {
+                    player1Game.setRoll(3);
+                    player1Game.nextTurn();
+                    player1Game.setCurrentTurn(false);
+                    player2Game.setCurrentTurn(true);
+                    graPaper.Clear(Color.LightYellow);
+                    ckbHoldDice1.Checked = false;
+                    ckbHoldDice2.Checked = false;
+                    ckbHoldDice3.Checked = false;
+                    ckbHoldDice4.Checked = false;
+                    ckbHoldDice5.Checked = false;
+                }
+            }
+            else
+            {
+                if (player2Game.getRoll() > 0)
+                {
+                    player2Game.nextRoll();
+                }
+                else
+                {
+                    player2Game.setRoll(3);
+                    player2Game.nextTurn();
+                    player2Game.setCurrentTurn(false);
+                    player1Game.setCurrentTurn(true);
+                    graPaper.Clear(Color.LightYellow);
+                    ckbHoldDice1.Checked = false;
+                    ckbHoldDice2.Checked = false;
+                    ckbHoldDice3.Checked = false;
+                    ckbHoldDice4.Checked = false;
+                    ckbHoldDice5.Checked = false;
+                }
+            }
+            refresh();
         }
 
         //When Clicked if checkbox is checked=
@@ -272,7 +379,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold1_Click(object sender, EventArgs e)
         {
-            Graphics graPaper = picbxDrawing.CreateGraphics();
+            graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice1.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 40, 40, 95, 10);
@@ -296,7 +403,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold2_Click(object sender, EventArgs e)
         {
-            Graphics graPaper = picbxDrawing.CreateGraphics();
+            graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice2.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 140, 40, 95, 10);
@@ -320,7 +427,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold3_Click(object sender, EventArgs e)
         {
-            Graphics graPaper = picbxDrawing.CreateGraphics();
+            graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice3.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 240, 40, 95, 10);
@@ -344,7 +451,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold4_Click(object sender, EventArgs e)
         {
-            Graphics graPaper = picbxDrawing.CreateGraphics();
+            graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice4.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 340, 40, 95, 10);
@@ -368,7 +475,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold5_Click(object sender, EventArgs e)
         {
-            Graphics graPaper = picbxDrawing.CreateGraphics();
+            graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice5.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 440, 40, 95, 10);

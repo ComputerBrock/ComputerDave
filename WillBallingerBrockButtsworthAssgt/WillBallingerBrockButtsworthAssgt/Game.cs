@@ -20,10 +20,12 @@ namespace WillBallingerBrockButtsworthAssgt
         private Int32 roll;
         private Int32 goalScore;
         private Int32 currentScore;
+        private Int32 totalScore;
         private Int32[] dice;
+        private Boolean currentTurn;
 
         // Constructor
-        public Game(Int32 tempPlayerID, string tempType)
+        public Game(Int32 tempPlayerID, string tempType, Boolean tempCurrentTurn)
         {
             turn = 1;
             roll = 3;
@@ -31,6 +33,7 @@ namespace WillBallingerBrockButtsworthAssgt
             dice = new Int32[] { 0, 0, 0, 0, 0 };
             playerID = tempPlayerID;
             type = tempType;
+            currentTurn = tempCurrentTurn;
         }
 
         // Get Methods
@@ -62,7 +65,18 @@ namespace WillBallingerBrockButtsworthAssgt
 
         public Int32 getCurrentScore()
         {
-            return currentScore;
+            Int32 tempCurrentScore = 0;
+            tempCurrentScore = tempCurrentScore + dice[0];
+            tempCurrentScore = tempCurrentScore + dice[1];
+            tempCurrentScore = tempCurrentScore + dice[2];
+            tempCurrentScore = tempCurrentScore + dice[3];
+            tempCurrentScore = tempCurrentScore + dice[4];
+            return tempCurrentScore;
+        }
+
+        public Int32 getTotalScore()
+        {
+            return totalScore;
         }
 
         public Int32[] getDice()
@@ -73,6 +87,11 @@ namespace WillBallingerBrockButtsworthAssgt
         public Int32 getDiceValue(Int32 position)
         {
             return dice[position];
+        }
+
+        public Boolean getCurrentTurn()
+        {
+            return currentTurn;
         }
 
         // Set Methods
@@ -101,9 +120,14 @@ namespace WillBallingerBrockButtsworthAssgt
             goalScore = tempGoalScore;
         }
 
+        public void setTotalScore(Int32 tempTotalScore)
+        {
+            totalScore = tempTotalScore;
+        }
+
         public void setCurrentScore()
         {
-
+            
         }
 
         // Used to update dice rolls in the game array.
@@ -113,19 +137,21 @@ namespace WillBallingerBrockButtsworthAssgt
             dice[index-1] = diceRolled;
         }
 
+        public void setCurrentTurn(Boolean tempCurrentTurn)
+        {
+            currentTurn = tempCurrentTurn;
+        }
+
         //Updates the Roll.
-        // If its the third roll updates turn.
+        public void nextRoll()
+        {
+            roll--;
+        }
+
+        //Updates the Roll.
         public void nextTurn()
         {
-            if (roll>1)
-            {
-                roll--;
-            }
-            else
-            {
-                roll = 3;
-                turn++;
-            }
+            turn++;
         }
 
         // resets values back to beggining without restetting playerID and type.

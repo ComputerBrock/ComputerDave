@@ -49,8 +49,18 @@
             this.lblRollsRemaining = new System.Windows.Forms.Label();
             this.lblRollsRemaingResult = new System.Windows.Forms.Label();
             this.btnTest = new System.Windows.Forms.Button();
+            this.pbxPlayer1Background = new System.Windows.Forms.PictureBox();
+            this.pbxPlayer2Background = new System.Windows.Forms.PictureBox();
+            this.lblPlayer1Title = new System.Windows.Forms.Label();
+            this.lblPlayer2Title = new System.Windows.Forms.Label();
+            this.lblPlayer1Name = new System.Windows.Forms.Label();
+            this.lblPlayer2Name = new System.Windows.Forms.Label();
+            this.lblPlayer1TotalScore = new System.Windows.Forms.Label();
+            this.lblPlayer2TotalScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHold5
@@ -155,9 +165,10 @@
             // 
             // picbxDrawing
             // 
+            this.picbxDrawing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.picbxDrawing.Location = new System.Drawing.Point(36, 148);
             this.picbxDrawing.Name = "picbxDrawing";
-            this.picbxDrawing.Size = new System.Drawing.Size(1300, 140);
+            this.picbxDrawing.Size = new System.Drawing.Size(575, 140);
             this.picbxDrawing.TabIndex = 20;
             this.picbxDrawing.TabStop = false;
             // 
@@ -205,7 +216,7 @@
             // lblTurn
             // 
             this.lblTurn.AutoSize = true;
-            this.lblTurn.Location = new System.Drawing.Point(44, 389);
+            this.lblTurn.Location = new System.Drawing.Point(48, 389);
             this.lblTurn.Name = "lblTurn";
             this.lblTurn.Size = new System.Drawing.Size(49, 20);
             this.lblTurn.TabIndex = 32;
@@ -248,10 +259,92 @@
             this.btnTest.UseVisualStyleBackColor = true;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
+            // pbxPlayer1Background
+            // 
+            this.pbxPlayer1Background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pbxPlayer1Background.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxPlayer1Background.Location = new System.Drawing.Point(36, 496);
+            this.pbxPlayer1Background.Name = "pbxPlayer1Background";
+            this.pbxPlayer1Background.Size = new System.Drawing.Size(225, 136);
+            this.pbxPlayer1Background.TabIndex = 37;
+            this.pbxPlayer1Background.TabStop = false;
+            // 
+            // pbxPlayer2Background
+            // 
+            this.pbxPlayer2Background.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.pbxPlayer2Background.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbxPlayer2Background.Location = new System.Drawing.Point(296, 496);
+            this.pbxPlayer2Background.Name = "pbxPlayer2Background";
+            this.pbxPlayer2Background.Size = new System.Drawing.Size(225, 136);
+            this.pbxPlayer2Background.TabIndex = 38;
+            this.pbxPlayer2Background.TabStop = false;
+            // 
+            // lblPlayer1Title
+            // 
+            this.lblPlayer1Title.AutoSize = true;
+            this.lblPlayer1Title.Location = new System.Drawing.Point(56, 510);
+            this.lblPlayer1Title.Name = "lblPlayer1Title";
+            this.lblPlayer1Title.Size = new System.Drawing.Size(69, 20);
+            this.lblPlayer1Title.TabIndex = 39;
+            this.lblPlayer1Title.Text = "Player 1:";
+            // 
+            // lblPlayer2Title
+            // 
+            this.lblPlayer2Title.AutoSize = true;
+            this.lblPlayer2Title.Location = new System.Drawing.Point(314, 510);
+            this.lblPlayer2Title.Name = "lblPlayer2Title";
+            this.lblPlayer2Title.Size = new System.Drawing.Size(69, 20);
+            this.lblPlayer2Title.TabIndex = 40;
+            this.lblPlayer2Title.Text = "Player 2:";
+            // 
+            // lblPlayer1Name
+            // 
+            this.lblPlayer1Name.AutoSize = true;
+            this.lblPlayer1Name.Location = new System.Drawing.Point(56, 544);
+            this.lblPlayer1Name.Name = "lblPlayer1Name";
+            this.lblPlayer1Name.Size = new System.Drawing.Size(118, 20);
+            this.lblPlayer1Name.TabIndex = 41;
+            this.lblPlayer1Name.Text = "lblPlayer1Name";
+            // 
+            // lblPlayer2Name
+            // 
+            this.lblPlayer2Name.AutoSize = true;
+            this.lblPlayer2Name.Location = new System.Drawing.Point(314, 544);
+            this.lblPlayer2Name.Name = "lblPlayer2Name";
+            this.lblPlayer2Name.Size = new System.Drawing.Size(118, 20);
+            this.lblPlayer2Name.TabIndex = 42;
+            this.lblPlayer2Name.Text = "lblPlayer2Name";
+            // 
+            // lblPlayer1TotalScore
+            // 
+            this.lblPlayer1TotalScore.AutoSize = true;
+            this.lblPlayer1TotalScore.Location = new System.Drawing.Point(56, 578);
+            this.lblPlayer1TotalScore.Name = "lblPlayer1TotalScore";
+            this.lblPlayer1TotalScore.Size = new System.Drawing.Size(153, 20);
+            this.lblPlayer1TotalScore.TabIndex = 43;
+            this.lblPlayer1TotalScore.Text = "lblPlayer1TotalScore";
+            // 
+            // lblPlayer2TotalScore
+            // 
+            this.lblPlayer2TotalScore.AutoSize = true;
+            this.lblPlayer2TotalScore.Location = new System.Drawing.Point(314, 578);
+            this.lblPlayer2TotalScore.Name = "lblPlayer2TotalScore";
+            this.lblPlayer2TotalScore.Size = new System.Drawing.Size(153, 20);
+            this.lblPlayer2TotalScore.TabIndex = 44;
+            this.lblPlayer2TotalScore.Text = "lblPlayer2TotalScore";
+            // 
             // GameScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.lblPlayer2TotalScore);
+            this.Controls.Add(this.lblPlayer1TotalScore);
+            this.Controls.Add(this.lblPlayer2Name);
+            this.Controls.Add(this.lblPlayer1Name);
+            this.Controls.Add(this.lblPlayer2Title);
+            this.Controls.Add(this.lblPlayer1Title);
+            this.Controls.Add(this.pbxPlayer2Background);
+            this.Controls.Add(this.pbxPlayer1Background);
             this.Controls.Add(this.btnTest);
             this.Controls.Add(this.lblRollsRemaingResult);
             this.Controls.Add(this.lblRollsRemaining);
@@ -277,6 +370,8 @@
             this.Load += new System.EventHandler(this.GameScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,5 +399,13 @@
         private System.Windows.Forms.Label lblRollsRemaining;
         private System.Windows.Forms.Label lblRollsRemaingResult;
         private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.PictureBox pbxPlayer1Background;
+        private System.Windows.Forms.PictureBox pbxPlayer2Background;
+        private System.Windows.Forms.Label lblPlayer1Title;
+        private System.Windows.Forms.Label lblPlayer2Title;
+        private System.Windows.Forms.Label lblPlayer1Name;
+        private System.Windows.Forms.Label lblPlayer2Name;
+        private System.Windows.Forms.Label lblPlayer1TotalScore;
+        private System.Windows.Forms.Label lblPlayer2TotalScore;
     }
 }
