@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblHeaderPlusMois = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(welcomeScreen));
             this.btnGameRules = new System.Windows.Forms.Button();
             this.lblGameMode = new System.Windows.Forms.Label();
             this.lbl1v1 = new System.Windows.Forms.Label();
@@ -45,18 +45,9 @@
             this.lblPlayer1tbxError = new System.Windows.Forms.Label();
             this.lblPlayer2tbxError = new System.Windows.Forms.Label();
             this.lblGoalScoretbxError = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblHeaderPlusMois
-            // 
-            this.lblHeaderPlusMois.AutoSize = true;
-            this.lblHeaderPlusMois.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeaderPlusMois.Location = new System.Drawing.Point(538, 9);
-            this.lblHeaderPlusMois.Name = "lblHeaderPlusMois";
-            this.lblHeaderPlusMois.Size = new System.Drawing.Size(258, 55);
-            this.lblHeaderPlusMois.TabIndex = 2;
-            this.lblHeaderPlusMois.Text = "Plus Moins";
-            this.lblHeaderPlusMois.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // btnGameRules
             // 
@@ -71,7 +62,7 @@
             // lblGameMode
             // 
             this.lblGameMode.AutoSize = true;
-            this.lblGameMode.Location = new System.Drawing.Point(240, 109);
+            this.lblGameMode.Location = new System.Drawing.Point(146, 178);
             this.lblGameMode.Name = "lblGameMode";
             this.lblGameMode.Size = new System.Drawing.Size(101, 20);
             this.lblGameMode.TabIndex = 4;
@@ -80,7 +71,7 @@
             // lbl1v1
             // 
             this.lbl1v1.AutoSize = true;
-            this.lbl1v1.Location = new System.Drawing.Point(205, 188);
+            this.lbl1v1.Location = new System.Drawing.Point(205, 222);
             this.lbl1v1.Name = "lbl1v1";
             this.lbl1v1.Size = new System.Drawing.Size(42, 20);
             this.lbl1v1.TabIndex = 5;
@@ -90,7 +81,7 @@
             // lbl1vCPU
             // 
             this.lbl1vCPU.AutoSize = true;
-            this.lbl1vCPU.Location = new System.Drawing.Point(348, 188);
+            this.lbl1vCPU.Location = new System.Drawing.Point(348, 222);
             this.lbl1vCPU.Name = "lbl1vCPU";
             this.lbl1vCPU.Size = new System.Drawing.Size(66, 20);
             this.lbl1vCPU.TabIndex = 6;
@@ -160,7 +151,7 @@
             // cbx1v1
             // 
             this.cbx1v1.AutoSize = true;
-            this.cbx1v1.Location = new System.Drawing.Point(209, 222);
+            this.cbx1v1.Location = new System.Drawing.Point(209, 256);
             this.cbx1v1.Name = "cbx1v1";
             this.cbx1v1.Size = new System.Drawing.Size(22, 21);
             this.cbx1v1.TabIndex = 14;
@@ -169,7 +160,7 @@
             // cbx1vCPU
             // 
             this.cbx1vCPU.AutoSize = true;
-            this.cbx1vCPU.Location = new System.Drawing.Point(370, 222);
+            this.cbx1vCPU.Location = new System.Drawing.Point(370, 256);
             this.cbx1vCPU.Name = "cbx1vCPU";
             this.cbx1vCPU.Size = new System.Drawing.Size(22, 21);
             this.cbx1vCPU.TabIndex = 15;
@@ -202,12 +193,23 @@
             this.lblGoalScoretbxError.TabIndex = 19;
             this.lblGoalScoretbxError.Text = "*";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(507, -1);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(441, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
             // welcomeScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblGoalScoretbxError);
             this.Controls.Add(this.lblPlayer2tbxError);
             this.Controls.Add(this.lblPlayer1tbxError);
@@ -224,17 +226,15 @@
             this.Controls.Add(this.lbl1v1);
             this.Controls.Add(this.lblGameMode);
             this.Controls.Add(this.btnGameRules);
-            this.Controls.Add(this.lblHeaderPlusMois);
             this.Name = "welcomeScreen";
             this.Text = "Plus Moins";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblHeaderPlusMois;
         private System.Windows.Forms.Button btnGameRules;
         private System.Windows.Forms.Label lblGameMode;
         private System.Windows.Forms.Label lbl1v1;
@@ -251,5 +251,6 @@
         private System.Windows.Forms.Label lblPlayer1tbxError;
         private System.Windows.Forms.Label lblPlayer2tbxError;
         private System.Windows.Forms.Label lblGoalScoretbxError;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

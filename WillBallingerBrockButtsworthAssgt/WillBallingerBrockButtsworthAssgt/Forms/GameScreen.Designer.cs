@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.btnHold5 = new System.Windows.Forms.Button();
             this.btnHold4 = new System.Windows.Forms.Button();
             this.btnHold3 = new System.Windows.Forms.Button();
@@ -42,8 +43,14 @@
             this.btnRoll = new System.Windows.Forms.Button();
             this.lblTargetScore = new System.Windows.Forms.Label();
             this.lblGoalScore = new System.Windows.Forms.Label();
-            this.lblHeaderPlusMois = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblTurn = new System.Windows.Forms.Label();
+            this.lblTurnResult = new System.Windows.Forms.Label();
+            this.lblRollsRemaining = new System.Windows.Forms.Label();
+            this.lblRollsRemaingResult = new System.Windows.Forms.Label();
+            this.btnTest = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHold5
@@ -185,21 +192,72 @@
             this.lblGoalScore.Text = "Goal Score:";
             this.lblGoalScore.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // lblHeaderPlusMois
+            // pictureBox1
             // 
-            this.lblHeaderPlusMois.AutoSize = true;
-            this.lblHeaderPlusMois.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeaderPlusMois.Location = new System.Drawing.Point(524, 37);
-            this.lblHeaderPlusMois.Name = "lblHeaderPlusMois";
-            this.lblHeaderPlusMois.Size = new System.Drawing.Size(258, 55);
-            this.lblHeaderPlusMois.TabIndex = 16;
-            this.lblHeaderPlusMois.Text = "Plus Moins";
-            this.lblHeaderPlusMois.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(473, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(441, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 31;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblTurn
+            // 
+            this.lblTurn.AutoSize = true;
+            this.lblTurn.Location = new System.Drawing.Point(44, 389);
+            this.lblTurn.Name = "lblTurn";
+            this.lblTurn.Size = new System.Drawing.Size(49, 20);
+            this.lblTurn.TabIndex = 32;
+            this.lblTurn.Text = "Turn :";
+            // 
+            // lblTurnResult
+            // 
+            this.lblTurnResult.AutoSize = true;
+            this.lblTurnResult.Location = new System.Drawing.Point(246, 389);
+            this.lblTurnResult.Name = "lblTurnResult";
+            this.lblTurnResult.Size = new System.Drawing.Size(15, 20);
+            this.lblTurnResult.TabIndex = 33;
+            this.lblTurnResult.Text = "*";
+            // 
+            // lblRollsRemaining
+            // 
+            this.lblRollsRemaining.AutoSize = true;
+            this.lblRollsRemaining.Location = new System.Drawing.Point(48, 425);
+            this.lblRollsRemaining.Name = "lblRollsRemaining";
+            this.lblRollsRemaining.Size = new System.Drawing.Size(128, 20);
+            this.lblRollsRemaining.TabIndex = 34;
+            this.lblRollsRemaining.Text = "Rolls Remaining:";
+            // 
+            // lblRollsRemaingResult
+            // 
+            this.lblRollsRemaingResult.AutoSize = true;
+            this.lblRollsRemaingResult.Location = new System.Drawing.Point(246, 425);
+            this.lblRollsRemaingResult.Name = "lblRollsRemaingResult";
+            this.lblRollsRemaingResult.Size = new System.Drawing.Size(15, 20);
+            this.lblRollsRemaingResult.TabIndex = 35;
+            this.lblRollsRemaingResult.Text = "*";
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(1224, 591);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(133, 41);
+            this.btnTest.TabIndex = 36;
+            this.btnTest.Text = "TestButton";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // GameScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.btnTest);
+            this.Controls.Add(this.lblRollsRemaingResult);
+            this.Controls.Add(this.lblRollsRemaining);
+            this.Controls.Add(this.lblTurnResult);
+            this.Controls.Add(this.lblTurn);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnHold5);
             this.Controls.Add(this.btnHold4);
             this.Controls.Add(this.btnHold3);
@@ -214,10 +272,11 @@
             this.Controls.Add(this.btnRoll);
             this.Controls.Add(this.lblTargetScore);
             this.Controls.Add(this.lblGoalScore);
-            this.Controls.Add(this.lblHeaderPlusMois);
             this.Name = "GameScreen";
             this.Text = "GameScreen";
+            this.Load += new System.EventHandler(this.GameScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,6 +298,11 @@
         private System.Windows.Forms.Button btnRoll;
         private System.Windows.Forms.Label lblTargetScore;
         private System.Windows.Forms.Label lblGoalScore;
-        private System.Windows.Forms.Label lblHeaderPlusMois;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblTurn;
+        private System.Windows.Forms.Label lblTurnResult;
+        private System.Windows.Forms.Label lblRollsRemaining;
+        private System.Windows.Forms.Label lblRollsRemaingResult;
+        private System.Windows.Forms.Button btnTest;
     }
 }

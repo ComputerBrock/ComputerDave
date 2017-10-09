@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace WillBallingerBrockButtsworthAssgt
 {
-    class Player
+    public class Player
     {
         //Variables
         private string playerName;
         private Int32 playerID;
         private Int32 gamesPlayed;
         private Int32 gamesWon;
+
+        //Constuctor
+        public Player(string tempPlayerName)
+        {
+            //If player Doesn't exist
+            playerName = tempPlayerName;
+            playerID = 1;
+            gamesPlayed = 0;
+            gamesWon = 0;
+        }
         
         //Get Methods
 

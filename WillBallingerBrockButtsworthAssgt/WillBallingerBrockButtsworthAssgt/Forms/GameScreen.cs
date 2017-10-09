@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WillBallingerBrockButtsworthAssgt;
 /*
 -INFT2012 - Assignment 1 - Plus Mois
 -Authors Brock Buttsworth and Will Ballinger.
@@ -18,16 +19,19 @@ using System.Windows.Forms;
     each of whom is trying to reach an agreed total.
  */
 namespace WillBallingerBrockButtsworthAssgt.Forms
+
 {
     public partial class GameScreen : Form
     {
         int totalRolls = 0;
+        Game player1Game = new Game(1, "Human");
+        Player player1 = new Player("Dave");
         public GameScreen()
         {
             InitializeComponent();
         }
 
-        private void rollDice(Graphics tempCanvas, int loopValue, int xValue, int yValue)
+        private void rollDice(Graphics tempCanvas, int diceIndex, int xValue, int yValue)
         {
             int tempX = xValue;
             int tempY = yValue;
@@ -39,6 +43,8 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             //String appendValue = Convert.ToString(totalRolls) + "\n\r";
             //txbTotalRoll.AppendText(String.Format("{0:d} {1:d}\n\r"), loopValue, appendValue);
             //txbTotalRoll.Text = (appendValue);
+            //Adds the roll to the array.
+            player1Game.setDice(diceIndex, rollValue);
             //Used to Draw the Dice that was Rolled.
             switch (rollValue)
             {
@@ -184,18 +190,19 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             int numberOfRolls = 3;
             int tempX = 50;
             int tempY = 50;
+            int j = 1;
             if (ckbHoldDice1.Checked != true)
             {
                 //Draws First Dice
                 for (int i = 0; i < numberOfRolls; i++)
                 {
                     drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, i, tempX, tempY);
+                    rollDice(graPaper, j, tempX, tempY);
                     Application.DoEvents();
                     System.Threading.Thread.Sleep(1500);
                 }
             }
-
+            j++;
             if (ckbHoldDice2.Checked != true)
             {
                 //Draws Second Dice
@@ -204,12 +211,12 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 for (int i = 0; i < numberOfRolls; i++)
                 {
                     drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, i, tempX, tempY);
+                    rollDice(graPaper, j, tempX, tempY);
                     Application.DoEvents();
                     System.Threading.Thread.Sleep(1500);
                 }
             }
-
+            j++;
             if (ckbHoldDice3.Checked != true)
             {
 
@@ -219,12 +226,12 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 for (int i = 0; i < numberOfRolls; i++)
                 {
                     drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, i, tempX, tempY);
+                    rollDice(graPaper, j, tempX, tempY);
                     Application.DoEvents();
                     System.Threading.Thread.Sleep(1500);
                 }
             }
-
+            j++;
             if (ckbHoldDice4.Checked != true)
             {
                 //Draws Fourth Dice
@@ -233,12 +240,12 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 for (int i = 0; i < numberOfRolls; i++)
                 {
                     drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, i, tempX, tempY);
+                    rollDice(graPaper, j, tempX, tempY);
                     Application.DoEvents();
                     System.Threading.Thread.Sleep(1500);
                 }
             }
-
+            j++;
             if (ckbHoldDice5.Checked != true)
             {
                 //Draws Fifth Dice
@@ -249,12 +256,15 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                     for (int i = 0; i < numberOfRolls; i++)
                     {
                         drawBox(graPaper, tempX, tempY);
-                        rollDice(graPaper, i, tempX, tempY);
+                        rollDice(graPaper, j, tempX, tempY);
                         Application.DoEvents();
                         System.Threading.Thread.Sleep(1500);
                     }
                 }
             }
+            player1Game.nextTurn();
+            lblTurnResult.Text = player1Game.getTurn().ToString();
+            lblRollsRemaingResult.Text = player1Game.getRoll().ToString();
         }
 
         //When Clicked if checkbox is checked=
@@ -375,6 +385,19 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 graPaper.FillRectangle(Brushes.Gainsboro, 525, 50, 10, 75);
                 ckbHoldDice5.Checked = false;
             }
+        }
+
+        private void GameScreen_Load(object sender, EventArgs e)
+        {
+            lblTurnResult.Text = player1Game.getTurn().ToString();
+            lblRollsRemaingResult.Text = player1Game.getRoll().ToString(); 
+        }
+
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            Form form = new TestForm(player1Game, player1);
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.Show();
         }
     }
 }

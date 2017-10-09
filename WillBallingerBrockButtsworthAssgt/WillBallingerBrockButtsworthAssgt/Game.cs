@@ -11,20 +11,22 @@ using System.Threading.Tasks;
 
 namespace WillBallingerBrockButtsworthAssgt
 {
-    class Game
+    public class Game
     {
         // Variables
         private Int32 playerID;
         private string type;
         private Int32 turn;
+        private Int32 roll;
         private Int32 goalScore;
         private Int32 currentScore;
         private Int32[] dice;
 
         // Constructor
-        Game(Int32 tempPlayerID, string tempType)
+        public Game(Int32 tempPlayerID, string tempType)
         {
-            turn = 0;
+            turn = 1;
+            roll = 3;
             currentScore = 0;
             dice = new Int32[] { 0, 0, 0, 0, 0 };
             playerID = tempPlayerID;
@@ -48,6 +50,11 @@ namespace WillBallingerBrockButtsworthAssgt
             return turn;
         }
 
+        public Int32 getRoll()
+        {
+            return roll;
+        }
+
         public Int32 getGoalScore()
         {
             return goalScore;
@@ -61,6 +68,11 @@ namespace WillBallingerBrockButtsworthAssgt
         public Int32[] getDice()
         {
             return dice;
+        }
+
+        public Int32 getDiceValue(Int32 position)
+        {
+            return dice[position];
         }
 
         // Set Methods
@@ -79,6 +91,11 @@ namespace WillBallingerBrockButtsworthAssgt
             turn = tempTurn;
         }
 
+        public void setRoll(Int32 tempRoll)
+        {
+            roll = tempRoll;
+        }
+
         public void setGoalScore(Int32 tempGoalScore)
         {
             goalScore = tempGoalScore;
@@ -93,7 +110,22 @@ namespace WillBallingerBrockButtsworthAssgt
         // requires index between 0 to 4 and dice rolled between 1 and 6.
         public void setDice(Int32 index, Int32 diceRolled)
         {
-            dice[index] = diceRolled;
+            dice[index-1] = diceRolled;
+        }
+
+        //Updates the Roll.
+        // If its the third roll updates turn.
+        public void nextTurn()
+        {
+            if (roll>1)
+            {
+                roll--;
+            }
+            else
+            {
+                roll = 3;
+                turn++;
+            }
         }
 
         // resets values back to beggining without restetting playerID and type.
