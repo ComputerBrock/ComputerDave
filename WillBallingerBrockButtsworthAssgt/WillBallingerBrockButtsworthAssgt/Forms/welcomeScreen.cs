@@ -26,7 +26,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-            Form form2 = new FormGameScreen();
+            Form form2 = new GameScreen();
             form2.StartPosition = FormStartPosition.CenterParent;
             this.Hide();
             form2.ShowDialog();
