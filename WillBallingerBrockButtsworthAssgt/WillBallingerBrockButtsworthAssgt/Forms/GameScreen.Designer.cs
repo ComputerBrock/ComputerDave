@@ -56,7 +56,6 @@
             this.lblPlayer2Name = new System.Windows.Forms.Label();
             this.lblPlayer1TotalScore = new System.Windows.Forms.Label();
             this.lblPlayer2TotalScore = new System.Windows.Forms.Label();
-            this.horizontalRule = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).BeginInit();
@@ -395,22 +394,12 @@
             this.lblPlayer2TotalScore.Text = "lblPlayer2TotalScore";
             this.lblPlayer2TotalScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // horizontalRule
-            // 
-            this.horizontalRule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.horizontalRule.Location = new System.Drawing.Point(5, 100);
-            this.horizontalRule.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.horizontalRule.Name = "horizontalRule";
-            this.horizontalRule.Size = new System.Drawing.Size(1365, 5);
-            this.horizontalRule.TabIndex = 45;
-            // 
             // GameScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1378, 644);
-            this.Controls.Add(this.horizontalRule);
             this.Controls.Add(this.lblPlayer2TotalScore);
             this.Controls.Add(this.lblPlayer1TotalScore);
             this.Controls.Add(this.lblPlayer2Name);
@@ -479,6 +468,5 @@
         private System.Windows.Forms.Label lblPlayer2Name;
         private System.Windows.Forms.Label lblPlayer1TotalScore;
         private System.Windows.Forms.Label lblPlayer2TotalScore;
-        private System.Windows.Forms.Label horizontalRule;
     }
 }
