@@ -43,7 +43,7 @@
             this.btnRoll = new System.Windows.Forms.Button();
             this.lblTargetScore = new System.Windows.Forms.Label();
             this.lblGoalScore = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pctbxLogo = new System.Windows.Forms.PictureBox();
             this.lblTurn = new System.Windows.Forms.Label();
             this.lblTurnResult = new System.Windows.Forms.Label();
             this.lblRollsRemaining = new System.Windows.Forms.Label();
@@ -59,59 +59,64 @@
             this.lblPlayer2TotalScore = new System.Windows.Forms.Label();
             this.horizontalRule = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).BeginInit();
             this.SuspendLayout();
             // 
             // btnHold5
             // 
+            this.btnHold5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnHold5.Location = new System.Drawing.Point(486, 331);
             this.btnHold5.Name = "btnHold5";
-            this.btnHold5.Size = new System.Drawing.Size(75, 23);
+            this.btnHold5.Size = new System.Drawing.Size(89, 30);
             this.btnHold5.TabIndex = 30;
             this.btnHold5.Text = "Hold 5";
-            this.btnHold5.UseVisualStyleBackColor = true;
+            this.btnHold5.UseVisualStyleBackColor = false;
             this.btnHold5.Click += new System.EventHandler(this.btnHold5_Click);
             // 
             // btnHold4
             // 
+            this.btnHold4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnHold4.Location = new System.Drawing.Point(386, 331);
             this.btnHold4.Name = "btnHold4";
-            this.btnHold4.Size = new System.Drawing.Size(75, 23);
+            this.btnHold4.Size = new System.Drawing.Size(89, 30);
             this.btnHold4.TabIndex = 29;
             this.btnHold4.Text = "Hold 4";
-            this.btnHold4.UseVisualStyleBackColor = true;
+            this.btnHold4.UseVisualStyleBackColor = false;
             this.btnHold4.Click += new System.EventHandler(this.btnHold4_Click);
             // 
             // btnHold3
             // 
+            this.btnHold3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnHold3.Location = new System.Drawing.Point(286, 331);
             this.btnHold3.Name = "btnHold3";
-            this.btnHold3.Size = new System.Drawing.Size(75, 23);
+            this.btnHold3.Size = new System.Drawing.Size(89, 30);
             this.btnHold3.TabIndex = 28;
             this.btnHold3.Text = "Hold 3";
-            this.btnHold3.UseVisualStyleBackColor = true;
+            this.btnHold3.UseVisualStyleBackColor = false;
             this.btnHold3.Click += new System.EventHandler(this.btnHold3_Click);
             // 
             // btnHold2
             // 
+            this.btnHold2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnHold2.Location = new System.Drawing.Point(186, 330);
             this.btnHold2.Name = "btnHold2";
-            this.btnHold2.Size = new System.Drawing.Size(75, 23);
+            this.btnHold2.Size = new System.Drawing.Size(89, 30);
             this.btnHold2.TabIndex = 27;
             this.btnHold2.Text = "Hold 2";
-            this.btnHold2.UseVisualStyleBackColor = true;
+            this.btnHold2.UseVisualStyleBackColor = false;
             this.btnHold2.Click += new System.EventHandler(this.btnHold2_Click);
             // 
             // btnHold1
             // 
+            this.btnHold1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnHold1.Location = new System.Drawing.Point(86, 331);
             this.btnHold1.Name = "btnHold1";
-            this.btnHold1.Size = new System.Drawing.Size(75, 23);
+            this.btnHold1.Size = new System.Drawing.Size(89, 30);
             this.btnHold1.TabIndex = 26;
             this.btnHold1.Text = "Hold 1";
-            this.btnHold1.UseVisualStyleBackColor = true;
+            this.btnHold1.UseVisualStyleBackColor = false;
             this.btnHold1.Click += new System.EventHandler(this.btnHold1_Click);
             // 
             // ckbHoldDice5
@@ -171,7 +176,7 @@
             // 
             // picbxDrawing
             // 
-            this.picbxDrawing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.picbxDrawing.BackColor = System.Drawing.Color.Transparent;
             this.picbxDrawing.Location = new System.Drawing.Point(36, 148);
             this.picbxDrawing.Name = "picbxDrawing";
             this.picbxDrawing.Size = new System.Drawing.Size(575, 140);
@@ -180,19 +185,21 @@
             // 
             // btnRoll
             // 
-            this.btnRoll.Location = new System.Drawing.Point(1162, 482);
+            this.btnRoll.BackColor = System.Drawing.Color.Lime;
+            this.btnRoll.Location = new System.Drawing.Point(802, 395);
             this.btnRoll.Name = "btnRoll";
-            this.btnRoll.Size = new System.Drawing.Size(143, 43);
+            this.btnRoll.Size = new System.Drawing.Size(145, 80);
             this.btnRoll.TabIndex = 19;
             this.btnRoll.Text = "Roll";
-            this.btnRoll.UseVisualStyleBackColor = true;
+            this.btnRoll.UseVisualStyleBackColor = false;
             this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
             // lblTargetScore
             // 
             this.lblTargetScore.AutoSize = true;
+            this.lblTargetScore.BackColor = System.Drawing.Color.Transparent;
             this.lblTargetScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTargetScore.Location = new System.Drawing.Point(1229, 44);
+            this.lblTargetScore.Location = new System.Drawing.Point(1189, 30);
             this.lblTargetScore.Name = "lblTargetScore";
             this.lblTargetScore.Size = new System.Drawing.Size(86, 46);
             this.lblTargetScore.TabIndex = 18;
@@ -201,24 +208,25 @@
             // lblGoalScore
             // 
             this.lblGoalScore.AutoSize = true;
+            this.lblGoalScore.BackColor = System.Drawing.Color.Transparent;
             this.lblGoalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblGoalScore.Location = new System.Drawing.Point(990, 44);
+            this.lblGoalScore.Location = new System.Drawing.Point(950, 30);
             this.lblGoalScore.Name = "lblGoalScore";
             this.lblGoalScore.Size = new System.Drawing.Size(233, 46);
             this.lblGoalScore.TabIndex = 17;
             this.lblGoalScore.Text = "Goal Score:";
             this.lblGoalScore.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // pictureBox1
+            // pctbxLogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(575, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 100);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 31;
-            this.pictureBox1.TabStop = false;
+            this.pctbxLogo.BackColor = System.Drawing.Color.Transparent;
+            this.pctbxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pctbxLogo.Image")));
+            this.pctbxLogo.Location = new System.Drawing.Point(575, 0);
+            this.pctbxLogo.Name = "pctbxLogo";
+            this.pctbxLogo.Size = new System.Drawing.Size(250, 100);
+            this.pctbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctbxLogo.TabIndex = 31;
+            this.pctbxLogo.TabStop = false;
             // 
             // lblTurn
             // 
@@ -293,6 +301,7 @@
             // lblPlayer1Title
             // 
             this.lblPlayer1Title.AutoSize = true;
+            this.lblPlayer1Title.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayer1Title.Location = new System.Drawing.Point(56, 510);
             this.lblPlayer1Title.Name = "lblPlayer1Title";
             this.lblPlayer1Title.Size = new System.Drawing.Size(69, 20);
@@ -302,6 +311,7 @@
             // lblPlayer2Title
             // 
             this.lblPlayer2Title.AutoSize = true;
+            this.lblPlayer2Title.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayer2Title.Location = new System.Drawing.Point(314, 510);
             this.lblPlayer2Title.Name = "lblPlayer2Title";
             this.lblPlayer2Title.Size = new System.Drawing.Size(69, 20);
@@ -311,6 +321,7 @@
             // lblPlayer1Name
             // 
             this.lblPlayer1Name.AutoSize = true;
+            this.lblPlayer1Name.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayer1Name.Location = new System.Drawing.Point(56, 544);
             this.lblPlayer1Name.Name = "lblPlayer1Name";
             this.lblPlayer1Name.Size = new System.Drawing.Size(118, 20);
@@ -320,6 +331,7 @@
             // lblPlayer2Name
             // 
             this.lblPlayer2Name.AutoSize = true;
+            this.lblPlayer2Name.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayer2Name.Location = new System.Drawing.Point(314, 544);
             this.lblPlayer2Name.Name = "lblPlayer2Name";
             this.lblPlayer2Name.Size = new System.Drawing.Size(118, 20);
@@ -329,6 +341,7 @@
             // lblPlayer1TotalScore
             // 
             this.lblPlayer1TotalScore.AutoSize = true;
+            this.lblPlayer1TotalScore.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayer1TotalScore.Location = new System.Drawing.Point(56, 578);
             this.lblPlayer1TotalScore.Name = "lblPlayer1TotalScore";
             this.lblPlayer1TotalScore.Size = new System.Drawing.Size(153, 20);
@@ -338,6 +351,7 @@
             // lblPlayer2TotalScore
             // 
             this.lblPlayer2TotalScore.AutoSize = true;
+            this.lblPlayer2TotalScore.BackColor = System.Drawing.Color.Transparent;
             this.lblPlayer2TotalScore.Location = new System.Drawing.Point(314, 578);
             this.lblPlayer2TotalScore.Name = "lblPlayer2TotalScore";
             this.lblPlayer2TotalScore.Size = new System.Drawing.Size(153, 20);
@@ -355,7 +369,8 @@
             // 
             // GameScreen
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1378, 644);
             this.Controls.Add(this.horizontalRule);
@@ -372,7 +387,7 @@
             this.Controls.Add(this.lblRollsRemaining);
             this.Controls.Add(this.lblTurnResult);
             this.Controls.Add(this.lblTurn);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pctbxLogo);
             this.Controls.Add(this.btnHold5);
             this.Controls.Add(this.btnHold4);
             this.Controls.Add(this.btnHold3);
@@ -388,10 +403,11 @@
             this.Controls.Add(this.lblTargetScore);
             this.Controls.Add(this.lblGoalScore);
             this.Name = "GameScreen";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameScreen";
             this.Load += new System.EventHandler(this.GameScreen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pctbxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).EndInit();
             this.ResumeLayout(false);
@@ -415,7 +431,7 @@
         private System.Windows.Forms.Button btnRoll;
         private System.Windows.Forms.Label lblTargetScore;
         private System.Windows.Forms.Label lblGoalScore;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pctbxLogo;
         private System.Windows.Forms.Label lblTurn;
         private System.Windows.Forms.Label lblTurnResult;
         private System.Windows.Forms.Label lblRollsRemaining;
