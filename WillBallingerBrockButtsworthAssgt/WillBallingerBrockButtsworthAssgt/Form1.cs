@@ -32,6 +32,8 @@ namespace WillBallingerBrockButtsworthAssgt
         private void btnRoll_Click(object sender, EventArgs e)
         {
             Graphics graPaper = picbxDrawing.CreateGraphics();
+          
+
 
             totalRolls = 0;
             int numberOfRolls = 3;
