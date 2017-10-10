@@ -235,8 +235,8 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
 
             totalRolls = 0;
             int numberOfRolls = 3;
-            int tempX = 50;
-            int tempY = 50;
+            int tempX = 10;
+            int tempY = 10;
             int j = 1;
             if ((player1Game.getRoll() != 0) && (player2Game.getRoll() != 0))
             {
@@ -255,8 +255,8 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 if (ckbHoldDice2.Checked != true)
                 {
                     //Draws Second Dice
-                    tempX = 150;
-                    tempY = 50;
+                    tempX = 110;
+                    tempY = 10;
                     for (int i = 0; i < numberOfRolls; i++)
                     {
                         drawBox(graPaper, tempX, tempY);
@@ -270,8 +270,8 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 {
 
                     //Draws Third Dice
-                    tempX = 250;
-                    tempY = 50;
+                    tempX = 210;
+                    tempY = 10;
                     for (int i = 0; i < numberOfRolls; i++)
                     {
                         drawBox(graPaper, tempX, tempY);
@@ -284,8 +284,8 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 if (ckbHoldDice4.Checked != true)
                 {
                     //Draws Fourth Dice
-                    tempX = 350;
-                    tempY = 50;
+                    tempX = 310;
+                    tempY = 10;
                     for (int i = 0; i < numberOfRolls; i++)
                     {
                         drawBox(graPaper, tempX, tempY);
@@ -300,8 +300,8 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                     //Draws Fifth Dice
                     if (ckbHoldDice5.Checked != true)
                     {
-                        tempX = 450;
-                        tempY = 50;
+                        tempX = 410;
+                        tempY = 10;
                         for (int i = 0; i < numberOfRolls; i++)
                         {
                             drawBox(graPaper, tempX, tempY);
@@ -382,18 +382,18 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice1.Checked != true)
             {
-                graPaper.FillRectangle(Brushes.Yellow, 40, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 40, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Yellow, 50, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 125, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Yellow, 5, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 5, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Yellow, 10, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 85, 10, 5, 75);
                 ckbHoldDice1.Checked = true;
             }
             else
             {
-                graPaper.FillRectangle(Brushes.Gainsboro, 40, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 40, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Gainsboro, 50, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 125, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Gainsboro, 5, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 5, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Gainsboro, 10, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 85, 10, 5, 75);
                 ckbHoldDice1.Checked = false;
             }
         }
@@ -406,18 +406,18 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice2.Checked != true)
             {
-                graPaper.FillRectangle(Brushes.Yellow, 140, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 140, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Yellow, 150, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 225, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Yellow, 105, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 105, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Yellow, 110, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 185, 10, 5, 75);
                 ckbHoldDice2.Checked = true;
             }
             else
             {
-                graPaper.FillRectangle(Brushes.Gainsboro, 140, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 140, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Gainsboro, 150, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 225, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Gainsboro, 105, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 105, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Gainsboro, 110, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 185, 10, 5, 75);
                 ckbHoldDice2.Checked = false;
             }
         }
@@ -430,18 +430,18 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice3.Checked != true)
             {
-                graPaper.FillRectangle(Brushes.Yellow, 240, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 240, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Yellow, 250, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 325, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Yellow, 205, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 205, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Yellow, 210, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 285, 10, 5, 75);
                 ckbHoldDice3.Checked = true;
             }
             else
             {
-                graPaper.FillRectangle(Brushes.Gainsboro, 240, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 240, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Gainsboro, 250, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 325, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Gainsboro, 205, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 205, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Gainsboro, 210, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 285, 10, 5, 75);
                 ckbHoldDice3.Checked = false;
             }
         }
@@ -454,18 +454,18 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice4.Checked != true)
             {
-                graPaper.FillRectangle(Brushes.Yellow, 340, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 340, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Yellow, 350, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 425, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Yellow, 305, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 305, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Yellow, 310, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 385, 10, 5, 75);
                 ckbHoldDice4.Checked = true;
             }
             else
             {
-                graPaper.FillRectangle(Brushes.Gainsboro, 340, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 340, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Gainsboro, 350, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 425, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Gainsboro, 305, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 305, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Gainsboro, 310, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 385, 10, 5, 75);
                 ckbHoldDice4.Checked = false;
             }
         }
@@ -478,18 +478,18 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             graPaper = picbxDrawing.CreateGraphics();
             if (ckbHoldDice5.Checked != true)
             {
-                graPaper.FillRectangle(Brushes.Yellow, 440, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 440, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Yellow, 450, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Yellow, 525, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Yellow, 405, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 405, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Yellow, 410, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Yellow, 485, 10, 5, 75);
                 ckbHoldDice5.Checked = true;
             }
             else
             {
-                graPaper.FillRectangle(Brushes.Gainsboro, 440, 40, 95, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 440, 50, 10, 85);
-                graPaper.FillRectangle(Brushes.Gainsboro, 450, 125, 85, 10);
-                graPaper.FillRectangle(Brushes.Gainsboro, 525, 50, 10, 75);
+                graPaper.FillRectangle(Brushes.Gainsboro, 405, 5, 85, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 405, 10, 5, 80);
+                graPaper.FillRectangle(Brushes.Gainsboro, 410, 85, 80, 5);
+                graPaper.FillRectangle(Brushes.Gainsboro, 485, 10, 5, 75);
                 ckbHoldDice5.Checked = false;
             }
         }
