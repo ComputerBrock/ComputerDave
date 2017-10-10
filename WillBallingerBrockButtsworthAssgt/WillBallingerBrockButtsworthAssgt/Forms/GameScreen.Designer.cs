@@ -57,6 +57,7 @@
             this.lblPlayer2Name = new System.Windows.Forms.Label();
             this.lblPlayer1TotalScore = new System.Windows.Forms.Label();
             this.lblPlayer2TotalScore = new System.Windows.Forms.Label();
+            this.horizontalRule = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).BeginInit();
@@ -119,7 +120,7 @@
             this.ckbHoldDice5.BackColor = System.Drawing.Color.Transparent;
             this.ckbHoldDice5.Location = new System.Drawing.Point(486, 300);
             this.ckbHoldDice5.Name = "ckbHoldDice5";
-            this.ckbHoldDice5.Size = new System.Drawing.Size(82, 17);
+            this.ckbHoldDice5.Size = new System.Drawing.Size(117, 24);
             this.ckbHoldDice5.TabIndex = 25;
             this.ckbHoldDice5.Text = "Hold Dice 5";
             this.ckbHoldDice5.UseVisualStyleBackColor = false;
@@ -130,7 +131,7 @@
             this.ckbHoldDice4.BackColor = System.Drawing.Color.Transparent;
             this.ckbHoldDice4.Location = new System.Drawing.Point(386, 300);
             this.ckbHoldDice4.Name = "ckbHoldDice4";
-            this.ckbHoldDice4.Size = new System.Drawing.Size(82, 17);
+            this.ckbHoldDice4.Size = new System.Drawing.Size(117, 24);
             this.ckbHoldDice4.TabIndex = 24;
             this.ckbHoldDice4.Text = "Hold Dice 4";
             this.ckbHoldDice4.UseVisualStyleBackColor = false;
@@ -141,7 +142,7 @@
             this.ckbHoldDice3.BackColor = System.Drawing.Color.Transparent;
             this.ckbHoldDice3.Location = new System.Drawing.Point(286, 300);
             this.ckbHoldDice3.Name = "ckbHoldDice3";
-            this.ckbHoldDice3.Size = new System.Drawing.Size(82, 17);
+            this.ckbHoldDice3.Size = new System.Drawing.Size(117, 24);
             this.ckbHoldDice3.TabIndex = 23;
             this.ckbHoldDice3.Text = "Hold Dice 3";
             this.ckbHoldDice3.UseVisualStyleBackColor = false;
@@ -152,7 +153,7 @@
             this.ckbHoldDice2.BackColor = System.Drawing.Color.Transparent;
             this.ckbHoldDice2.Location = new System.Drawing.Point(186, 300);
             this.ckbHoldDice2.Name = "ckbHoldDice2";
-            this.ckbHoldDice2.Size = new System.Drawing.Size(82, 17);
+            this.ckbHoldDice2.Size = new System.Drawing.Size(117, 24);
             this.ckbHoldDice2.TabIndex = 22;
             this.ckbHoldDice2.Text = "Hold Dice 2";
             this.ckbHoldDice2.UseVisualStyleBackColor = false;
@@ -163,7 +164,7 @@
             this.ckbHoldDice1.BackColor = System.Drawing.Color.Transparent;
             this.ckbHoldDice1.Location = new System.Drawing.Point(86, 300);
             this.ckbHoldDice1.Name = "ckbHoldDice1";
-            this.ckbHoldDice1.Size = new System.Drawing.Size(82, 17);
+            this.ckbHoldDice1.Size = new System.Drawing.Size(117, 24);
             this.ckbHoldDice1.TabIndex = 21;
             this.ckbHoldDice1.Text = "Hold Dice 1";
             this.ckbHoldDice1.UseVisualStyleBackColor = false;
@@ -193,7 +194,7 @@
             this.lblTargetScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTargetScore.Location = new System.Drawing.Point(1229, 44);
             this.lblTargetScore.Name = "lblTargetScore";
-            this.lblTargetScore.Size = new System.Drawing.Size(59, 31);
+            this.lblTargetScore.Size = new System.Drawing.Size(86, 46);
             this.lblTargetScore.TabIndex = 18;
             this.lblTargetScore.Text = "200";
             // 
@@ -203,7 +204,7 @@
             this.lblGoalScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGoalScore.Location = new System.Drawing.Point(990, 44);
             this.lblGoalScore.Name = "lblGoalScore";
-            this.lblGoalScore.Size = new System.Drawing.Size(157, 31);
+            this.lblGoalScore.Size = new System.Drawing.Size(233, 46);
             this.lblGoalScore.TabIndex = 17;
             this.lblGoalScore.Text = "Goal Score:";
             this.lblGoalScore.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -212,7 +213,7 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(473, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(575, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -225,7 +226,7 @@
             this.lblTurn.BackColor = System.Drawing.Color.Transparent;
             this.lblTurn.Location = new System.Drawing.Point(48, 389);
             this.lblTurn.Name = "lblTurn";
-            this.lblTurn.Size = new System.Drawing.Size(35, 13);
+            this.lblTurn.Size = new System.Drawing.Size(49, 20);
             this.lblTurn.TabIndex = 32;
             this.lblTurn.Text = "Turn :";
             // 
@@ -235,7 +236,7 @@
             this.lblTurnResult.BackColor = System.Drawing.Color.Transparent;
             this.lblTurnResult.Location = new System.Drawing.Point(246, 389);
             this.lblTurnResult.Name = "lblTurnResult";
-            this.lblTurnResult.Size = new System.Drawing.Size(11, 13);
+            this.lblTurnResult.Size = new System.Drawing.Size(15, 20);
             this.lblTurnResult.TabIndex = 33;
             this.lblTurnResult.Text = "*";
             // 
@@ -245,7 +246,7 @@
             this.lblRollsRemaining.BackColor = System.Drawing.Color.Transparent;
             this.lblRollsRemaining.Location = new System.Drawing.Point(48, 425);
             this.lblRollsRemaining.Name = "lblRollsRemaining";
-            this.lblRollsRemaining.Size = new System.Drawing.Size(86, 13);
+            this.lblRollsRemaining.Size = new System.Drawing.Size(128, 20);
             this.lblRollsRemaining.TabIndex = 34;
             this.lblRollsRemaining.Text = "Rolls Remaining:";
             // 
@@ -255,7 +256,7 @@
             this.lblRollsRemaingResult.BackColor = System.Drawing.Color.Transparent;
             this.lblRollsRemaingResult.Location = new System.Drawing.Point(246, 425);
             this.lblRollsRemaingResult.Name = "lblRollsRemaingResult";
-            this.lblRollsRemaingResult.Size = new System.Drawing.Size(11, 13);
+            this.lblRollsRemaingResult.Size = new System.Drawing.Size(15, 20);
             this.lblRollsRemaingResult.TabIndex = 35;
             this.lblRollsRemaingResult.Text = "*";
             // 
@@ -294,7 +295,7 @@
             this.lblPlayer1Title.AutoSize = true;
             this.lblPlayer1Title.Location = new System.Drawing.Point(56, 510);
             this.lblPlayer1Title.Name = "lblPlayer1Title";
-            this.lblPlayer1Title.Size = new System.Drawing.Size(48, 13);
+            this.lblPlayer1Title.Size = new System.Drawing.Size(69, 20);
             this.lblPlayer1Title.TabIndex = 39;
             this.lblPlayer1Title.Text = "Player 1:";
             // 
@@ -303,7 +304,7 @@
             this.lblPlayer2Title.AutoSize = true;
             this.lblPlayer2Title.Location = new System.Drawing.Point(314, 510);
             this.lblPlayer2Title.Name = "lblPlayer2Title";
-            this.lblPlayer2Title.Size = new System.Drawing.Size(48, 13);
+            this.lblPlayer2Title.Size = new System.Drawing.Size(69, 20);
             this.lblPlayer2Title.TabIndex = 40;
             this.lblPlayer2Title.Text = "Player 2:";
             // 
@@ -312,7 +313,7 @@
             this.lblPlayer1Name.AutoSize = true;
             this.lblPlayer1Name.Location = new System.Drawing.Point(56, 544);
             this.lblPlayer1Name.Name = "lblPlayer1Name";
-            this.lblPlayer1Name.Size = new System.Drawing.Size(80, 13);
+            this.lblPlayer1Name.Size = new System.Drawing.Size(118, 20);
             this.lblPlayer1Name.TabIndex = 41;
             this.lblPlayer1Name.Text = "lblPlayer1Name";
             // 
@@ -321,7 +322,7 @@
             this.lblPlayer2Name.AutoSize = true;
             this.lblPlayer2Name.Location = new System.Drawing.Point(314, 544);
             this.lblPlayer2Name.Name = "lblPlayer2Name";
-            this.lblPlayer2Name.Size = new System.Drawing.Size(80, 13);
+            this.lblPlayer2Name.Size = new System.Drawing.Size(118, 20);
             this.lblPlayer2Name.TabIndex = 42;
             this.lblPlayer2Name.Text = "lblPlayer2Name";
             // 
@@ -330,7 +331,7 @@
             this.lblPlayer1TotalScore.AutoSize = true;
             this.lblPlayer1TotalScore.Location = new System.Drawing.Point(56, 578);
             this.lblPlayer1TotalScore.Name = "lblPlayer1TotalScore";
-            this.lblPlayer1TotalScore.Size = new System.Drawing.Size(104, 13);
+            this.lblPlayer1TotalScore.Size = new System.Drawing.Size(153, 20);
             this.lblPlayer1TotalScore.TabIndex = 43;
             this.lblPlayer1TotalScore.Text = "lblPlayer1TotalScore";
             // 
@@ -339,15 +340,25 @@
             this.lblPlayer2TotalScore.AutoSize = true;
             this.lblPlayer2TotalScore.Location = new System.Drawing.Point(314, 578);
             this.lblPlayer2TotalScore.Name = "lblPlayer2TotalScore";
-            this.lblPlayer2TotalScore.Size = new System.Drawing.Size(104, 13);
+            this.lblPlayer2TotalScore.Size = new System.Drawing.Size(153, 20);
             this.lblPlayer2TotalScore.TabIndex = 44;
             this.lblPlayer2TotalScore.Text = "lblPlayer2TotalScore";
+            // 
+            // horizontalRule
+            // 
+            this.horizontalRule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.horizontalRule.Location = new System.Drawing.Point(5, 100);
+            this.horizontalRule.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.horizontalRule.Name = "horizontalRule";
+            this.horizontalRule.Size = new System.Drawing.Size(1365, 5);
+            this.horizontalRule.TabIndex = 45;
             // 
             // GameScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.horizontalRule);
             this.Controls.Add(this.lblPlayer2TotalScore);
             this.Controls.Add(this.lblPlayer1TotalScore);
             this.Controls.Add(this.lblPlayer2Name);
@@ -418,5 +429,6 @@
         private System.Windows.Forms.Label lblPlayer2Name;
         private System.Windows.Forms.Label lblPlayer1TotalScore;
         private System.Windows.Forms.Label lblPlayer2TotalScore;
+        private System.Windows.Forms.Label horizontalRule;
     }
 }

@@ -46,7 +46,7 @@
             this.lblPlayer2tbxError = new System.Windows.Forms.Label();
             this.lblGoalScoretbxError = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.horizontalRule = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,10 +54,9 @@
             // 
             this.btnGameRules.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnGameRules.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGameRules.Location = new System.Drawing.Point(557, 141);
-            this.btnGameRules.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnGameRules.Location = new System.Drawing.Point(836, 217);
             this.btnGameRules.Name = "btnGameRules";
-            this.btnGameRules.Size = new System.Drawing.Size(293, 50);
+            this.btnGameRules.Size = new System.Drawing.Size(440, 77);
             this.btnGameRules.TabIndex = 3;
             this.btnGameRules.Text = "Game Rules";
             this.btnGameRules.UseVisualStyleBackColor = false;
@@ -67,10 +66,9 @@
             // 
             this.lblGameMode.AutoSize = true;
             this.lblGameMode.BackColor = System.Drawing.Color.Transparent;
-            this.lblGameMode.Location = new System.Drawing.Point(97, 116);
-            this.lblGameMode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGameMode.Location = new System.Drawing.Point(146, 178);
             this.lblGameMode.Name = "lblGameMode";
-            this.lblGameMode.Size = new System.Drawing.Size(68, 13);
+            this.lblGameMode.Size = new System.Drawing.Size(101, 20);
             this.lblGameMode.TabIndex = 4;
             this.lblGameMode.Text = "Game Mode:";
             // 
@@ -78,10 +76,9 @@
             // 
             this.lbl1v1.AutoSize = true;
             this.lbl1v1.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1v1.Location = new System.Drawing.Point(137, 144);
-            this.lbl1v1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl1v1.Location = new System.Drawing.Point(206, 222);
             this.lbl1v1.Name = "lbl1v1";
-            this.lbl1v1.Size = new System.Drawing.Size(31, 13);
+            this.lbl1v1.Size = new System.Drawing.Size(42, 20);
             this.lbl1v1.TabIndex = 5;
             this.lbl1v1.Text = "1 v 1";
             this.lbl1v1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -90,10 +87,9 @@
             // 
             this.lbl1vCPU.AutoSize = true;
             this.lbl1vCPU.BackColor = System.Drawing.Color.Transparent;
-            this.lbl1vCPU.Location = new System.Drawing.Point(232, 144);
-            this.lbl1vCPU.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl1vCPU.Location = new System.Drawing.Point(348, 222);
             this.lbl1vCPU.Name = "lbl1vCPU";
-            this.lbl1vCPU.Size = new System.Drawing.Size(47, 13);
+            this.lbl1vCPU.Size = new System.Drawing.Size(66, 20);
             this.lbl1vCPU.TabIndex = 6;
             this.lbl1vCPU.Text = "1 v CPU";
             // 
@@ -101,10 +97,9 @@
             // 
             this.lblPlayer1Name.AutoSize = true;
             this.lblPlayer1Name.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayer1Name.Location = new System.Drawing.Point(119, 207);
-            this.lblPlayer1Name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayer1Name.Location = new System.Drawing.Point(178, 318);
             this.lblPlayer1Name.Name = "lblPlayer1Name";
-            this.lblPlayer1Name.Size = new System.Drawing.Size(48, 13);
+            this.lblPlayer1Name.Size = new System.Drawing.Size(69, 20);
             this.lblPlayer1Name.TabIndex = 7;
             this.lblPlayer1Name.Text = "Player 1:";
             // 
@@ -112,28 +107,25 @@
             // 
             this.lblPlayer2.AutoSize = true;
             this.lblPlayer2.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayer2.Location = new System.Drawing.Point(280, 207);
-            this.lblPlayer2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayer2.Location = new System.Drawing.Point(420, 318);
             this.lblPlayer2.Name = "lblPlayer2";
-            this.lblPlayer2.Size = new System.Drawing.Size(48, 13);
+            this.lblPlayer2.Size = new System.Drawing.Size(69, 20);
             this.lblPlayer2.TabIndex = 8;
             this.lblPlayer2.Text = "Player 2:";
             // 
             // tbxPlayer1Name
             // 
-            this.tbxPlayer1Name.Location = new System.Drawing.Point(95, 261);
-            this.tbxPlayer1Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxPlayer1Name.Location = new System.Drawing.Point(142, 402);
             this.tbxPlayer1Name.Name = "tbxPlayer1Name";
-            this.tbxPlayer1Name.Size = new System.Drawing.Size(93, 20);
+            this.tbxPlayer1Name.Size = new System.Drawing.Size(138, 26);
             this.tbxPlayer1Name.TabIndex = 9;
             this.tbxPlayer1Name.Text = "Player 1 Name";
             // 
             // tbxPlayer2Name
             // 
-            this.tbxPlayer2Name.Location = new System.Drawing.Point(255, 261);
-            this.tbxPlayer2Name.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxPlayer2Name.Location = new System.Drawing.Point(382, 402);
             this.tbxPlayer2Name.Name = "tbxPlayer2Name";
-            this.tbxPlayer2Name.Size = new System.Drawing.Size(99, 20);
+            this.tbxPlayer2Name.Size = new System.Drawing.Size(146, 26);
             this.tbxPlayer2Name.TabIndex = 10;
             this.tbxPlayer2Name.Text = "Player 2 Name";
             // 
@@ -141,19 +133,17 @@
             // 
             this.lblGoalScore.AutoSize = true;
             this.lblGoalScore.BackColor = System.Drawing.Color.Transparent;
-            this.lblGoalScore.Location = new System.Drawing.Point(93, 337);
-            this.lblGoalScore.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGoalScore.Location = new System.Drawing.Point(140, 518);
             this.lblGoalScore.Name = "lblGoalScore";
-            this.lblGoalScore.Size = new System.Drawing.Size(124, 13);
+            this.lblGoalScore.Size = new System.Drawing.Size(182, 20);
             this.lblGoalScore.TabIndex = 11;
             this.lblGoalScore.Text = "What is your goal score?";
             // 
             // tbxGoalScore
             // 
-            this.tbxGoalScore.Location = new System.Drawing.Point(254, 333);
-            this.tbxGoalScore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbxGoalScore.Location = new System.Drawing.Point(381, 512);
             this.tbxGoalScore.Name = "tbxGoalScore";
-            this.tbxGoalScore.Size = new System.Drawing.Size(101, 20);
+            this.tbxGoalScore.Size = new System.Drawing.Size(150, 26);
             this.tbxGoalScore.TabIndex = 12;
             this.tbxGoalScore.Text = "Enter Goal Score";
             // 
@@ -161,10 +151,9 @@
             // 
             this.btnStartGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.btnStartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartGame.Location = new System.Drawing.Point(557, 215);
-            this.btnStartGame.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStartGame.Location = new System.Drawing.Point(836, 331);
             this.btnStartGame.Name = "btnStartGame";
-            this.btnStartGame.Size = new System.Drawing.Size(293, 50);
+            this.btnStartGame.Size = new System.Drawing.Size(440, 77);
             this.btnStartGame.TabIndex = 13;
             this.btnStartGame.Text = "Start Game";
             this.btnStartGame.UseVisualStyleBackColor = false;
@@ -174,10 +163,9 @@
             // 
             this.cbx1v1.AutoSize = true;
             this.cbx1v1.BackColor = System.Drawing.Color.Transparent;
-            this.cbx1v1.Location = new System.Drawing.Point(139, 166);
-            this.cbx1v1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbx1v1.Location = new System.Drawing.Point(208, 255);
             this.cbx1v1.Name = "cbx1v1";
-            this.cbx1v1.Size = new System.Drawing.Size(15, 14);
+            this.cbx1v1.Size = new System.Drawing.Size(22, 21);
             this.cbx1v1.TabIndex = 14;
             this.cbx1v1.UseVisualStyleBackColor = false;
             // 
@@ -185,10 +173,9 @@
             // 
             this.cbx1vCPU.AutoSize = true;
             this.cbx1vCPU.BackColor = System.Drawing.Color.Transparent;
-            this.cbx1vCPU.Location = new System.Drawing.Point(247, 166);
-            this.cbx1vCPU.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbx1vCPU.Location = new System.Drawing.Point(370, 255);
             this.cbx1vCPU.Name = "cbx1vCPU";
-            this.cbx1vCPU.Size = new System.Drawing.Size(15, 14);
+            this.cbx1vCPU.Size = new System.Drawing.Size(22, 21);
             this.cbx1vCPU.TabIndex = 15;
             this.cbx1vCPU.UseVisualStyleBackColor = false;
             // 
@@ -196,10 +183,9 @@
             // 
             this.lblPlayer1tbxError.AutoSize = true;
             this.lblPlayer1tbxError.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayer1tbxError.Location = new System.Drawing.Point(137, 236);
-            this.lblPlayer1tbxError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayer1tbxError.Location = new System.Drawing.Point(206, 363);
             this.lblPlayer1tbxError.Name = "lblPlayer1tbxError";
-            this.lblPlayer1tbxError.Size = new System.Drawing.Size(11, 13);
+            this.lblPlayer1tbxError.Size = new System.Drawing.Size(15, 20);
             this.lblPlayer1tbxError.TabIndex = 17;
             this.lblPlayer1tbxError.Text = "*";
             // 
@@ -207,10 +193,9 @@
             // 
             this.lblPlayer2tbxError.AutoSize = true;
             this.lblPlayer2tbxError.BackColor = System.Drawing.Color.Transparent;
-            this.lblPlayer2tbxError.Location = new System.Drawing.Point(297, 236);
-            this.lblPlayer2tbxError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblPlayer2tbxError.Location = new System.Drawing.Point(446, 363);
             this.lblPlayer2tbxError.Name = "lblPlayer2tbxError";
-            this.lblPlayer2tbxError.Size = new System.Drawing.Size(11, 13);
+            this.lblPlayer2tbxError.Size = new System.Drawing.Size(15, 20);
             this.lblPlayer2tbxError.TabIndex = 18;
             this.lblPlayer2tbxError.Text = "*";
             // 
@@ -218,10 +203,9 @@
             // 
             this.lblGoalScoretbxError.AutoSize = true;
             this.lblGoalScoretbxError.BackColor = System.Drawing.Color.Transparent;
-            this.lblGoalScoretbxError.Location = new System.Drawing.Point(280, 313);
-            this.lblGoalScoretbxError.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGoalScoretbxError.Location = new System.Drawing.Point(420, 482);
             this.lblGoalScoretbxError.Name = "lblGoalScoretbxError";
-            this.lblGoalScoretbxError.Size = new System.Drawing.Size(11, 13);
+            this.lblGoalScoretbxError.Size = new System.Drawing.Size(15, 20);
             this.lblGoalScoretbxError.TabIndex = 19;
             this.lblGoalScoretbxError.Text = "*";
             // 
@@ -229,30 +213,30 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(338, -1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(575, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 32;
             this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // horizontalRule
             // 
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label1.Location = new System.Drawing.Point(36, 94);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(850, 4);
-            this.label1.TabIndex = 33;
+            this.horizontalRule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.horizontalRule.Location = new System.Drawing.Point(5, 100);
+            this.horizontalRule.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.horizontalRule.Name = "horizontalRule";
+            this.horizontalRule.Size = new System.Drawing.Size(1365, 5);
+            this.horizontalRule.TabIndex = 33;
             // 
             // welcomeScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(919, 419);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1378, 645);
+            this.Controls.Add(this.horizontalRule);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblGoalScoretbxError);
             this.Controls.Add(this.lblPlayer2tbxError);
@@ -270,7 +254,6 @@
             this.Controls.Add(this.lbl1v1);
             this.Controls.Add(this.lblGameMode);
             this.Controls.Add(this.btnGameRules);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "welcomeScreen";
             this.Text = "Plus Moins";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -297,6 +280,6 @@
         private System.Windows.Forms.Label lblPlayer2tbxError;
         private System.Windows.Forms.Label lblGoalScoretbxError;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label horizontalRule;
     }
 }

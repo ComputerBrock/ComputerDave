@@ -29,41 +29,51 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_Rules));
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.horizontalRule = new System.Windows.Forms.Label();
+            this.tbxRules = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(67, 334);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "game rules page";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::WillBallingerBrockButtsworthAssgt.Properties.Resources.plusmoinslogo1;
-            this.pictureBox1.Location = new System.Drawing.Point(344, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(575, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(250, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // horizontalRule
+            // 
+            this.horizontalRule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.horizontalRule.Location = new System.Drawing.Point(5, 100);
+            this.horizontalRule.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.horizontalRule.Name = "horizontalRule";
+            this.horizontalRule.Size = new System.Drawing.Size(1365, 5);
+            this.horizontalRule.TabIndex = 34;
+            // 
+            // tbxRules
+            // 
+            this.tbxRules.Location = new System.Drawing.Point(234, 149);
+            this.tbxRules.Multiline = true;
+            this.tbxRules.Name = "tbxRules";
+            this.tbxRules.Size = new System.Drawing.Size(921, 371);
+            this.tbxRules.TabIndex = 35;
+            this.tbxRules.Text = resources.GetString("tbxRules.Text");
+            // 
             // Game_Rules
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(919, 419);
+            this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.tbxRules);
+            this.Controls.Add(this.horizontalRule);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Game_Rules";
             this.Text = "Game Rules";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -73,8 +83,8 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label horizontalRule;
+        private System.Windows.Forms.TextBox tbxRules;
     }
 }
