@@ -42,12 +42,19 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         {
             string playerName = tbxPlayer1Name.Text;
             string playerName2 = tbxPlayer2Name.Text;
+            //add validation that text box's are not blank
             player1 = new Player(playerName);
             player2 = new Player(playerName2);
             Form form2 = new GameScreen(player1, player2);
             form2.StartPosition = FormStartPosition.CenterParent;
             this.Hide();
             form2.ShowDialog();
+        }
+
+        private void refresh()
+        {
+            // Refresh if 1VCPU selected make player 2 options invisible.
+            // Else make visible
         }
     }
 }
