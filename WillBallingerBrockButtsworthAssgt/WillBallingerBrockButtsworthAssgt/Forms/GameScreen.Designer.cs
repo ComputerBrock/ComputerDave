@@ -56,6 +56,19 @@
             this.lblPlayer2Name = new System.Windows.Forms.Label();
             this.lblPlayer1TotalScore = new System.Windows.Forms.Label();
             this.lblPlayer2TotalScore = new System.Windows.Forms.Label();
+            this.btnSaveScore = new System.Windows.Forms.Button();
+            this.lbl5InARow = new System.Windows.Forms.Label();
+            this.lblResult5InARow = new System.Windows.Forms.Label();
+            this.lbl4InARow = new System.Windows.Forms.Label();
+            this.lbl3InARow = new System.Windows.Forms.Label();
+            this.lbl5OfAKind = new System.Windows.Forms.Label();
+            this.lbl4OfAKind = new System.Windows.Forms.Label();
+            this.lbl3OfAKind = new System.Windows.Forms.Label();
+            this.lblResult4InARow = new System.Windows.Forms.Label();
+            this.lblResult3InARow = new System.Windows.Forms.Label();
+            this.lblResult5OfAKind = new System.Windows.Forms.Label();
+            this.lblResult4OfAKind = new System.Windows.Forms.Label();
+            this.lblResult3OfAKind = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).BeginInit();
@@ -394,12 +407,171 @@
             this.lblPlayer2TotalScore.Text = "lblPlayer2TotalScore";
             this.lblPlayer2TotalScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnSaveScore
+            // 
+            this.btnSaveScore.BackColor = System.Drawing.Color.Gold;
+            this.btnSaveScore.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnSaveScore.FlatAppearance.BorderSize = 10;
+            this.btnSaveScore.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveScore.Location = new System.Drawing.Point(1046, 228);
+            this.btnSaveScore.Name = "btnSaveScore";
+            this.btnSaveScore.Size = new System.Drawing.Size(269, 96);
+            this.btnSaveScore.TabIndex = 45;
+            this.btnSaveScore.Text = "End Turn";
+            this.btnSaveScore.UseVisualStyleBackColor = false;
+            this.btnSaveScore.Click += new System.EventHandler(this.btnSaveScore_Click);
+            // 
+            // lbl5InARow
+            // 
+            this.lbl5InARow.AutoSize = true;
+            this.lbl5InARow.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5InARow.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5InARow.Location = new System.Drawing.Point(731, 170);
+            this.lbl5InARow.Name = "lbl5InARow";
+            this.lbl5InARow.Size = new System.Drawing.Size(110, 23);
+            this.lbl5InARow.TabIndex = 46;
+            this.lbl5InARow.Text = "5 in a Row:";
+            // 
+            // lblResult5InARow
+            // 
+            this.lblResult5InARow.AutoSize = true;
+            this.lblResult5InARow.BackColor = System.Drawing.Color.Transparent;
+            this.lblResult5InARow.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult5InARow.Location = new System.Drawing.Point(854, 170);
+            this.lblResult5InARow.Name = "lblResult5InARow";
+            this.lblResult5InARow.Size = new System.Drawing.Size(142, 20);
+            this.lblResult5InARow.TabIndex = 47;
+            this.lblResult5InARow.Text = "Result5InARow";
+            // 
+            // lbl4InARow
+            // 
+            this.lbl4InARow.AutoSize = true;
+            this.lbl4InARow.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4InARow.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4InARow.Location = new System.Drawing.Point(730, 203);
+            this.lbl4InARow.Name = "lbl4InARow";
+            this.lbl4InARow.Size = new System.Drawing.Size(111, 23);
+            this.lbl4InARow.TabIndex = 48;
+            this.lbl4InARow.Text = "4 in a Row:";
+            // 
+            // lbl3InARow
+            // 
+            this.lbl3InARow.AutoSize = true;
+            this.lbl3InARow.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3InARow.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3InARow.Location = new System.Drawing.Point(731, 236);
+            this.lbl3InARow.Name = "lbl3InARow";
+            this.lbl3InARow.Size = new System.Drawing.Size(110, 23);
+            this.lbl3InARow.TabIndex = 49;
+            this.lbl3InARow.Text = "3 in a Row:";
+            // 
+            // lbl5OfAKind
+            // 
+            this.lbl5OfAKind.AutoSize = true;
+            this.lbl5OfAKind.BackColor = System.Drawing.Color.Transparent;
+            this.lbl5OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5OfAKind.Location = new System.Drawing.Point(726, 269);
+            this.lbl5OfAKind.Name = "lbl5OfAKind";
+            this.lbl5OfAKind.Size = new System.Drawing.Size(115, 23);
+            this.lbl5OfAKind.TabIndex = 50;
+            this.lbl5OfAKind.Text = "5 of a Kind:";
+            // 
+            // lbl4OfAKind
+            // 
+            this.lbl4OfAKind.AutoSize = true;
+            this.lbl4OfAKind.BackColor = System.Drawing.Color.Transparent;
+            this.lbl4OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4OfAKind.Location = new System.Drawing.Point(725, 302);
+            this.lbl4OfAKind.Name = "lbl4OfAKind";
+            this.lbl4OfAKind.Size = new System.Drawing.Size(116, 23);
+            this.lbl4OfAKind.TabIndex = 51;
+            this.lbl4OfAKind.Text = "4 of a Kind:";
+            // 
+            // lbl3OfAKind
+            // 
+            this.lbl3OfAKind.AutoSize = true;
+            this.lbl3OfAKind.BackColor = System.Drawing.Color.Transparent;
+            this.lbl3OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3OfAKind.Location = new System.Drawing.Point(726, 335);
+            this.lbl3OfAKind.Name = "lbl3OfAKind";
+            this.lbl3OfAKind.Size = new System.Drawing.Size(115, 23);
+            this.lbl3OfAKind.TabIndex = 52;
+            this.lbl3OfAKind.Text = "3 of a Kind:";
+            // 
+            // lblResult4InARow
+            // 
+            this.lblResult4InARow.AutoSize = true;
+            this.lblResult4InARow.BackColor = System.Drawing.Color.Transparent;
+            this.lblResult4InARow.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult4InARow.Location = new System.Drawing.Point(853, 203);
+            this.lblResult4InARow.Name = "lblResult4InARow";
+            this.lblResult4InARow.Size = new System.Drawing.Size(143, 20);
+            this.lblResult4InARow.TabIndex = 53;
+            this.lblResult4InARow.Text = "Result4InARow";
+            // 
+            // lblResult3InARow
+            // 
+            this.lblResult3InARow.AutoSize = true;
+            this.lblResult3InARow.BackColor = System.Drawing.Color.Transparent;
+            this.lblResult3InARow.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult3InARow.Location = new System.Drawing.Point(854, 236);
+            this.lblResult3InARow.Name = "lblResult3InARow";
+            this.lblResult3InARow.Size = new System.Drawing.Size(142, 20);
+            this.lblResult3InARow.TabIndex = 54;
+            this.lblResult3InARow.Text = "Result3InARow";
+            // 
+            // lblResult5OfAKind
+            // 
+            this.lblResult5OfAKind.AutoSize = true;
+            this.lblResult5OfAKind.BackColor = System.Drawing.Color.Transparent;
+            this.lblResult5OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult5OfAKind.Location = new System.Drawing.Point(849, 269);
+            this.lblResult5OfAKind.Name = "lblResult5OfAKind";
+            this.lblResult5OfAKind.Size = new System.Drawing.Size(147, 20);
+            this.lblResult5OfAKind.TabIndex = 55;
+            this.lblResult5OfAKind.Text = "Result5OfAKind";
+            // 
+            // lblResult4OfAKind
+            // 
+            this.lblResult4OfAKind.AutoSize = true;
+            this.lblResult4OfAKind.BackColor = System.Drawing.Color.Transparent;
+            this.lblResult4OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult4OfAKind.Location = new System.Drawing.Point(848, 302);
+            this.lblResult4OfAKind.Name = "lblResult4OfAKind";
+            this.lblResult4OfAKind.Size = new System.Drawing.Size(148, 20);
+            this.lblResult4OfAKind.TabIndex = 56;
+            this.lblResult4OfAKind.Text = "Result4OfAKind";
+            // 
+            // lblResult3OfAKind
+            // 
+            this.lblResult3OfAKind.AutoSize = true;
+            this.lblResult3OfAKind.BackColor = System.Drawing.Color.Transparent;
+            this.lblResult3OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult3OfAKind.Location = new System.Drawing.Point(849, 335);
+            this.lblResult3OfAKind.Name = "lblResult3OfAKind";
+            this.lblResult3OfAKind.Size = new System.Drawing.Size(147, 20);
+            this.lblResult3OfAKind.TabIndex = 57;
+            this.lblResult3OfAKind.Text = "Result3OfAKind";
+            // 
             // GameScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.lblResult3OfAKind);
+            this.Controls.Add(this.lblResult4OfAKind);
+            this.Controls.Add(this.lblResult5OfAKind);
+            this.Controls.Add(this.lblResult3InARow);
+            this.Controls.Add(this.lblResult4InARow);
+            this.Controls.Add(this.lbl3OfAKind);
+            this.Controls.Add(this.lbl4OfAKind);
+            this.Controls.Add(this.lbl5OfAKind);
+            this.Controls.Add(this.lbl3InARow);
+            this.Controls.Add(this.lbl4InARow);
+            this.Controls.Add(this.lblResult5InARow);
+            this.Controls.Add(this.lbl5InARow);
+            this.Controls.Add(this.btnSaveScore);
             this.Controls.Add(this.lblPlayer2TotalScore);
             this.Controls.Add(this.lblPlayer1TotalScore);
             this.Controls.Add(this.lblPlayer2Name);
@@ -468,5 +640,18 @@
         private System.Windows.Forms.Label lblPlayer2Name;
         private System.Windows.Forms.Label lblPlayer1TotalScore;
         private System.Windows.Forms.Label lblPlayer2TotalScore;
+        private System.Windows.Forms.Button btnSaveScore;
+        private System.Windows.Forms.Label lbl5InARow;
+        private System.Windows.Forms.Label lblResult5InARow;
+        private System.Windows.Forms.Label lbl4InARow;
+        private System.Windows.Forms.Label lbl3InARow;
+        private System.Windows.Forms.Label lbl5OfAKind;
+        private System.Windows.Forms.Label lbl4OfAKind;
+        private System.Windows.Forms.Label lbl3OfAKind;
+        private System.Windows.Forms.Label lblResult4InARow;
+        private System.Windows.Forms.Label lblResult3InARow;
+        private System.Windows.Forms.Label lblResult5OfAKind;
+        private System.Windows.Forms.Label lblResult4OfAKind;
+        private System.Windows.Forms.Label lblResult3OfAKind;
     }
 }

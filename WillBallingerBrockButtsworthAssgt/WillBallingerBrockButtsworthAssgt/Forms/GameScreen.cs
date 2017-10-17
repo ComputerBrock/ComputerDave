@@ -49,6 +49,21 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 //Current Player
                 lblTurnResult.Text = player1Game.getTurn().ToString();
                 lblRollsRemaingResult.Text = player1Game.getRoll().ToString();
+                //Add Label Updates for Player1's Current Roll Labels
+                lblResult5OfAKind.Text = player1Game.fiveOfAKind().ToString() + " Points";
+                lblResult4OfAKind.Text = player1Game.fourOfAKind().ToString() + " Points";
+                lblResult3OfAKind.Text = player1Game.threeInARow().ToString() + " Points";
+                lblResult5InARow.Text = player1Game.fiveInARow().ToString() + " Points";
+                lblResult4InARow.Text = player1Game.fourInARow().ToString() + " Points";
+                lblResult3InARow.Text = player1Game.threeInARow().ToString() + " Points";
+                if (player1Game.getRoll() == 0)
+                {
+                    btnRoll.Visible = false;
+                }
+                else
+                {
+                    btnRoll.Visible = true;
+                }
             }
             else
             {
@@ -63,6 +78,21 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 //Current Player
                 lblTurnResult.Text = player2Game.getTurn().ToString();
                 lblRollsRemaingResult.Text = player2Game.getRoll().ToString();
+                //Add Label Updates for Player2's Current Roll Labels
+                lblResult5OfAKind.Text = player2Game.fiveOfAKind().ToString() + " Points";
+                lblResult4OfAKind.Text = player2Game.fourOfAKind().ToString() + " Points";
+                lblResult3OfAKind.Text = player2Game.threeInARow().ToString() + " Points";
+                lblResult5InARow.Text = player2Game.fiveInARow().ToString() + " Points";
+                lblResult4InARow.Text = player2Game.fourInARow().ToString() + " Points";
+                lblResult3InARow.Text = player2Game.threeInARow().ToString() + " Points";
+                if (player2Game.getRoll() == 0)
+                {
+                    btnRoll.Visible = false;
+                }
+                else
+                {
+                    btnRoll.Visible = true;
+                }
             }
             else
             {
@@ -232,7 +262,6 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         private void btnRoll_Click(object sender, EventArgs e)
         {
             graPaper = picbxDrawing.CreateGraphics();
-
             totalRolls = 0;
             int numberOfRolls = 3;
             int tempX = 10;
@@ -268,7 +297,6 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 j++;
                 if (ckbHoldDice3.Checked != true)
                 {
-
                     //Draws Third Dice
                     tempX = 210;
                     tempY = 10;
@@ -317,17 +345,11 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 //SaveCurrentScore
                 if (player1Game.getCurrentTurn())
                 {
-                    Int32 totalScore = player1Game.getTotalScore();
-                    Int32 currentScore = player1Game.getCurrentScore();
-                    totalScore = totalScore + currentScore;
-                    player1Game.setTotalScore(totalScore);
+                    player1Game.setTotalScore();
                 }
                 else
                 {
-                    Int32 totalScore = player2Game.getTotalScore();
-                    Int32 currentScore = player2Game.getCurrentScore();
-                    totalScore = totalScore + currentScore;
-                    player2Game.setTotalScore(totalScore);
+                    player2Game.setTotalScore();
                 }
                     
             }
@@ -343,7 +365,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                     player1Game.nextTurn();
                     player1Game.setCurrentTurn(false);
                     player2Game.setCurrentTurn(true);
-                    graPaper.Clear(Color.LightYellow);
+                    graPaper.Clear(Color.Gainsboro);
                     ckbHoldDice1.Checked = false;
                     ckbHoldDice2.Checked = false;
                     ckbHoldDice3.Checked = false;
@@ -363,7 +385,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                     player2Game.nextTurn();
                     player2Game.setCurrentTurn(false);
                     player1Game.setCurrentTurn(true);
-                    graPaper.Clear(Color.LightYellow);
+                    graPaper.Clear(Color.Gainsboro);
                     ckbHoldDice1.Checked = false;
                     ckbHoldDice2.Checked = false;
                     ckbHoldDice3.Checked = false;
@@ -507,6 +529,38 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             form.Show();
         }
 
+        private void btnSaveScore_Click(object sender, EventArgs e)
+        {
+            if (player1Game.getCurrentTurn())
+            {
+                player1Game.setTotalScore();
+                player1Game.setRoll(3);
+                player1Game.nextTurn();
+                player1Game.setCurrentTurn(false);
+                player2Game.setCurrentTurn(true);
+                graPaper.Clear(Color.Gainsboro);
+                ckbHoldDice1.Checked = false;
+                ckbHoldDice2.Checked = false;
+                ckbHoldDice3.Checked = false;
+                ckbHoldDice4.Checked = false;
+                ckbHoldDice5.Checked = false;
+            }
+            else //player2 
+            {
+                player2Game.setTotalScore();
+                player2Game.setRoll(3);
+                player2Game.nextTurn();
+                player2Game.setCurrentTurn(false);
+                player1Game.setCurrentTurn(true);
+                graPaper.Clear(Color.Gainsboro);
+                ckbHoldDice1.Checked = false;
+                ckbHoldDice2.Checked = false;
+                ckbHoldDice3.Checked = false;
+                ckbHoldDice4.Checked = false;
+                ckbHoldDice5.Checked = false;
+            }
+            refresh();
+        }
     }
 
 }

@@ -168,7 +168,9 @@ namespace WillBallingerBrockButtsworthAssgt
             // Add to tempCurrentScore as game score rules. 
             // fiveInARow
             tempCurrentScore = tempCurrentScore + fiveInARow();
+            // fourInARow
             tempCurrentScore = tempCurrentScore + fourInARow();
+            // threeInARow
             tempCurrentScore = tempCurrentScore + threeInARow();
             tempCurrentScore = tempCurrentScore + fiveOfAKind();
             tempCurrentScore = tempCurrentScore + fourOfAKind();
@@ -234,7 +236,6 @@ namespace WillBallingerBrockButtsworthAssgt
                 }
             }
             return returnScore;
-
         }
 
 
