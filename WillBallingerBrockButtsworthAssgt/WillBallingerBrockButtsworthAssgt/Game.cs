@@ -19,18 +19,15 @@ namespace WillBallingerBrockButtsworthAssgt
         private Int32 turn;
         private Int32 roll;
         private Int32 goalScore;
-        private Int32 currentScore;
         private Int32 totalScore;
         private Int32[] dice;
         private Boolean currentTurn;
-        private Boolean evenValue;  //used to diplay if currentScore Total is even
 
         // Constructor
         public Game(Int32 tempPlayerID, string tempType, Boolean tempCurrentTurn)
         {
             turn = 1;
             roll = 3;
-            currentScore = 0;
             dice = new Int32[] { 0, 0, 0, 0, 0 };
             playerID = tempPlayerID;
             type = tempType;
@@ -149,19 +146,28 @@ namespace WillBallingerBrockButtsworthAssgt
         public void restart()
         {
             turn = 0;
-            currentScore = 0;
             dice = new Int32[] { 0, 0, 0, 0, 0 };
         }
 
 
         // Methods for calculating score
-        // Calculate current score and add to current total score
+        // Calculate current score and add to current total score if even or subtracts if odd
         public void setTotalScore()
         {
             Int32 tempCurrentScore = calculateCurrentScore();
-            totalScore = totalScore + tempCurrentScore;
+            if(isEvenNotOdd()) 
+            {
+                //Is Even
+                totalScore = totalScore + tempCurrentScore;
+            }
+            else //is Odd
+            {
+                totalScore = totalScore - tempCurrentScore;
+            }
+            
         }
 
+        //Calculates the points earned from current Game.
         private int calculateCurrentScore()
         {
             Int32 tempCurrentScore = 0;
@@ -177,12 +183,6 @@ namespace WillBallingerBrockButtsworthAssgt
             tempCurrentScore = tempCurrentScore + threeOfAKind();
             return tempCurrentScore;
         }
-
-        public void setCurrentScore()
-        {
-
-        }
-
 
         // This method is to return true if value exists in dice array.
         public Boolean ifValueExists(Int32 tempCompareValue)
@@ -363,7 +363,6 @@ namespace WillBallingerBrockButtsworthAssgt
             return response;
         }
        
-
         // if the dice show five of a kind (all five showing the same number), the score is 30.
         public Int32 fiveOfAKind()
         {
@@ -378,7 +377,6 @@ namespace WillBallingerBrockButtsworthAssgt
             }
             return returnScore;
         }
-
 
         // This method takes an int and returns true if exists 5 times.
         public Boolean fourExistsInArray(Int32 tempDiceValue)
@@ -484,10 +482,20 @@ namespace WillBallingerBrockButtsworthAssgt
             return returnScore;
         }
 
-        
+
 
         /* but . . . if the total of all five dice is even, the score is added to the player’s score, 
            whereas is if the total of all five dice is odd, the score is subtracted from the player’s score. */
+        public Boolean isEvenNotOdd()
+        {
+            Boolean returnValue = false;
+            Int32 currentTotal = getCurrentScore();
+            if (currentTotal % 2 == 0)
+            {
+                returnValue = true;
+            }
+            return returnValue;
+        }
 
         /* If there is any ambiguity concerning the score, the score will be the biggest of the possibilities.
          For example, 3 2 4 3 3 is both three of a kind and a sequence of three, so it will score 10 for three of

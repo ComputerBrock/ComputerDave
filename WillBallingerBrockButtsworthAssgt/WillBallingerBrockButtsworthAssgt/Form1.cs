@@ -21,7 +21,7 @@ namespace WillBallingerBrockButtsworthAssgt
 {
     public partial class FormGameScreen : Form
     {
-        int totalRolls = 0;
+        //int totalRolls = 0;
         
         public FormGameScreen()
         {
@@ -32,10 +32,6 @@ namespace WillBallingerBrockButtsworthAssgt
         private void btnRoll_Click(object sender, EventArgs e)
         {
             Graphics graPaper = picbxDrawing.CreateGraphics();
-          
-
-
-            totalRolls = 0;
             int numberOfRolls = 3;
             int tempX = 50;
             int tempY = 50;

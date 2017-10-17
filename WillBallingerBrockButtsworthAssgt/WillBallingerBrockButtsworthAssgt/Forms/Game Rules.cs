@@ -16,5 +16,10 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         {
             InitializeComponent();
         }
+
+        private void tbxRules_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

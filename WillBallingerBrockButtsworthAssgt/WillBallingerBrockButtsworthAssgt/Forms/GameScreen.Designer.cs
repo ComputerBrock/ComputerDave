@@ -69,6 +69,11 @@
             this.lblResult5OfAKind = new System.Windows.Forms.Label();
             this.lblResult4OfAKind = new System.Windows.Forms.Label();
             this.lblResult3OfAKind = new System.Windows.Forms.Label();
+            this.lblOddorEven = new System.Windows.Forms.Label();
+            this.lblResultOddorEven = new System.Windows.Forms.Label();
+            this.btnGameRules = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnNewGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).BeginInit();
@@ -221,7 +226,7 @@
             this.btnRoll.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRoll.FlatAppearance.BorderSize = 10;
             this.btnRoll.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoll.Location = new System.Drawing.Point(1046, 349);
+            this.btnRoll.Location = new System.Drawing.Point(1088, 170);
             this.btnRoll.Name = "btnRoll";
             this.btnRoll.Size = new System.Drawing.Size(269, 96);
             this.btnRoll.TabIndex = 19;
@@ -413,7 +418,7 @@
             this.btnSaveScore.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnSaveScore.FlatAppearance.BorderSize = 10;
             this.btnSaveScore.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveScore.Location = new System.Drawing.Point(1046, 228);
+            this.btnSaveScore.Location = new System.Drawing.Point(1088, 315);
             this.btnSaveScore.Name = "btnSaveScore";
             this.btnSaveScore.Size = new System.Drawing.Size(269, 96);
             this.btnSaveScore.TabIndex = 45;
@@ -425,133 +430,210 @@
             // 
             this.lbl5InARow.AutoSize = true;
             this.lbl5InARow.BackColor = System.Drawing.Color.Transparent;
-            this.lbl5InARow.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5InARow.Font = new System.Drawing.Font("Showcard Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl5InARow.Location = new System.Drawing.Point(731, 170);
             this.lbl5InARow.Name = "lbl5InARow";
-            this.lbl5InARow.Size = new System.Drawing.Size(110, 23);
+            this.lbl5InARow.Size = new System.Drawing.Size(132, 28);
             this.lbl5InARow.TabIndex = 46;
+            this.lbl5InARow.Tag = "GameDataLBL";
             this.lbl5InARow.Text = "5 in a Row:";
             // 
             // lblResult5InARow
             // 
             this.lblResult5InARow.AutoSize = true;
             this.lblResult5InARow.BackColor = System.Drawing.Color.Transparent;
-            this.lblResult5InARow.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult5InARow.Location = new System.Drawing.Point(854, 170);
+            this.lblResult5InARow.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult5InARow.Location = new System.Drawing.Point(852, 170);
             this.lblResult5InARow.Name = "lblResult5InARow";
-            this.lblResult5InARow.Size = new System.Drawing.Size(142, 20);
+            this.lblResult5InARow.Size = new System.Drawing.Size(177, 26);
             this.lblResult5InARow.TabIndex = 47;
+            this.lblResult5InARow.Tag = "GameDataLBL";
             this.lblResult5InARow.Text = "Result5InARow";
             // 
             // lbl4InARow
             // 
             this.lbl4InARow.AutoSize = true;
             this.lbl4InARow.BackColor = System.Drawing.Color.Transparent;
-            this.lbl4InARow.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4InARow.Font = new System.Drawing.Font("Showcard Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl4InARow.Location = new System.Drawing.Point(730, 203);
             this.lbl4InARow.Name = "lbl4InARow";
-            this.lbl4InARow.Size = new System.Drawing.Size(111, 23);
+            this.lbl4InARow.Size = new System.Drawing.Size(133, 28);
             this.lbl4InARow.TabIndex = 48;
+            this.lbl4InARow.Tag = "GameDataLBL";
             this.lbl4InARow.Text = "4 in a Row:";
             // 
             // lbl3InARow
             // 
             this.lbl3InARow.AutoSize = true;
             this.lbl3InARow.BackColor = System.Drawing.Color.Transparent;
-            this.lbl3InARow.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3InARow.Font = new System.Drawing.Font("Showcard Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3InARow.Location = new System.Drawing.Point(731, 236);
             this.lbl3InARow.Name = "lbl3InARow";
-            this.lbl3InARow.Size = new System.Drawing.Size(110, 23);
+            this.lbl3InARow.Size = new System.Drawing.Size(132, 28);
             this.lbl3InARow.TabIndex = 49;
+            this.lbl3InARow.Tag = "GameDataLBL";
             this.lbl3InARow.Text = "3 in a Row:";
             // 
             // lbl5OfAKind
             // 
             this.lbl5OfAKind.AutoSize = true;
             this.lbl5OfAKind.BackColor = System.Drawing.Color.Transparent;
-            this.lbl5OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl5OfAKind.Location = new System.Drawing.Point(726, 269);
             this.lbl5OfAKind.Name = "lbl5OfAKind";
-            this.lbl5OfAKind.Size = new System.Drawing.Size(115, 23);
+            this.lbl5OfAKind.Size = new System.Drawing.Size(138, 28);
             this.lbl5OfAKind.TabIndex = 50;
+            this.lbl5OfAKind.Tag = "GameDataLBL";
             this.lbl5OfAKind.Text = "5 of a Kind:";
             // 
             // lbl4OfAKind
             // 
             this.lbl4OfAKind.AutoSize = true;
             this.lbl4OfAKind.BackColor = System.Drawing.Color.Transparent;
-            this.lbl4OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl4OfAKind.Location = new System.Drawing.Point(725, 302);
             this.lbl4OfAKind.Name = "lbl4OfAKind";
-            this.lbl4OfAKind.Size = new System.Drawing.Size(116, 23);
+            this.lbl4OfAKind.Size = new System.Drawing.Size(139, 28);
             this.lbl4OfAKind.TabIndex = 51;
+            this.lbl4OfAKind.Tag = "GameDataLBL";
             this.lbl4OfAKind.Text = "4 of a Kind:";
             // 
             // lbl3OfAKind
             // 
             this.lbl3OfAKind.AutoSize = true;
             this.lbl3OfAKind.BackColor = System.Drawing.Color.Transparent;
-            this.lbl3OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl3OfAKind.Location = new System.Drawing.Point(726, 335);
             this.lbl3OfAKind.Name = "lbl3OfAKind";
-            this.lbl3OfAKind.Size = new System.Drawing.Size(115, 23);
+            this.lbl3OfAKind.Size = new System.Drawing.Size(138, 28);
             this.lbl3OfAKind.TabIndex = 52;
+            this.lbl3OfAKind.Tag = "GameDataLBL";
             this.lbl3OfAKind.Text = "3 of a Kind:";
             // 
             // lblResult4InARow
             // 
             this.lblResult4InARow.AutoSize = true;
             this.lblResult4InARow.BackColor = System.Drawing.Color.Transparent;
-            this.lblResult4InARow.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult4InARow.Location = new System.Drawing.Point(853, 203);
+            this.lblResult4InARow.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult4InARow.Location = new System.Drawing.Point(852, 203);
             this.lblResult4InARow.Name = "lblResult4InARow";
-            this.lblResult4InARow.Size = new System.Drawing.Size(143, 20);
+            this.lblResult4InARow.Size = new System.Drawing.Size(178, 26);
             this.lblResult4InARow.TabIndex = 53;
+            this.lblResult4InARow.Tag = "GameDataLBL";
             this.lblResult4InARow.Text = "Result4InARow";
             // 
             // lblResult3InARow
             // 
             this.lblResult3InARow.AutoSize = true;
             this.lblResult3InARow.BackColor = System.Drawing.Color.Transparent;
-            this.lblResult3InARow.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult3InARow.Location = new System.Drawing.Point(854, 236);
+            this.lblResult3InARow.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult3InARow.Location = new System.Drawing.Point(852, 236);
             this.lblResult3InARow.Name = "lblResult3InARow";
-            this.lblResult3InARow.Size = new System.Drawing.Size(142, 20);
+            this.lblResult3InARow.Size = new System.Drawing.Size(177, 26);
             this.lblResult3InARow.TabIndex = 54;
+            this.lblResult3InARow.Tag = "GameDataLBL";
             this.lblResult3InARow.Text = "Result3InARow";
             // 
             // lblResult5OfAKind
             // 
             this.lblResult5OfAKind.AutoSize = true;
             this.lblResult5OfAKind.BackColor = System.Drawing.Color.Transparent;
-            this.lblResult5OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult5OfAKind.Location = new System.Drawing.Point(849, 269);
+            this.lblResult5OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult5OfAKind.Location = new System.Drawing.Point(852, 269);
             this.lblResult5OfAKind.Name = "lblResult5OfAKind";
-            this.lblResult5OfAKind.Size = new System.Drawing.Size(147, 20);
+            this.lblResult5OfAKind.Size = new System.Drawing.Size(183, 26);
             this.lblResult5OfAKind.TabIndex = 55;
+            this.lblResult5OfAKind.Tag = "GameDataLBL";
             this.lblResult5OfAKind.Text = "Result5OfAKind";
             // 
             // lblResult4OfAKind
             // 
             this.lblResult4OfAKind.AutoSize = true;
             this.lblResult4OfAKind.BackColor = System.Drawing.Color.Transparent;
-            this.lblResult4OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult4OfAKind.Location = new System.Drawing.Point(848, 302);
+            this.lblResult4OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult4OfAKind.Location = new System.Drawing.Point(852, 302);
             this.lblResult4OfAKind.Name = "lblResult4OfAKind";
-            this.lblResult4OfAKind.Size = new System.Drawing.Size(148, 20);
+            this.lblResult4OfAKind.Size = new System.Drawing.Size(184, 26);
             this.lblResult4OfAKind.TabIndex = 56;
+            this.lblResult4OfAKind.Tag = "GameDataLBL";
             this.lblResult4OfAKind.Text = "Result4OfAKind";
             // 
             // lblResult3OfAKind
             // 
             this.lblResult3OfAKind.AutoSize = true;
             this.lblResult3OfAKind.BackColor = System.Drawing.Color.Transparent;
-            this.lblResult3OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblResult3OfAKind.Location = new System.Drawing.Point(849, 335);
+            this.lblResult3OfAKind.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResult3OfAKind.Location = new System.Drawing.Point(852, 335);
             this.lblResult3OfAKind.Name = "lblResult3OfAKind";
-            this.lblResult3OfAKind.Size = new System.Drawing.Size(147, 20);
+            this.lblResult3OfAKind.Size = new System.Drawing.Size(183, 26);
             this.lblResult3OfAKind.TabIndex = 57;
+            this.lblResult3OfAKind.Tag = "GameDataLBL";
             this.lblResult3OfAKind.Text = "Result3OfAKind";
+            // 
+            // lblOddorEven
+            // 
+            this.lblOddorEven.AutoSize = true;
+            this.lblOddorEven.BackColor = System.Drawing.Color.Transparent;
+            this.lblOddorEven.Font = new System.Drawing.Font("Showcard Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblOddorEven.Location = new System.Drawing.Point(710, 372);
+            this.lblOddorEven.Name = "lblOddorEven";
+            this.lblOddorEven.Size = new System.Drawing.Size(158, 28);
+            this.lblOddorEven.TabIndex = 58;
+            this.lblOddorEven.Tag = "GameDataLBL";
+            this.lblOddorEven.Text = "Odd or Even:";
+            // 
+            // lblResultOddorEven
+            // 
+            this.lblResultOddorEven.AutoSize = true;
+            this.lblResultOddorEven.BackColor = System.Drawing.Color.Transparent;
+            this.lblResultOddorEven.Font = new System.Drawing.Font("Showcard Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblResultOddorEven.Location = new System.Drawing.Point(852, 371);
+            this.lblResultOddorEven.Name = "lblResultOddorEven";
+            this.lblResultOddorEven.Size = new System.Drawing.Size(207, 26);
+            this.lblResultOddorEven.TabIndex = 59;
+            this.lblResultOddorEven.Tag = "GameDataLBL";
+            this.lblResultOddorEven.Text = "ResultOddorEven";
+            // 
+            // btnGameRules
+            // 
+            this.btnGameRules.BackColor = System.Drawing.Color.Gold;
+            this.btnGameRules.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnGameRules.FlatAppearance.BorderSize = 10;
+            this.btnGameRules.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGameRules.Location = new System.Drawing.Point(498, 24);
+            this.btnGameRules.Name = "btnGameRules";
+            this.btnGameRules.Size = new System.Drawing.Size(170, 55);
+            this.btnGameRules.TabIndex = 60;
+            this.btnGameRules.Text = "Game Rules";
+            this.btnGameRules.UseVisualStyleBackColor = false;
+            this.btnGameRules.Click += new System.EventHandler(this.btnGameRules_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Gold;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 10;
+            this.btnExit.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(697, 24);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(170, 55);
+            this.btnExit.TabIndex = 61;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btnNewGame
+            // 
+            this.btnNewGame.BackColor = System.Drawing.Color.Gold;
+            this.btnNewGame.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnNewGame.FlatAppearance.BorderSize = 10;
+            this.btnNewGame.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewGame.Location = new System.Drawing.Point(299, 24);
+            this.btnNewGame.Name = "btnNewGame";
+            this.btnNewGame.Size = new System.Drawing.Size(170, 55);
+            this.btnNewGame.TabIndex = 62;
+            this.btnNewGame.Text = "New Game";
+            this.btnNewGame.UseVisualStyleBackColor = false;
             // 
             // GameScreen
             // 
@@ -559,6 +641,11 @@
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.btnNewGame);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnGameRules);
+            this.Controls.Add(this.lblResultOddorEven);
+            this.Controls.Add(this.lblOddorEven);
             this.Controls.Add(this.lblResult3OfAKind);
             this.Controls.Add(this.lblResult4OfAKind);
             this.Controls.Add(this.lblResult5OfAKind);
@@ -653,5 +740,10 @@
         private System.Windows.Forms.Label lblResult5OfAKind;
         private System.Windows.Forms.Label lblResult4OfAKind;
         private System.Windows.Forms.Label lblResult3OfAKind;
+        private System.Windows.Forms.Label lblOddorEven;
+        private System.Windows.Forms.Label lblResultOddorEven;
+        private System.Windows.Forms.Button btnGameRules;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Button btnNewGame;
     }
 }

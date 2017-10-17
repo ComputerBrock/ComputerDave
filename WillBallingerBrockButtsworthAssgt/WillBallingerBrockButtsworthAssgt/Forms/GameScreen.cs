@@ -23,19 +23,20 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
 {
     public partial class GameScreen : Form
     {
-        int totalRolls = 0;
         Game player1Game = new Game(1, "Human", true);
         Game player2Game = new Game(2, "Human", false);
         Player player1;
         Player player2;
+        Int32 goalScore;
         Graphics graPaper;
-        public GameScreen(Player tempPlayer1, Player tempPlayer2)
+        public GameScreen(Player tempPlayer1, Player tempPlayer2, Int32 tempGoalScore)
         {
             InitializeComponent();
             player1= tempPlayer1;
             Int32 tempPlayerID = player1.getPlayerID();
             player2 = tempPlayer2;
             Int32 tempPlayerID2 = player2.getPlayerID();
+            goalScore = tempGoalScore;
             refresh();
         }
         public void refresh()
@@ -43,26 +44,99 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             //Player1
             lblPlayer1Name.Text = player1.getPlayerName();
             lblPlayer1TotalScore.Text = player1Game.getTotalScore().ToString();
+            lblTargetScore.Text = goalScore.ToString(); 
             if(player1Game.getCurrentTurn())
             {
                 pbxPlayer1Background.BackColor = Color.LightSeaGreen;
                 //Current Player
                 lblTurnResult.Text = player1Game.getTurn().ToString();
                 lblRollsRemaingResult.Text = player1Game.getRoll().ToString();
-                //Add Label Updates for Player1's Current Roll Labels
-                lblResult5OfAKind.Text = player1Game.fiveOfAKind().ToString() + " Points";
-                lblResult4OfAKind.Text = player1Game.fourOfAKind().ToString() + " Points";
-                lblResult3OfAKind.Text = player1Game.threeInARow().ToString() + " Points";
-                lblResult5InARow.Text = player1Game.fiveInARow().ToString() + " Points";
-                lblResult4InARow.Text = player1Game.fourInARow().ToString() + " Points";
-                lblResult3InARow.Text = player1Game.threeInARow().ToString() + " Points";
-                if (player1Game.getRoll() == 0)
+                if (player1Game.getRoll() == 3)
+                {
+                    btnRoll.Visible = true;
+                    btnSaveScore.Visible = false;
+                    lblResult5OfAKind.Visible = false;
+                    lblResult4OfAKind.Visible = false;
+                    lblResult3OfAKind.Visible = false;
+                    lblResult5InARow.Visible = false;
+                    lblResult4InARow.Visible = false;
+                    lblResult3InARow.Visible = false;
+                    lblResultOddorEven.Visible = false;
+                    lbl5OfAKind.Visible = false;
+                    lbl4OfAKind.Visible = false;
+                    lbl3OfAKind.Visible = false;
+                    lbl5InARow.Visible = false;
+                    lbl4InARow.Visible = false;
+                    lbl3InARow.Visible = false;
+                    lblOddorEven.Visible = false;
+                }
+                else if (player1Game.getRoll() == 0)
                 {
                     btnRoll.Visible = false;
+                    btnSaveScore.Visible = true;
+                    lblResult5OfAKind.Visible = true;
+                    lblResult4OfAKind.Visible = true;
+                    lblResult3OfAKind.Visible = true;
+                    lblResult5InARow.Visible = true;
+                    lblResult4InARow.Visible = true;
+                    lblResult3InARow.Visible = true;
+                    lblResultOddorEven.Visible = true;
+                    lbl5OfAKind.Visible = true;
+                    lbl4OfAKind.Visible = true;
+                    lbl3OfAKind.Visible = true;
+                    lbl5InARow.Visible = true;
+                    lbl4InARow.Visible = true;
+                    lbl3InARow.Visible = true;
+                    lblOddorEven.Visible = true;
+                    //Add Label Updates for Player1's Current Roll Labels
+                    lblResult5OfAKind.Text = player1Game.fiveOfAKind().ToString() + " Points";
+                    lblResult4OfAKind.Text = player1Game.fourOfAKind().ToString() + " Points";
+                    lblResult3OfAKind.Text = player1Game.threeInARow().ToString() + " Points";
+                    lblResult5InARow.Text = player1Game.fiveInARow().ToString() + " Points";
+                    lblResult4InARow.Text = player1Game.fourInARow().ToString() + " Points";
+                    lblResult3InARow.Text = player1Game.threeInARow().ToString() + " Points";
+                    if (player1Game.isEvenNotOdd())
+                    {
+                        lblResultOddorEven.Text = "Even and is Added";
+                    }
+                    else
+                    {
+                        lblResultOddorEven.Text = "Odd and is Subtracted";
+                    }
                 }
                 else
                 {
                     btnRoll.Visible = true;
+                    btnSaveScore.Visible = true;
+                    lblResult5OfAKind.Visible = true;
+                    lblResult4OfAKind.Visible = true;
+                    lblResult3OfAKind.Visible = true;
+                    lblResult5InARow.Visible = true;
+                    lblResult4InARow.Visible = true;
+                    lblResult3InARow.Visible = true;
+                    lblResultOddorEven.Visible = true;
+                    lbl5OfAKind.Visible = true;
+                    lbl4OfAKind.Visible = true;
+                    lbl3OfAKind.Visible = true;
+                    lbl5InARow.Visible = true;
+                    lbl4InARow.Visible = true;
+                    lbl3InARow.Visible = true;
+                    lblOddorEven.Visible = true;
+                    //Add Label Updates for Player1's Current Roll Labels
+                    lblResult5OfAKind.Text = player1Game.fiveOfAKind().ToString() + " Points";
+                    lblResult4OfAKind.Text = player1Game.fourOfAKind().ToString() + " Points";
+                    lblResult3OfAKind.Text = player1Game.threeInARow().ToString() + " Points";
+                    lblResult5InARow.Text = player1Game.fiveInARow().ToString() + " Points";
+                    lblResult4InARow.Text = player1Game.fourInARow().ToString() + " Points";
+                    lblResult3InARow.Text = player1Game.threeInARow().ToString() + " Points";
+                    if (player1Game.isEvenNotOdd())
+                    {
+                        lblResultOddorEven.Text = "Even and is Added";
+                    }
+                    else
+                    {
+                        lblResultOddorEven.Text = "Odd and is Subtracted";
+                    }
                 }
             }
             else
@@ -85,13 +159,70 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 lblResult5InARow.Text = player2Game.fiveInARow().ToString() + " Points";
                 lblResult4InARow.Text = player2Game.fourInARow().ToString() + " Points";
                 lblResult3InARow.Text = player2Game.threeInARow().ToString() + " Points";
-                if (player2Game.getRoll() == 0)
+                if (player2Game.isEvenNotOdd())
+                {
+                    lblResultOddorEven.Text = "Even and is Added";
+                }
+                else
+                {
+                    lblResultOddorEven.Text = "Odd and is Subtracted";
+                }
+                if (player2Game.getRoll() == 3)
+                {
+                    btnRoll.Visible = true;
+                    btnSaveScore.Visible = false;
+                    lblResult5OfAKind.Visible = false;
+                    lblResult4OfAKind.Visible = false;
+                    lblResult3OfAKind.Visible = false;
+                    lblResult5InARow.Visible = false;
+                    lblResult4InARow.Visible = false;
+                    lblResult3InARow.Visible = false;
+                    lblResultOddorEven.Visible = false;
+                    lbl5OfAKind.Visible = false;
+                    lbl4OfAKind.Visible = false;
+                    lbl3OfAKind.Visible = false;
+                    lbl5InARow.Visible = false;
+                    lbl4InARow.Visible = false;
+                    lbl3InARow.Visible = false;
+                    lblOddorEven.Visible = false;
+                }
+                else if (player2Game.getRoll() == 0)
                 {
                     btnRoll.Visible = false;
+                    btnSaveScore.Visible = true;
+                    lblResult5OfAKind.Visible = true;
+                    lblResult4OfAKind.Visible = true;
+                    lblResult3OfAKind.Visible = true;
+                    lblResult5InARow.Visible = true;
+                    lblResult4InARow.Visible = true;
+                    lblResult3InARow.Visible = true;
+                    lblResultOddorEven.Visible = true;
+                    lbl5OfAKind.Visible = true;
+                    lbl4OfAKind.Visible = true;
+                    lbl3OfAKind.Visible = true;
+                    lbl5InARow.Visible = true;
+                    lbl4InARow.Visible = true;
+                    lbl3InARow.Visible = true;
+                    lblOddorEven.Visible = true;
                 }
                 else
                 {
                     btnRoll.Visible = true;
+                    btnSaveScore.Visible = true;
+                    lblResult5OfAKind.Visible = true;
+                    lblResult4OfAKind.Visible = true;
+                    lblResult3OfAKind.Visible = true;
+                    lblResult5InARow.Visible = true;
+                    lblResult4InARow.Visible = true;
+                    lblResult3InARow.Visible = true;
+                    lblResultOddorEven.Visible = true;
+                    lbl5OfAKind.Visible = true;
+                    lbl4OfAKind.Visible = true;
+                    lbl3OfAKind.Visible = true;
+                    lbl5InARow.Visible = true;
+                    lbl4InARow.Visible = true;
+                    lbl3InARow.Visible = true;
+                    lblOddorEven.Visible = true;
                 }
             }
             else
@@ -262,7 +393,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         private void btnRoll_Click(object sender, EventArgs e)
         {
             graPaper = picbxDrawing.CreateGraphics();
-            totalRolls = 0;
+            //totalRolls = 0;
             int numberOfRolls = 3;
             int tempX = 10;
             int tempY = 10;
@@ -560,6 +691,18 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 ckbHoldDice5.Checked = false;
             }
             refresh();
+        }
+
+        private void btnGameRules_Click(object sender, EventArgs e)
+        {
+            Form form = new Game_Rules();
+            form.StartPosition = FormStartPosition.CenterParent;
+            form.Show();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 

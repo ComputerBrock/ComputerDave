@@ -29,24 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_Rules));
-            this.pctbxLogo = new System.Windows.Forms.PictureBox();
             this.horizontalRule = new System.Windows.Forms.Label();
             this.tbxRules = new System.Windows.Forms.TextBox();
             this.lblGameRulesHeading = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pctbxLogo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pctbxLogo
-            // 
-            this.pctbxLogo.BackColor = System.Drawing.Color.Transparent;
-            this.pctbxLogo.Image = global::WillBallingerBrockButtsworthAssgt.Properties.Resources.plusmoinslogo1;
-            this.pctbxLogo.Location = new System.Drawing.Point(575, 0);
-            this.pctbxLogo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pctbxLogo.Name = "pctbxLogo";
-            this.pctbxLogo.Size = new System.Drawing.Size(250, 100);
-            this.pctbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pctbxLogo.TabIndex = 1;
-            this.pctbxLogo.TabStop = false;
             // 
             // horizontalRule
             // 
@@ -65,13 +51,15 @@
             this.tbxRules.Enabled = false;
             this.tbxRules.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxRules.ForeColor = System.Drawing.Color.Black;
-            this.tbxRules.Location = new System.Drawing.Point(16, 167);
+            this.tbxRules.Location = new System.Drawing.Point(140, 167);
             this.tbxRules.Multiline = true;
             this.tbxRules.Name = "tbxRules";
             this.tbxRules.ReadOnly = true;
-            this.tbxRules.Size = new System.Drawing.Size(1349, 466);
+            this.tbxRules.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxRules.Size = new System.Drawing.Size(1226, 331);
             this.tbxRules.TabIndex = 35;
             this.tbxRules.Text = resources.GetString("tbxRules.Text");
+            this.tbxRules.TextChanged += new System.EventHandler(this.tbxRules_TextChanged);
             // 
             // lblGameRulesHeading
             // 
@@ -79,7 +67,7 @@
             this.lblGameRulesHeading.BackColor = System.Drawing.Color.Transparent;
             this.lblGameRulesHeading.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameRulesHeading.ForeColor = System.Drawing.Color.Black;
-            this.lblGameRulesHeading.Location = new System.Drawing.Point(615, 120);
+            this.lblGameRulesHeading.Location = new System.Drawing.Point(625, 132);
             this.lblGameRulesHeading.Name = "lblGameRulesHeading";
             this.lblGameRulesHeading.Size = new System.Drawing.Size(173, 32);
             this.lblGameRulesHeading.TabIndex = 37;
@@ -89,23 +77,20 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.ClientSize = new System.Drawing.Size(1378, 361);
             this.Controls.Add(this.lblGameRulesHeading);
             this.Controls.Add(this.tbxRules);
             this.Controls.Add(this.horizontalRule);
-            this.Controls.Add(this.pctbxLogo);
             this.Enabled = false;
             this.Name = "Game_Rules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Rules";
-            ((System.ComponentModel.ISupportInitialize)(this.pctbxLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pctbxLogo;
         private System.Windows.Forms.Label horizontalRule;
         private System.Windows.Forms.TextBox tbxRules;
         private System.Windows.Forms.Label lblGameRulesHeading;
