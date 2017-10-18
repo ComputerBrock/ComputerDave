@@ -13,8 +13,8 @@ using WillBallingerBrockButtsworthAssgt;
 -Authors Brock Buttsworth and Will Ballinger.
 -Created 20/9/2017
 -Brief Description :
-    PlusMoins is a rather unforgiving and frustrating dice game. 
-    It involves five dice, and permits the player a certain amount of judgement, 
+    PlusMoins is a rather unforgiving and frustrating iArrayDice game. 
+    It involves five iArrayDice, and permits the player a certain amount of judgement, 
     but luck also plays a very big part. There are two players, 
     each of whom is trying to reach an agreed total.
  */
@@ -60,8 +60,19 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             //Player1
             lblPlayer1Name.Text = player1.getPlayerName();
             lblPlayer1TotalScore.Text = player1Game.getTotalScore().ToString();
-            lblTargetScore.Text = goalScore.ToString(); 
-            if(player1Game.getCurrentTurn())
+            lblTargetScore.Text = goalScore.ToString();
+            //Add Label Updates for Player1's Current Roll Labels
+            lblResult5OfAKind.Text = player1Game.fiveOfAKind().ToString() + " Points";
+            lblResult4OfAKind.Text = player1Game.fourOfAKind().ToString() + " Points";
+            lblResult3OfAKind.Text = player1Game.threeOfAKind().ToString() + " Points";
+            lblResult5InARow.Text = player1Game.fiveInARow().ToString() + " Points";
+            lblResult4InARow.Text = player1Game.fourInARow().ToString() + " Points";
+            lblResult3InARow.Text = player1Game.threeInARow().ToString() + " Points";
+            if (player1Game.isEvenNotOdd())
+            {
+                lblResultOddorEven.Text = "Even and is Added";
+            }
+            if (player1Game.getCurrentTurn())
             {
                 pbxPlayer1Background.BackColor = Color.LightSeaGreen;
                 //Current Player
@@ -104,21 +115,6 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                     lbl4InARow.Visible = true;
                     lbl3InARow.Visible = true;
                     lblOddorEven.Visible = true;
-                    //Add Label Updates for Player1's Current Roll Labels
-                    lblResult5OfAKind.Text = player1Game.fiveOfAKind().ToString() + " Points";
-                    lblResult4OfAKind.Text = player1Game.fourOfAKind().ToString() + " Points";
-                    lblResult3OfAKind.Text = player1Game.threeInARow().ToString() + " Points";
-                    lblResult5InARow.Text = player1Game.fiveInARow().ToString() + " Points";
-                    lblResult4InARow.Text = player1Game.fourInARow().ToString() + " Points";
-                    lblResult3InARow.Text = player1Game.threeInARow().ToString() + " Points";
-                    if (player1Game.isEvenNotOdd())
-                    {
-                        lblResultOddorEven.Text = "Even and is Added";
-                    }
-                    else
-                    {
-                        lblResultOddorEven.Text = "Odd and is Subtracted";
-                    }
                 }
                 else
                 {
@@ -138,21 +134,6 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                     lbl4InARow.Visible = true;
                     lbl3InARow.Visible = true;
                     lblOddorEven.Visible = true;
-                    //Add Label Updates for Player1's Current Roll Labels
-                    lblResult5OfAKind.Text = player1Game.fiveOfAKind().ToString() + " Points";
-                    lblResult4OfAKind.Text = player1Game.fourOfAKind().ToString() + " Points";
-                    lblResult3OfAKind.Text = player1Game.threeInARow().ToString() + " Points";
-                    lblResult5InARow.Text = player1Game.fiveInARow().ToString() + " Points";
-                    lblResult4InARow.Text = player1Game.fourInARow().ToString() + " Points";
-                    lblResult3InARow.Text = player1Game.threeInARow().ToString() + " Points";
-                    if (player1Game.isEvenNotOdd())
-                    {
-                        lblResultOddorEven.Text = "Even and is Added";
-                    }
-                    else
-                    {
-                        lblResultOddorEven.Text = "Odd and is Subtracted";
-                    }
                 }
             }
             else
@@ -171,7 +152,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 //Add Label Updates for Player2's Current Roll Labels
                 lblResult5OfAKind.Text = player2Game.fiveOfAKind().ToString() + " Points";
                 lblResult4OfAKind.Text = player2Game.fourOfAKind().ToString() + " Points";
-                lblResult3OfAKind.Text = player2Game.threeInARow().ToString() + " Points";
+                lblResult3OfAKind.Text = player2Game.threeOfAKind().ToString() + " Points";
                 lblResult5InARow.Text = player2Game.fiveInARow().ToString() + " Points";
                 lblResult4InARow.Text = player2Game.fourInARow().ToString() + " Points";
                 lblResult3InARow.Text = player2Game.threeInARow().ToString() + " Points";
@@ -253,13 +234,13 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             int tempY = yValue;
             Random number = new Random();
             int rollValue = number.Next(1, 7);
-            //dice % Convert.ToInt32(number);
+            //iArrayDice % Convert.ToInt32(number);
             //txbCurrentRoll.Text = Convert.ToString(rollValue);
             //totalRolls = totalRolls + rollValue;
             //String appendValue = Convert.ToString(totalRolls) + "\n\r";
             //txbTotalRoll.AppendText(String.Format("{0:d} {1:d}\n\r"), loopValue, appendValue);
             //txbTotalRoll.Text = (appendValue);
-            //Adds the roll to the array.
+            //Adds the iRoll to the array.
             if (player1Game.getCurrentTurn())
             {
                 player1Game.setDice(diceIndex, rollValue);

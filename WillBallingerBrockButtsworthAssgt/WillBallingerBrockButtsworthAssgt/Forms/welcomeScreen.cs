@@ -13,8 +13,8 @@ using WillBallingerBrockButtsworthAssgt;
 -Authors Brock Buttsworth and Will Ballinger.
 -Created 5/10/2017
 -Brief Description :
-    PlusMoins is a rather unforgiving and frustrating dice game. 
-    It involves five dice, and permits the player a certain amount of judgement, 
+    PlusMoins is a rather unforgiving and frustrating iArrayDice game. 
+    It involves five iArrayDice, and permits the player a certain amount of judgement, 
     but luck also plays a very big part. There are two players, 
     each of whom is trying to reach an agreed total.
  */
@@ -23,9 +23,9 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
 {
     public partial class welcomeScreen : Form
     {
-        Player player1;
-        Player player2;
-        Int32 gameScore;
+        private Player player1;
+        private Player player2;
+        private Int32 gameScore;
         public welcomeScreen()
         {
             InitializeComponent();

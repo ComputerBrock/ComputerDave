@@ -12,8 +12,8 @@ using System.Windows.Forms;
 -Authors Brock Buttsworth and Will Ballinger.
 -Created 20/9/2017
 -Brief Description :
-    PlusMoins is a rather unforgiving and frustrating dice game. 
-    It involves five dice, and permits the player a certain amount of judgement, 
+    PlusMoins is a rather unforgiving and frustrating iArrayDice game. 
+    It involves five iArrayDice, and permits the player a certain amount of judgement, 
     but luck also plays a very big part. There are two players, 
     each of whom is trying to reach an agreed total.
  */
@@ -34,15 +34,15 @@ namespace WillBallingerBrockButtsworthAssgt
         {
             Graphics graPaper = picbxDrawing.CreateGraphics();
             int numberOfRolls = 3;
-            int tempX = 50;
-            int tempY = 50;
+            int iTempX = 50;
+            int iTempY = 50;
             if (ckbHoldDice1.Checked != true)
             {
                 //Draws First Dice
                 for (int i = 0; i < numberOfRolls; i++)
                 {
-                    drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, i, tempX, tempY);
+                    drawBox(graPaper, iTempX, iTempY);
+                    rollDice(graPaper, i, iTempX, iTempY);
                     Application.DoEvents();
                     System.Threading.Thread.Sleep(1500);
                 }
@@ -51,12 +51,12 @@ namespace WillBallingerBrockButtsworthAssgt
             if (ckbHoldDice2.Checked != true)
             {
                 //Draws Second Dice
-                tempX = 150;
-                tempY = 50;
+                iTempX = 150;
+                iTempY = 50;
                 for (int i = 0; i < numberOfRolls; i++)
                 {
-                    drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, i, tempX, tempY);
+                    drawBox(graPaper, iTempX, iTempY);
+                    rollDice(graPaper, i, iTempX, iTempY);
                     Application.DoEvents();
                     System.Threading.Thread.Sleep(1500);
                 }
@@ -65,12 +65,12 @@ namespace WillBallingerBrockButtsworthAssgt
             if (ckbHoldDice3.Checked != true)
             {
                 //Draws Third Dice
-                tempX = 250;
-                tempY = 50;
+                iTempX = 250;
+                iTempY = 50;
                 for (int i = 0; i < numberOfRolls; i++)
                 {
-                    drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, i, tempX, tempY);
+                    drawBox(graPaper, iTempX, iTempY);
+                    rollDice(graPaper, i, iTempX, iTempY);
                     Application.DoEvents();
                     System.Threading.Thread.Sleep(1500);
                 }
@@ -79,12 +79,12 @@ namespace WillBallingerBrockButtsworthAssgt
             if (ckbHoldDice4.Checked != true)
             {
                 //Draws Fourth Dice
-                tempX = 350;
-                tempY = 50;
+                iTempX = 350;
+                iTempY = 50;
                 for (int i = 0; i < numberOfRolls; i++)
                 {
-                    drawBox(graPaper, tempX, tempY);
-                    rollDice(graPaper, i, tempX, tempY);
+                    drawBox(graPaper, iTempX, iTempY);
+                    rollDice(graPaper, i, iTempX, iTempY);
                     Application.DoEvents();
                     System.Threading.Thread.Sleep(1500);
                 }
@@ -95,12 +95,12 @@ namespace WillBallingerBrockButtsworthAssgt
                 //Draws Fifth Dice
                 if (ckbHoldDice5.Checked != true)
                 {
-                    tempX = 450;
-                    tempY = 50;
+                    iTempX = 450;
+                    iTempY = 50;
                     for (int i = 0; i < numberOfRolls; i++)
                     {
-                        drawBox(graPaper, tempX, tempY);
-                        rollDice(graPaper, i, tempX, tempY);
+                        drawBox(graPaper, iTempX, iTempY);
+                        rollDice(graPaper, i, iTempX, iTempY);
                         Application.DoEvents();
                         System.Threading.Thread.Sleep(1500);
                     }
@@ -115,7 +115,7 @@ namespace WillBallingerBrockButtsworthAssgt
             int tempY = yValue;
             Random number = new Random();
             int rollValue = number.Next(1, 7);  
-            //dice % Convert.ToInt32(number);
+            //iArrayDice % Convert.ToInt32(number);
             //txbCurrentRoll.Text = Convert.ToString(rollValue);
             //totalRolls = totalRolls + rollValue;
             //String appendValue = Convert.ToString(totalRolls) + "\n\r";

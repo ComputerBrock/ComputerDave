@@ -61,7 +61,7 @@ namespace WillBallingerBrockButtsworthAssgt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of sType System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap GameScreenBackground2 {
             get {
@@ -71,7 +71,7 @@ namespace WillBallingerBrockButtsworthAssgt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of sType System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap plusmoinslogo1 {
             get {
@@ -81,7 +81,7 @@ namespace WillBallingerBrockButtsworthAssgt.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized resource of sType System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap winscreen {
             get {

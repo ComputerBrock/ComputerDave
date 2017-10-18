@@ -158,7 +158,6 @@
             this.cbx1v1.Size = new System.Drawing.Size(22, 21);
             this.cbx1v1.TabIndex = 14;
             this.cbx1v1.UseVisualStyleBackColor = false;
-            this.cbx1v1.Visible = false;
             // 
             // cbx1vCPU
             // 

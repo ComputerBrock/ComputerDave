@@ -14,141 +14,140 @@ namespace WillBallingerBrockButtsworthAssgt
     public class Game
     {
         // Variables
-        private Int32 playerID;
-        private string type;
-        private Int32 turn;
-        private Int32 roll;
-        private Int32 goalScore;
-        private Int32 totalScore;
-        private Int32[] dice;
-        private Boolean currentTurn;
+        private Int32 iPlayerID;
+        private string sType;
+        private Int32 iTurn;
+        private Int32 iRoll;
+        private Int32 iGoalScore;
+        private Int32 iTotalScore;
+        private Int32[] iArrayDice;
+        private Boolean bCurrentTurn;
 
         // Constructor
         public Game(Int32 tempPlayerID, string tempType, Boolean tempCurrentTurn)
         {
-            turn = 1;
-            roll = 3;
-            dice = new Int32[] { 0, 0, 0, 0, 0 };
-            playerID = tempPlayerID;
-            type = tempType;
-            currentTurn = tempCurrentTurn;
+            iTurn = 1;
+            iRoll = 3;
+            iArrayDice = new Int32[] { 0, 0, 0, 0, 0 };
+            iPlayerID = tempPlayerID;
+            sType = tempType;
+            bCurrentTurn = tempCurrentTurn;
         }
 
         // Get Methods
 
         public Int32 getPlayerID()
         {
-            return playerID;
+            return iPlayerID;
         }
 
         public string getType()
         {
-            return type;
+            return sType;
         }
 
         public Int32 getTurn()
         {
-            return turn;
+            return iTurn;
         }
 
         public Int32 getRoll()
         {
-            return roll;
+            return iRoll;
         }
 
         public Int32 getGoalScore()
         {
-            return goalScore;
+            return iGoalScore;
         }
 
         public Int32 getCurrentScore()
         {
             Int32 tempCurrentScore = 0;
-            tempCurrentScore = tempCurrentScore + dice[0];
-            tempCurrentScore = tempCurrentScore + dice[1];
-            tempCurrentScore = tempCurrentScore + dice[2];
-            tempCurrentScore = tempCurrentScore + dice[3];
-            tempCurrentScore = tempCurrentScore + dice[4];
+            tempCurrentScore = tempCurrentScore + iArrayDice[0];
+            tempCurrentScore = tempCurrentScore + iArrayDice[1];
+            tempCurrentScore = tempCurrentScore + iArrayDice[2];
+            tempCurrentScore = tempCurrentScore + iArrayDice[3];
+            tempCurrentScore = tempCurrentScore + iArrayDice[4];
             return tempCurrentScore;
         }
 
         public Int32 getTotalScore()
         {
-            return totalScore;
+            return iTotalScore;
         }
 
         public Int32[] getDice()
         {
-            return dice;
+            return iArrayDice;
         }
 
-        public Int32 getDiceValue(Int32 position)
+        public Int32 getDiceValue(Int32 iPosition)
         {
-            return dice[position];
+            return iArrayDice[iPosition];
         }
 
         public Boolean getCurrentTurn()
         {
-            return currentTurn;
+            return bCurrentTurn;
         }
 
         // Set Methods
-        public void setPlayerID(Int32 tempPlayerID)
+        public void setPlayerID(Int32 iTempPlayerID)
         {
-            playerID = tempPlayerID;
+            iPlayerID = iTempPlayerID;
         }
 
-        public void setType(string tempType)
+        public void setType(string iTempType)
         {
-            type = tempType;
+            sType = iTempType;
         }
 
-        public void setTurn(Int32 tempTurn)
+        public void setTurn(Int32 iTempTurn)
         {
-            turn = tempTurn;
+            iTurn = iTempTurn;
         }
 
-        public void setRoll(Int32 tempRoll)
+        public void setRoll(Int32 iTempRoll)
         {
-            roll = tempRoll;
+            iRoll = iTempRoll;
         }
 
-        public void setGoalScore(Int32 tempGoalScore)
+        public void setGoalScore(Int32 iTempGoalScore)
         {
-            goalScore = tempGoalScore;
+            iGoalScore = iTempGoalScore;
         }
 
-        // Used to update dice rolls in the game array.
-        // requires index between 0 to 4 and dice rolled between 1 and 6.
-        public void setDice(Int32 index, Int32 diceRolled)
+        // Used to update iArrayDice rolls in the game array.
+        // requires iIndex between 0 to 4 and iArrayDice rolled between 1 and 6.
+        public void setDice(Int32 iIndex, Int32 iDiceRolled)
         {
-            dice[index-1] = diceRolled;
+            iArrayDice[iIndex-1] = iDiceRolled;
         }
 
-        public void setCurrentTurn(Boolean tempCurrentTurn)
+        public void setCurrentTurn(Boolean iTempCurrentTurn)
         {
-            currentTurn = tempCurrentTurn;
+            bCurrentTurn = iTempCurrentTurn;
         }
 
         //Updates the Roll.
         public void nextRoll()
         {
-            roll--;
+            iRoll--;
         }
 
         //Updates the Roll.
         public void nextTurn()
         {
-            turn++;
+            iTurn++;
         }
 
-        // resets values back to beggining without restetting playerID and type.
+        // resets values back to beggining without restetting iPlayerID and sType.
         public void restart()
         {
-            turn = 0;
-            dice = new Int32[] { 0, 0, 0, 0, 0 };
+            iTurn = 0;
+            iArrayDice = new Int32[] { 0, 0, 0, 0, 0 };
         }
-
 
         // Methods for calculating score
         // Calculate current score and add to current total score if even or subtracts if odd
@@ -158,11 +157,11 @@ namespace WillBallingerBrockButtsworthAssgt
             if(isEvenNotOdd()) 
             {
                 //Is Even
-                totalScore = totalScore + tempCurrentScore;
+                iTotalScore = iTotalScore + tempCurrentScore;
             }
             else //is Odd
             {
-                totalScore = totalScore - tempCurrentScore;
+                iTotalScore = iTotalScore - tempCurrentScore;
             }
             
         }
@@ -184,13 +183,13 @@ namespace WillBallingerBrockButtsworthAssgt
             return tempCurrentScore;
         }
 
-        // This method is to return true if value exists in dice array.
-        public Boolean ifValueExists(Int32 tempCompareValue)
+        // This method is to return true if value exists in iArrayDice array.
+        public Boolean ifValueExists(Int32 iTempCompareValue)
         {
             Boolean response = false;
             for (Int32 i = 0; i < 5; i++)
             {
-                if (dice[i] == tempCompareValue)
+                if (iArrayDice[i] == iTempCompareValue)
                 {
                     response = true;
                 }
@@ -198,7 +197,7 @@ namespace WillBallingerBrockButtsworthAssgt
             return response;
         }
 
-        //if dice array shows a sequence of five (ie 1 2 3 4 5 or 2 3 4 5 6), returns 25.
+        //if iArrayDice array shows a sequence of five (ie 1 2 3 4 5 or 2 3 4 5 6), returns 25.
         public Int32 fiveInARow()
         {
             Int32 returnScore = 0;
@@ -239,7 +238,7 @@ namespace WillBallingerBrockButtsworthAssgt
         }
 
 
-        // if the dice show a sequence of four (eg 1 3 6 4 2), the score is 15.
+        // if the iArrayDice show a sequence of four (eg 1 3 6 4 2), the score is 15.
         public Int32 fourInARow()
         {
             Int32 returnScore = 0;
@@ -289,17 +288,17 @@ namespace WillBallingerBrockButtsworthAssgt
         }
 
 
-        // if the dice show a sequence of three (eg 4 1 5 2 6), the score is 5.
+        // if the iArrayDice show a sequence of three (eg 4 1 5 2 6), the score is 5.
         public Int32 threeInARow()
         {
-            Int32 returnScore = 0;
+            Int32 iReturnScore = 0;
             if (ifValueExists(1))
             {
                 if (ifValueExists(2))
                 {
                     if (ifValueExists(3))
                     {
-                        returnScore = 5;
+                        iReturnScore = 5;
                     }
                 }
             }
@@ -310,7 +309,7 @@ namespace WillBallingerBrockButtsworthAssgt
                 {
                     if (ifValueExists(4))
                     {
-                        returnScore = 5;
+                        iReturnScore = 5;
                     }
                 }
             }
@@ -321,7 +320,7 @@ namespace WillBallingerBrockButtsworthAssgt
                 {
                     if (ifValueExists(5))
                     {
-                        returnScore = 5;
+                        iReturnScore = 5;
                     }
                 }
             }
@@ -331,11 +330,11 @@ namespace WillBallingerBrockButtsworthAssgt
                 {
                     if (ifValueExists(6))
                     {
-                        returnScore = 5;
+                        iReturnScore = 5;
                     }
                 }
             }
-            return returnScore;
+            return iReturnScore;
 
         }
 
@@ -343,27 +342,27 @@ namespace WillBallingerBrockButtsworthAssgt
         // This method takes an int and returns true if exists 5 times. 
         public Boolean fiveExistsInArray(Int32 tempDiceValue)
         {
-            Boolean response = false;
-            if (dice[0] == tempDiceValue)
+            Boolean bResponse = false;
+            if (iArrayDice[0] == tempDiceValue)
             {
-                if (dice[1] == tempDiceValue)
+                if (iArrayDice[1] == tempDiceValue)
                 {
-                    if (dice[2] == tempDiceValue)
+                    if (iArrayDice[2] == tempDiceValue)
                     {
-                        if (dice[3] == tempDiceValue)
+                        if (iArrayDice[3] == tempDiceValue)
                         {
-                            if (dice[4] == tempDiceValue)
+                            if (iArrayDice[4] == tempDiceValue)
                             {
-                                response = true;
+                                bResponse = true;
                             }
                         }
                     }
                 }
             }
-            return response;
+            return bResponse;
         }
        
-        // if the dice show five of a kind (all five showing the same number), the score is 30.
+        // if the iArrayDice show five of a kind (all five showing the same number), the score is 30.
         public Int32 fiveOfAKind()
         {
             Int32 returnScore = 0;
@@ -379,34 +378,34 @@ namespace WillBallingerBrockButtsworthAssgt
         }
 
         // This method takes an int and returns true if exists 5 times.
-        public Boolean fourExistsInArray(Int32 tempDiceValue)
+        public Boolean fourExistsInArray(Int32 iTempDiceValue)
         {
-            Int32 tempValue = 0;
-            if (dice[0] == tempDiceValue)
+            Int32 iTempValue = 0;
+            if (iArrayDice[0] == iTempDiceValue)
             {
-                tempValue++;
+                iTempValue++;
             }
 
-            if (dice[1] == tempDiceValue)
+            if (iArrayDice[1] == iTempDiceValue)
             {
-                tempValue++;
+                iTempValue++;
             }
 
-            if (dice[2] == tempDiceValue)
+            if (iArrayDice[2] == iTempDiceValue)
             {
-                tempValue++;
+                iTempValue++;
             }
 
-            if (dice[3] == tempDiceValue)
+            if (iArrayDice[3] == iTempDiceValue)
             {
-                tempValue++;
+                iTempValue++;
             }
-            if (dice[4] == tempDiceValue)
+            if (iArrayDice[4] == iTempDiceValue)
             {
-                tempValue++;
+                iTempValue++;
             }
 
-            if (tempValue == 4)
+            if (iTempValue == 4)
             {
                 return true;
             }
@@ -416,7 +415,7 @@ namespace WillBallingerBrockButtsworthAssgt
             }
         }
 
-        // if the dice show four of a kind (eg 2 2 5 2 2), the score is 20.
+        // if the iArrayDice show four of a kind (eg 2 2 5 2 2), the score is 20.
         public Int32 fourOfAKind()
         {
             Int32 returnScore = 0;
@@ -434,26 +433,26 @@ namespace WillBallingerBrockButtsworthAssgt
         public Boolean threeExistsInArray(Int32 tempDiceValue)
         {
             Int32 tempValue = 0;
-            if (dice[0] == tempDiceValue)
+            if (iArrayDice[0] == tempDiceValue)
             {
                 tempValue++;
             }
 
-            if (dice[1] == tempDiceValue)
+            if (iArrayDice[1] == tempDiceValue)
             {
                 tempValue++;
             }
 
-            if (dice[2] == tempDiceValue)
+            if (iArrayDice[2] == tempDiceValue)
             {
                 tempValue++;
             }
 
-            if (dice[3] == tempDiceValue)
+            if (iArrayDice[3] == tempDiceValue)
             {
                 tempValue++;
             }
-            if (dice[4] == tempDiceValue)
+            if (iArrayDice[4] == tempDiceValue)
             {
                 tempValue++;
             }
@@ -468,7 +467,7 @@ namespace WillBallingerBrockButtsworthAssgt
             }
         }
 
-        /* if the dice show three of a kind (eg 6 1 6 6 4), the score is 1 */
+        /* if the iArrayDice show three of a kind (eg 6 1 6 6 4), the score is 1 */
         public Int32 threeOfAKind()
         {
             Int32 returnScore = 0;
@@ -482,24 +481,17 @@ namespace WillBallingerBrockButtsworthAssgt
             return returnScore;
         }
 
-
-
-        /* but . . . if the total of all five dice is even, the score is added to the player’s score, 
-           whereas is if the total of all five dice is odd, the score is subtracted from the player’s score. */
+        /* but . . . if the total of all five iArrayDice is even, the score is added to the player’s score, 
+           whereas is if the total of all five iArrayDice is odd, the score is subtracted from the player’s score. */
         public Boolean isEvenNotOdd()
         {
-            Boolean returnValue = false;
-            Int32 currentTotal = getCurrentScore();
-            if (currentTotal % 2 == 0)
+            Boolean bReturnValue = false;
+            Int32 iCurrentTotal = getCurrentScore();
+            if (iCurrentTotal % 2 == 0)
             {
-                returnValue = true;
+                bReturnValue = true;
             }
-            return returnValue;
+            return bReturnValue;
         }
-
-        /* If there is any ambiguity concerning the score, the score will be the biggest of the possibilities.
-         For example, 3 2 4 3 3 is both three of a kind and a sequence of three, so it will score 10 for three of
-         a kind rather than 5 for a sequence of three (and will contribute –10 if it’s the end of the turn). */
-
     }
 }
