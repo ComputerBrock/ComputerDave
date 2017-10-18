@@ -88,10 +88,10 @@
             this.btnRoll.UseVisualStyleBackColor = true;
             this.btnRoll.Click += new System.EventHandler(this.btnRoll_Click);
             // 
-            // picbxDrawing
+            // graPicbxDrawing
             // 
             this.picbxDrawing.Location = new System.Drawing.Point(50, 120);
-            this.picbxDrawing.Name = "picbxDrawing";
+            this.picbxDrawing.Name = "graPicbxDrawing";
             this.picbxDrawing.Size = new System.Drawing.Size(1300, 140);
             this.picbxDrawing.TabIndex = 5;
             this.picbxDrawing.TabStop = false;

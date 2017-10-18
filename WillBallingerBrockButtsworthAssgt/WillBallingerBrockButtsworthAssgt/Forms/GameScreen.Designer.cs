@@ -38,7 +38,7 @@
             this.ckbHoldDice3 = new System.Windows.Forms.CheckBox();
             this.ckbHoldDice2 = new System.Windows.Forms.CheckBox();
             this.ckbHoldDice1 = new System.Windows.Forms.CheckBox();
-            this.picbxDrawing = new System.Windows.Forms.PictureBox();
+            this.graPicbxDrawing = new System.Windows.Forms.PictureBox();
             this.btnRoll = new System.Windows.Forms.Button();
             this.lblTargetScore = new System.Windows.Forms.Label();
             this.lblGoalScore = new System.Windows.Forms.Label();
@@ -73,7 +73,7 @@
             this.btnGameRules = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnNewGame = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graPicbxDrawing)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).BeginInit();
             this.SuspendLayout();
@@ -208,16 +208,16 @@
             this.ckbHoldDice1.UseVisualStyleBackColor = true;
             this.ckbHoldDice1.Visible = false;
             // 
-            // picbxDrawing
+            // graPicbxDrawing
             // 
-            this.picbxDrawing.BackColor = System.Drawing.Color.Gainsboro;
-            this.picbxDrawing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picbxDrawing.Location = new System.Drawing.Point(190, 170);
-            this.picbxDrawing.Margin = new System.Windows.Forms.Padding(0);
-            this.picbxDrawing.Name = "picbxDrawing";
-            this.picbxDrawing.Size = new System.Drawing.Size(495, 95);
-            this.picbxDrawing.TabIndex = 20;
-            this.picbxDrawing.TabStop = false;
+            this.graPicbxDrawing.BackColor = System.Drawing.Color.Gainsboro;
+            this.graPicbxDrawing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.graPicbxDrawing.Location = new System.Drawing.Point(190, 170);
+            this.graPicbxDrawing.Margin = new System.Windows.Forms.Padding(0);
+            this.graPicbxDrawing.Name = "graPicbxDrawing";
+            this.graPicbxDrawing.Size = new System.Drawing.Size(495, 95);
+            this.graPicbxDrawing.TabIndex = 20;
+            this.graPicbxDrawing.TabStop = false;
             // 
             // btnRoll
             // 
@@ -681,7 +681,7 @@
             this.Controls.Add(this.ckbHoldDice3);
             this.Controls.Add(this.ckbHoldDice2);
             this.Controls.Add(this.ckbHoldDice1);
-            this.Controls.Add(this.picbxDrawing);
+            this.Controls.Add(this.graPicbxDrawing);
             this.Controls.Add(this.btnRoll);
             this.Controls.Add(this.lblTargetScore);
             this.Controls.Add(this.lblGoalScore);
@@ -689,7 +689,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GameScreen";
             this.Load += new System.EventHandler(this.GameScreen_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.picbxDrawing)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.graPicbxDrawing)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer1Background)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxPlayer2Background)).EndInit();
             this.ResumeLayout(false);
@@ -709,7 +709,7 @@
         private System.Windows.Forms.CheckBox ckbHoldDice3;
         private System.Windows.Forms.CheckBox ckbHoldDice2;
         private System.Windows.Forms.CheckBox ckbHoldDice1;
-        private System.Windows.Forms.PictureBox picbxDrawing;
+        private System.Windows.Forms.PictureBox graPicbxDrawing;
         private System.Windows.Forms.Button btnRoll;
         private System.Windows.Forms.Label lblTargetScore;
         private System.Windows.Forms.Label lblGoalScore;

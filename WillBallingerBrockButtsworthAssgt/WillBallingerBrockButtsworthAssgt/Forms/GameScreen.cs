@@ -27,21 +27,21 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         Game player2Game = new Game(2, "Human", false);
         Player player1;
         Player player2;
-        Int32 goalScore;
+        Int32 iGoalScore;
         Graphics graPaper;
         public GameScreen(Player tempPlayer1, Player tempPlayer2, Int32 tempGoalScore)
         {
             InitializeComponent();
             player1= tempPlayer1;
-            Int32 tempPlayerID = player1.getPlayerID();
+            Int32 iTempPlayerID = player1.getPlayerID();
             player2 = tempPlayer2;
-            Int32 tempPlayerID2 = player2.getPlayerID();
-            goalScore = tempGoalScore;
+            Int32 iTempPlayerID2 = player2.getPlayerID();
+            iGoalScore = tempGoalScore;
             refresh();
         }
         public void refresh()
         {
-            if(player1Game.getTotalScore()==goalScore)
+            if(player1Game.getTotalScore()==iGoalScore)
             {
                 //Player 1 Won
                 Form form3 = new WinScreen(player1);
@@ -49,7 +49,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
                 this.Hide();
                 form3.ShowDialog();
             }
-            if (player2Game.getTotalScore() == goalScore)
+            if (player2Game.getTotalScore() == iGoalScore)
             {
                 //Player 2 Won
                 Form form3 = new WinScreen(player2);
@@ -60,7 +60,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             //Player1
             lblPlayer1Name.Text = player1.getPlayerName();
             lblPlayer1TotalScore.Text = player1Game.getTotalScore().ToString();
-            lblTargetScore.Text = goalScore.ToString();
+            lblTargetScore.Text = iGoalScore.ToString();
             //Add Label Updates for Player1's Current Roll Labels
             lblResult5OfAKind.Text = player1Game.fiveOfAKind().ToString() + " Points";
             lblResult4OfAKind.Text = player1Game.fourOfAKind().ToString() + " Points";
@@ -228,240 +228,240 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             }
         }
 
-        private void rollDice(Graphics tempCanvas, int diceIndex, int xValue, int yValue)
+        private void rollDice(Graphics graTempCanvas, int iDiceIndex, int ixValue, int iyValue)
         {
-            int tempX = xValue;
-            int tempY = yValue;
-            Random number = new Random();
-            int rollValue = number.Next(1, 7);
-            //iArrayDice % Convert.ToInt32(number);
-            //txbCurrentRoll.Text = Convert.ToString(rollValue);
-            //totalRolls = totalRolls + rollValue;
+            int iTempX = ixValue;
+            int iTtempY = iyValue;
+            Random ranNumber = new Random();
+            int iRollValue = ranNumber.Next(1, 7);
+            //iArrayDice % Convert.ToInt32(ranNumber);
+            //txbCurrentRoll.Text = Convert.ToString(iRollValue);
+            //totalRolls = totalRolls + iRollValue;
             //String appendValue = Convert.ToString(totalRolls) + "\n\r";
             //txbTotalRoll.AppendText(String.Format("{0:d} {1:d}\n\r"), loopValue, appendValue);
             //txbTotalRoll.Text = (appendValue);
             //Adds the iRoll to the array.
             if (player1Game.getCurrentTurn())
             {
-                player1Game.setDice(diceIndex, rollValue);
+                player1Game.setDice(iDiceIndex, iRollValue);
             }
             else
             {
-                player2Game.setDice(diceIndex, rollValue);
+                player2Game.setDice(iDiceIndex, iRollValue);
             }
             
             //Used to Draw the Dice that was Rolled.
-            switch (rollValue)
+            switch (iRollValue)
             {
                 case 1:
-                    roll1(tempCanvas, tempX, tempY);
+                    roll1(graTempCanvas, iTempX, iTtempY);
                     break;
                 case 2:
-                    roll2(tempCanvas, tempX, tempY);
+                    roll2(graTempCanvas, iTempX, iTtempY);
                     break;
                 case 3:
-                    roll3(tempCanvas, tempX, tempY);
+                    roll3(graTempCanvas, iTempX, iTtempY);
                     break;
                 case 4:
-                    roll4(tempCanvas, tempX, tempY);
+                    roll4(graTempCanvas, iTempX, iTtempY);
                     break;
                 case 5:
-                    roll5(tempCanvas, tempX, tempY);
+                    roll5(graTempCanvas, iTempX, iTtempY);
                     break;
                 case 6:
-                    roll6(tempCanvas, tempX, tempY);
+                    roll6(graTempCanvas, iTempX, iTtempY);
                     break;
             }
         }
 
         //Used to Create a Dice Displaying a square with 1 dot
-        private void roll1(Graphics tempCanvas, int tempX, int tempY)
+        private void roll1(Graphics graTempCanvas, int iTempX, int iTempY)
         {
-            centreDot(tempCanvas, tempX, tempY);
+            centreDot(graTempCanvas, iTempX, iTempY);
         }
 
         //Used to Create a Dice Displaying a square with 2 dots
-        private void roll2(Graphics tempCanvas, int tempX, int tempY)
+        private void roll2(Graphics graTempCanvas, int iTempX, int iTempY)
         {
-            thirdDot(tempCanvas, tempX, tempY);
-            sixthDot(tempCanvas, tempX, tempY);
+            thirdDot(graTempCanvas, iTempX, iTempY);
+            sixthDot(graTempCanvas, iTempX, iTempY);
         }
 
         //Used to Create a Dice Displaying a square with 3 dots
-        private void roll3(Graphics tempCanvas, int tempX, int tempY)
+        private void roll3(Graphics graTempCanvas, int iTempX, int iTempY)
         {
-            thirdDot(tempCanvas, tempX, tempY);
-            centreDot(tempCanvas, tempX, tempY);
-            sixthDot(tempCanvas, tempX, tempY);
+            thirdDot(graTempCanvas, iTempX, iTempY);
+            centreDot(graTempCanvas, iTempX, iTempY);
+            sixthDot(graTempCanvas, iTempX, iTempY);
         }
 
         //Used to Create a Dice Displaying a square with 4 dots
-        private void roll4(Graphics tempCanvas, int tempX, int tempY)
+        private void roll4(Graphics graTempCanvas, int iTempX, int iTempY)
         {
-            firstDot(tempCanvas, tempX, tempY);
-            thirdDot(tempCanvas, tempX, tempY);
-            fourthDot(tempCanvas, tempX, tempY);
-            sixthDot(tempCanvas, tempX, tempY);
+            firstDot(graTempCanvas, iTempX, iTempY);
+            thirdDot(graTempCanvas, iTempX, iTempY);
+            fourthDot(graTempCanvas, iTempX, iTempY);
+            sixthDot(graTempCanvas, iTempX, iTempY);
         }
 
         //Used to Create a Dice Displaying a square with 5 dots
-        private void roll5(Graphics tempCanvas, int tempX, int tempY)
+        private void roll5(Graphics graTempCanvas, int iTempX, int iTempY)
         {
-            firstDot(tempCanvas, tempX, tempY);
-            thirdDot(tempCanvas, tempX, tempY);
-            centreDot(tempCanvas, tempX, tempY);
-            fourthDot(tempCanvas, tempX, tempY);
-            sixthDot(tempCanvas, tempX, tempY);
+            firstDot(graTempCanvas, iTempX, iTempY);
+            thirdDot(graTempCanvas, iTempX, iTempY);
+            centreDot(graTempCanvas, iTempX, iTempY);
+            fourthDot(graTempCanvas, iTempX, iTempY);
+            sixthDot(graTempCanvas, iTempX, iTempY);
         }
 
         //Used to Create a Dice Displaying a square with 6 dots
-        private void roll6(Graphics tempCanvas, int tempX, int tempY)
+        private void roll6(Graphics graTempCanvas, int iTempX, int iTempY)
         {
-            firstDot(tempCanvas, tempX, tempY);
-            secondDot(tempCanvas, tempX, tempY);
-            thirdDot(tempCanvas, tempX, tempY);
-            fourthDot(tempCanvas, tempX, tempY);
-            fifthDot(tempCanvas, tempX, tempY);
-            sixthDot(tempCanvas, tempX, tempY);
+            firstDot(graTempCanvas, iTempX, iTempY);
+            secondDot(graTempCanvas, iTempX, iTempY);
+            thirdDot(graTempCanvas, iTempX, iTempY);
+            fourthDot(graTempCanvas, iTempX, iTempY);
+            fifthDot(graTempCanvas, iTempX, iTempY);
+            sixthDot(graTempCanvas, iTempX, iTempY);
         }
 
         //Uses the target (X,Y) to draws a rectangle from that spot.
-        private void drawBox(Graphics tempCanvas, int targetX, int targetY)
+        private void drawBox(Graphics graTempCanvas, int iTargetX, int iTargetY)
         {
-            tempCanvas.FillRectangle(Brushes.Black, targetX, targetY, 75, 75);
+            graTempCanvas.FillRectangle(Brushes.Black, iTargetX, iTargetY, 75, 75);
         }
 
         //Uses the target (X,Y) to draws a dot from that spot.
-        private void centreDot(Graphics tempCanvas, int targetX, int targetY)
+        private void centreDot(Graphics graTempCanvas, int iTargetX, int iTargetY)
         {
-            int tempTargetX = targetX + 32;
-            int tempTargetY = targetY + 32;
-            tempCanvas.FillEllipse(Brushes.White, tempTargetX, tempTargetY, 10, 10);
+            int iTempTargetX = iTargetX + 32;
+            int iTempTargetY = iTargetY + 32;
+            graTempCanvas.FillEllipse(Brushes.White, iTempTargetX, iTempTargetY, 10, 10);
         }
 
         //Uses the target (X,Y) to draws a dot from that spot.
-        private void firstDot(Graphics tempCanvas, int targetX, int targetY)
+        private void firstDot(Graphics graTempCanvas, int iTargetX, int iTargetY)
         {
-            int tempTargetX = targetX + 17;
-            int tempTargetY = targetY + 17;
-            tempCanvas.FillEllipse(Brushes.White, tempTargetX, tempTargetY, 10, 10);
+            int iTempTargetX = iTargetX + 17;
+            int iTempTargetY = iTargetY + 17;
+            graTempCanvas.FillEllipse(Brushes.White, iTempTargetX, iTempTargetY, 10, 10);
         }
 
         //Uses the target (X,Y) to draws a dot from that spot.
-        private void secondDot(Graphics tempCanvas, int targetX, int targetY)
+        private void secondDot(Graphics graTempCanvas, int iTargetX, int iTargetY)
         {
-            int tempTargetX = targetX + 17;
-            int tempTargetY = targetY + 32;
-            tempCanvas.FillEllipse(Brushes.White, tempTargetX, tempTargetY, 10, 10);
+            int iTempTargetX = iTargetX + 17;
+            int iTempTargetY = iTargetY + 32;
+            graTempCanvas.FillEllipse(Brushes.White, iTempTargetX, iTempTargetY, 10, 10);
         }
 
         //Uses the target (X,Y) to draws a dot from that spot.
-        private void thirdDot(Graphics tempCanvas, int targetX, int targetY)
+        private void thirdDot(Graphics graTempCanvas, int iTargetX, int iTargetY)
         {
-            int tempTargetX = targetX + 17;
-            int tempTargetY = targetY + 50;
-            tempCanvas.FillEllipse(Brushes.White, tempTargetX, tempTargetY, 10, 10);
+            int iTempTargetX = iTargetX + 17;
+            int iTempTargetY = iTargetY + 50;
+            graTempCanvas.FillEllipse(Brushes.White, iTempTargetX, iTempTargetY, 10, 10);
         }
 
         //Uses the target (X,Y) to draws a dot from that spot.
-        private void fourthDot(Graphics tempCanvas, int targetX, int targetY)
+        private void fourthDot(Graphics graTempCanvas, int iTargetX, int iTargetY)
         {
-            int tempTargetX = targetX + 50;
-            int tempTargetY = targetY + 50;
-            tempCanvas.FillEllipse(Brushes.White, tempTargetX, tempTargetY, 10, 10);
+            int iTempTargetX = iTargetX + 50;
+            int iTempTargetY = iTargetY + 50;
+            graTempCanvas.FillEllipse(Brushes.White, iTempTargetX, iTempTargetY, 10, 10);
         }
 
         //Uses the target (X,Y) to draws a dot from that spot.
-        private void fifthDot(Graphics tempCanvas, int targetX, int targetY)
+        private void fifthDot(Graphics graTempCanvas, int iTargetX, int iTargetY)
         {
-            int tempTargetX = targetX + 50;
-            int tempTargetY = targetY + 32;
-            tempCanvas.FillEllipse(Brushes.White, tempTargetX, tempTargetY, 10, 10);
+            int iTempTargetX = iTargetX + 50;
+            int iTempTargetY = iTargetY + 32;
+            graTempCanvas.FillEllipse(Brushes.White, iTempTargetX, iTempTargetY, 10, 10);
         }
 
         //Uses the target (X,Y) to draws a dot from that spot.
-        private void sixthDot(Graphics tempCanvas, int targetX, int targetY)
+        private void sixthDot(Graphics graTempCanvas, int iTargetX, int iTargetY)
         {
-            int tempTargetX = targetX + 50;
-            int tempTargetY = targetY + 17;
-            tempCanvas.FillEllipse(Brushes.White, tempTargetX, tempTargetY, 10, 10);
+            int iTempTargetX = iTargetX + 50;
+            int iTempTargetY = iTargetY + 17;
+            graTempCanvas.FillEllipse(Brushes.White, iTempTargetX, iTempTargetY, 10, 10);
         }
 
         private void btnRoll_Click(object sender, EventArgs e)
         {
-            graPaper = picbxDrawing.CreateGraphics();
+            graPaper = graPicbxDrawing.CreateGraphics();
             //totalRolls = 0;
-            int numberOfRolls = 3;
-            int tempX = 10;
-            int tempY = 10;
-            int j = 1;
+            int iNumberOfRolls = 3;
+            int iTempX = 10;
+            int iTempY = 10;
+            int iJ = 1;
             if ((player1Game.getRoll() != 0) && (player2Game.getRoll() != 0))
             {
                 if (ckbHoldDice1.Checked != true)
                 {
                     //Draws First Dice
-                    for (int i = 0; i < numberOfRolls; i++)
+                    for (int i = 0; i < iNumberOfRolls; i++)
                     {
-                        drawBox(graPaper, tempX, tempY);
-                        rollDice(graPaper, j, tempX, tempY);
+                        drawBox(graPaper, iTempX, iTempY);
+                        rollDice(graPaper, iJ, iTempX, iTempY);
                         Application.DoEvents();
                         System.Threading.Thread.Sleep(500);
                     }
                 }
-                j++;
+                iJ++;
                 if (ckbHoldDice2.Checked != true)
                 {
                     //Draws Second Dice
-                    tempX = 110;
-                    tempY = 10;
-                    for (int i = 0; i < numberOfRolls; i++)
+                    iTempX = 110;
+                    iTempY = 10;
+                    for (int i = 0; i < iNumberOfRolls; i++)
                     {
-                        drawBox(graPaper, tempX, tempY);
-                        rollDice(graPaper, j, tempX, tempY);
+                        drawBox(graPaper, iTempX, iTempY);
+                        rollDice(graPaper, iJ, iTempX, iTempY);
                         Application.DoEvents();
                         System.Threading.Thread.Sleep(500);
                     }
                 }
-                j++;
+                iJ++;
                 if (ckbHoldDice3.Checked != true)
                 {
                     //Draws Third Dice
-                    tempX = 210;
-                    tempY = 10;
-                    for (int i = 0; i < numberOfRolls; i++)
+                    iTempX = 210;
+                    iTempY = 10;
+                    for (int i = 0; i < iNumberOfRolls; i++)
                     {
-                        drawBox(graPaper, tempX, tempY);
-                        rollDice(graPaper, j, tempX, tempY);
+                        drawBox(graPaper, iTempX, iTempY);
+                        rollDice(graPaper, iJ, iTempX, iTempY);
                         Application.DoEvents();
                         System.Threading.Thread.Sleep(500);
                     }
                 }
-                j++;
+                iJ++;
                 if (ckbHoldDice4.Checked != true)
                 {
                     //Draws Fourth Dice
-                    tempX = 310;
-                    tempY = 10;
-                    for (int i = 0; i < numberOfRolls; i++)
+                    iTempX = 310;
+                    iTempY = 10;
+                    for (int i = 0; i < iNumberOfRolls; i++)
                     {
-                        drawBox(graPaper, tempX, tempY);
-                        rollDice(graPaper, j, tempX, tempY);
+                        drawBox(graPaper, iTempX, iTempY);
+                        rollDice(graPaper, iJ, iTempX, iTempY);
                         Application.DoEvents();
                         System.Threading.Thread.Sleep(500);
                     }
                 }
-                j++;
+                iJ++;
                 if (ckbHoldDice5.Checked != true)
                 {
                     //Draws Fifth Dice
                     if (ckbHoldDice5.Checked != true)
                     {
-                        tempX = 410;
-                        tempY = 10;
-                        for (int i = 0; i < numberOfRolls; i++)
+                        iTempX = 410;
+                        iTempY = 10;
+                        for (int i = 0; i < iNumberOfRolls; i++)
                         {
-                            drawBox(graPaper, tempX, tempY);
-                            rollDice(graPaper, j, tempX, tempY);
+                            drawBox(graPaper, iTempX, iTempY);
+                            rollDice(graPaper, iJ, iTempX, iTempY);
                             Application.DoEvents();
                             System.Threading.Thread.Sleep(500);
                         }
@@ -529,7 +529,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold1_Click(object sender, EventArgs e)
         {
-            graPaper = picbxDrawing.CreateGraphics();
+            graPaper = graPicbxDrawing.CreateGraphics();
             if (ckbHoldDice1.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 5, 5, 85, 5);
@@ -553,7 +553,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold2_Click(object sender, EventArgs e)
         {
-            graPaper = picbxDrawing.CreateGraphics();
+            graPaper = graPicbxDrawing.CreateGraphics();
             if (ckbHoldDice2.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 105, 5, 85, 5);
@@ -577,7 +577,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold3_Click(object sender, EventArgs e)
         {
-            graPaper = picbxDrawing.CreateGraphics();
+            graPaper = graPicbxDrawing.CreateGraphics();
             if (ckbHoldDice3.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 205, 5, 85, 5);
@@ -601,7 +601,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold4_Click(object sender, EventArgs e)
         {
-            graPaper = picbxDrawing.CreateGraphics();
+            graPaper = graPicbxDrawing.CreateGraphics();
             if (ckbHoldDice4.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 305, 5, 85, 5);
@@ -625,7 +625,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         //  False: draws 4 Yellow rectangles forming a border and checks checkbox.
         private void btnHold5_Click(object sender, EventArgs e)
         {
-            graPaper = picbxDrawing.CreateGraphics();
+            graPaper = graPicbxDrawing.CreateGraphics();
             if (ckbHoldDice5.Checked != true)
             {
                 graPaper.FillRectangle(Brushes.Yellow, 405, 5, 85, 5);

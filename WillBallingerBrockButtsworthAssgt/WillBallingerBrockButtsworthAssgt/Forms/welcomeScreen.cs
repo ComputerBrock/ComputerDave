@@ -25,7 +25,7 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
     {
         private Player player1;
         private Player player2;
-        private Int32 gameScore;
+        private Int32 iGameScore;
         public welcomeScreen()
         {
             InitializeComponent();
@@ -40,18 +40,18 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
-            string playerName = tbxPlayer1Name.Text;
-            string playerName2 = tbxPlayer2Name.Text;
+            string sPlayerName = tbxPlayer1Name.Text;
+            string sPlayerName2 = tbxPlayer2Name.Text;
             if (!int.TryParse(tbxGoalScore.Text, out Int32 parsedValue))
             {
                 MessageBox.Show("Enter The Goal Score");
                 return;
             }
-            gameScore = Convert.ToInt32(tbxGoalScore.Text);
+            iGameScore = Convert.ToInt32(tbxGoalScore.Text);
             //add validation that text box's are not blank
-            player1 = new Player(playerName);
-            player2 = new Player(playerName2);
-            Form form2 = new GameScreen(player1, player2,gameScore);
+            player1 = new Player(sPlayerName);
+            player2 = new Player(sPlayerName2);
+            Form form2 = new GameScreen(player1, player2,iGameScore);
             form2.StartPosition = FormStartPosition.CenterParent;
             this.Hide();
             form2.ShowDialog();
