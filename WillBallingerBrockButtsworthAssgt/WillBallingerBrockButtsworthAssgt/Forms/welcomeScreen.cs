@@ -29,7 +29,6 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         public welcomeScreen()
         {
             InitializeComponent();
-            
         }
 
         private void btnGameRules_Click(object sender, EventArgs e)
@@ -37,12 +36,17 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             Form form = new Game_Rules();
             form.StartPosition = FormStartPosition.CenterParent;
             form.Show();
-        }
+        }   
 
         private void btnStartGame_Click(object sender, EventArgs e)
         {
             string playerName = tbxPlayer1Name.Text;
             string playerName2 = tbxPlayer2Name.Text;
+            if (!int.TryParse(tbxGoalScore.Text, out Int32 parsedValue))
+            {
+                MessageBox.Show("Enter The Goal Score");
+                return;
+            }
             gameScore = Convert.ToInt32(tbxGoalScore.Text);
             //add validation that text box's are not blank
             player1 = new Player(playerName);
@@ -57,6 +61,51 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         {
             // Refresh if 1VCPU selected make player 2 options invisible.
             // Else make visible
+        }
+
+        //
+        private void tbxGoalScore_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar)&& e.KeyChar != '\b';
+        }
+
+        private void tbxGoalScore_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbxGoalScore.Text = "";
+        }
+
+        private void tbxPlayer2Name_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbxPlayer2Name.Text = "";
+        }
+
+        private void tbxPlayer1Name_MouseClick(object sender, MouseEventArgs e)
+        {
+            tbxPlayer1Name.Text = "";
+        }
+
+        private void btn1Vs1_Click(object sender, EventArgs e)
+        {
+            if (cbx1v1.Checked == true)
+            {
+                cbx1v1.Checked = false;
+            }
+            else
+            {
+                cbx1v1.Checked = true;
+            }
+        }
+
+        private void btn1vsCPU_Click(object sender, EventArgs e)
+        {
+            if (cbx1vCPU.Checked == true)
+            {
+                cbx1vCPU.Checked = false;
+            }
+            else
+            {
+                cbx1vCPU.Checked = true;
+            }
         }
     }
 }

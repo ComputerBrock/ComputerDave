@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameScreen));
             this.btnHold5 = new System.Windows.Forms.Button();
             this.btnHold4 = new System.Windows.Forms.Button();
             this.btnHold3 = new System.Windows.Forms.Button();
@@ -639,7 +638,7 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::WillBallingerBrockButtsworthAssgt.Properties.Resources.GameScreenBackground2;
             this.ClientSize = new System.Drawing.Size(1378, 644);
             this.Controls.Add(this.btnNewGame);
             this.Controls.Add(this.btnExit);

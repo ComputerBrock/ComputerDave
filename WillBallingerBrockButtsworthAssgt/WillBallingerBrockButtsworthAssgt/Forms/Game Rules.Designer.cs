@@ -29,19 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_Rules));
-            this.horizontalRule = new System.Windows.Forms.Label();
             this.tbxRules = new System.Windows.Forms.TextBox();
             this.lblGameRulesHeading = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // horizontalRule
-            // 
-            this.horizontalRule.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.horizontalRule.Location = new System.Drawing.Point(5, 100);
-            this.horizontalRule.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.horizontalRule.Name = "horizontalRule";
-            this.horizontalRule.Size = new System.Drawing.Size(1365, 5);
-            this.horizontalRule.TabIndex = 34;
             // 
             // tbxRules
             // 
@@ -75,12 +65,11 @@
             // 
             // Game_Rules
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1378, 361);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::WillBallingerBrockButtsworthAssgt.Properties.Resources.GameScreenBackground2;
+            this.ClientSize = new System.Drawing.Size(1378, 644);
             this.Controls.Add(this.lblGameRulesHeading);
             this.Controls.Add(this.tbxRules);
-            this.Controls.Add(this.horizontalRule);
             this.Enabled = false;
             this.Name = "Game_Rules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -91,7 +80,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label horizontalRule;
         private System.Windows.Forms.TextBox tbxRules;
         private System.Windows.Forms.Label lblGameRulesHeading;
     }

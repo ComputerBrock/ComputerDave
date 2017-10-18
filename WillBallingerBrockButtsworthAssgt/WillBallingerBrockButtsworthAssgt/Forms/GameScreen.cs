@@ -41,6 +41,22 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         }
         public void refresh()
         {
+            if(player1Game.getTotalScore()==goalScore)
+            {
+                //Player 1 Won
+                Form form3 = new WinScreen(player1);
+                form3.StartPosition = FormStartPosition.CenterParent;
+                this.Hide();
+                form3.ShowDialog();
+            }
+            if (player2Game.getTotalScore() == goalScore)
+            {
+                //Player 2 Won
+                Form form3 = new WinScreen(player2);
+                form3.StartPosition = FormStartPosition.CenterParent;
+                this.Hide();
+                form3.ShowDialog();
+            }
             //Player1
             lblPlayer1Name.Text = player1.getPlayerName();
             lblPlayer1TotalScore.Text = player1Game.getTotalScore().ToString();

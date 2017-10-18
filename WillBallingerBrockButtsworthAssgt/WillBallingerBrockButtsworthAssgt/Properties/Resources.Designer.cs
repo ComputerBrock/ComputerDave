@@ -63,9 +63,29 @@ namespace WillBallingerBrockButtsworthAssgt.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap GameScreenBackground2 {
+            get {
+                object obj = ResourceManager.GetObject("GameScreenBackground2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plusmoinslogo1 {
             get {
                 object obj = ResourceManager.GetObject("plusmoinslogo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap winscreen {
+            get {
+                object obj = ResourceManager.GetObject("winscreen", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

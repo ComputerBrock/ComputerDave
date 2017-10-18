@@ -29,6 +29,7 @@ namespace WillBallingerBrockButtsworthAssgt
             
         }
 
+        //BTnRoll Click Event
         private void btnRoll_Click(object sender, EventArgs e)
         {
             Graphics graPaper = picbxDrawing.CreateGraphics();
@@ -63,7 +64,6 @@ namespace WillBallingerBrockButtsworthAssgt
 
             if (ckbHoldDice3.Checked != true)
             {
-
                 //Draws Third Dice
                 tempX = 250;
                 tempY = 50;
