@@ -238,7 +238,7 @@
             this.lblTargetScore.AutoSize = true;
             this.lblTargetScore.BackColor = System.Drawing.Color.Transparent;
             this.lblTargetScore.Font = new System.Drawing.Font("Showcard Gothic", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTargetScore.Location = new System.Drawing.Point(1123, 27);
+            this.lblTargetScore.Location = new System.Drawing.Point(1064, 29);
             this.lblTargetScore.Name = "lblTargetScore";
             this.lblTargetScore.Size = new System.Drawing.Size(88, 50);
             this.lblTargetScore.TabIndex = 18;
@@ -336,11 +336,11 @@
             // 
             this.lblPlayer1Title.AutoSize = true;
             this.lblPlayer1Title.BackColor = System.Drawing.Color.Gold;
-            this.lblPlayer1Title.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer1Title.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer1Title.Location = new System.Drawing.Point(208, 532);
             this.lblPlayer1Title.MinimumSize = new System.Drawing.Size(205, 0);
             this.lblPlayer1Title.Name = "lblPlayer1Title";
-            this.lblPlayer1Title.Size = new System.Drawing.Size(205, 20);
+            this.lblPlayer1Title.Size = new System.Drawing.Size(205, 30);
             this.lblPlayer1Title.TabIndex = 39;
             this.lblPlayer1Title.Text = "Player 1:";
             this.lblPlayer1Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -349,11 +349,11 @@
             // 
             this.lblPlayer2Title.AutoSize = true;
             this.lblPlayer2Title.BackColor = System.Drawing.Color.Gold;
-            this.lblPlayer2Title.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer2Title.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer2Title.Location = new System.Drawing.Point(460, 532);
             this.lblPlayer2Title.MinimumSize = new System.Drawing.Size(205, 0);
             this.lblPlayer2Title.Name = "lblPlayer2Title";
-            this.lblPlayer2Title.Size = new System.Drawing.Size(205, 20);
+            this.lblPlayer2Title.Size = new System.Drawing.Size(205, 30);
             this.lblPlayer2Title.TabIndex = 40;
             this.lblPlayer2Title.Text = "Player 2:";
             this.lblPlayer2Title.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -362,11 +362,11 @@
             // 
             this.lblPlayer1Name.AutoSize = true;
             this.lblPlayer1Name.BackColor = System.Drawing.Color.Gold;
-            this.lblPlayer1Name.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer1Name.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer1Name.Location = new System.Drawing.Point(208, 561);
             this.lblPlayer1Name.MinimumSize = new System.Drawing.Size(205, 0);
             this.lblPlayer1Name.Name = "lblPlayer1Name";
-            this.lblPlayer1Name.Size = new System.Drawing.Size(205, 20);
+            this.lblPlayer1Name.Size = new System.Drawing.Size(219, 30);
             this.lblPlayer1Name.TabIndex = 41;
             this.lblPlayer1Name.Text = "lblPlayer1Name";
             this.lblPlayer1Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -375,11 +375,11 @@
             // 
             this.lblPlayer2Name.AutoSize = true;
             this.lblPlayer2Name.BackColor = System.Drawing.Color.Gold;
-            this.lblPlayer2Name.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer2Name.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer2Name.Location = new System.Drawing.Point(460, 561);
             this.lblPlayer2Name.MinimumSize = new System.Drawing.Size(205, 0);
             this.lblPlayer2Name.Name = "lblPlayer2Name";
-            this.lblPlayer2Name.Size = new System.Drawing.Size(205, 20);
+            this.lblPlayer2Name.Size = new System.Drawing.Size(220, 30);
             this.lblPlayer2Name.TabIndex = 42;
             this.lblPlayer2Name.Text = "lblPlayer2Name";
             this.lblPlayer2Name.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -388,11 +388,11 @@
             // 
             this.lblPlayer1TotalScore.AutoSize = true;
             this.lblPlayer1TotalScore.BackColor = System.Drawing.Color.Gold;
-            this.lblPlayer1TotalScore.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer1TotalScore.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer1TotalScore.Location = new System.Drawing.Point(208, 590);
             this.lblPlayer1TotalScore.MinimumSize = new System.Drawing.Size(205, 0);
             this.lblPlayer1TotalScore.Name = "lblPlayer1TotalScore";
-            this.lblPlayer1TotalScore.Size = new System.Drawing.Size(205, 20);
+            this.lblPlayer1TotalScore.Size = new System.Drawing.Size(304, 30);
             this.lblPlayer1TotalScore.TabIndex = 43;
             this.lblPlayer1TotalScore.Text = "lblPlayer1TotalScore";
             this.lblPlayer1TotalScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -401,12 +401,12 @@
             // 
             this.lblPlayer2TotalScore.AutoSize = true;
             this.lblPlayer2TotalScore.BackColor = System.Drawing.Color.Gold;
-            this.lblPlayer2TotalScore.Font = new System.Drawing.Font("Showcard Gothic", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer2TotalScore.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlayer2TotalScore.Location = new System.Drawing.Point(460, 590);
             this.lblPlayer2TotalScore.Margin = new System.Windows.Forms.Padding(0);
             this.lblPlayer2TotalScore.MinimumSize = new System.Drawing.Size(205, 0);
             this.lblPlayer2TotalScore.Name = "lblPlayer2TotalScore";
-            this.lblPlayer2TotalScore.Size = new System.Drawing.Size(205, 20);
+            this.lblPlayer2TotalScore.Size = new System.Drawing.Size(305, 30);
             this.lblPlayer2TotalScore.TabIndex = 44;
             this.lblPlayer2TotalScore.Text = "lblPlayer2TotalScore";
             this.lblPlayer2TotalScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -30,6 +30,7 @@
         {
             this.lblWinnerIs = new System.Windows.Forms.Label();
             this.lblResultWinnerName = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblWinnerIs
@@ -54,6 +55,20 @@
             this.lblResultWinnerName.TabIndex = 1;
             this.lblResultWinnerName.Text = "Sydney";
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Gold;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 10;
+            this.btnExit.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(926, 545);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(391, 55);
+            this.btnExit.TabIndex = 62;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // WinScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -61,6 +76,7 @@
             this.BackColor = System.Drawing.Color.Gold;
             this.BackgroundImage = global::WillBallingerBrockButtsworthAssgt.Properties.Resources.winscreen;
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblResultWinnerName);
             this.Controls.Add(this.lblWinnerIs);
             this.Name = "WinScreen";
@@ -74,5 +90,6 @@
 
         private System.Windows.Forms.Label lblWinnerIs;
         private System.Windows.Forms.Label lblResultWinnerName;
+        private System.Windows.Forms.Button btnExit;
     }
 }

@@ -42,11 +42,25 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
         {
             string sPlayerName = tbxPlayer1Name.Text;
             string sPlayerName2 = tbxPlayer2Name.Text;
+
+            if (tbxPlayer1Name.Text == "Player 1 Name")
+            {
+                MessageBox.Show("Enter Player 1 Name");
+                return;
+            }
+
+            if (tbxPlayer2Name.Text == "Player 2 Name")
+            {
+                MessageBox.Show("Enter Player 2 Name");
+                return;
+            }
+
             if (!int.TryParse(tbxGoalScore.Text, out Int32 parsedValue))
             {
                 MessageBox.Show("Enter The Goal Score");
                 return;
             }
+
             iGameScore = Convert.ToInt32(tbxGoalScore.Text);
             //add validation that text box's are not blank
             player1 = new Player(sPlayerName);
@@ -106,6 +120,11 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             {
                 cbx1vCPU.Checked = true;
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

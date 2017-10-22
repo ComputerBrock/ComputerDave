@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game_Rules));
             this.tbxRules = new System.Windows.Forms.TextBox();
             this.lblGameRulesHeading = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbxRules
@@ -38,7 +39,6 @@
             this.tbxRules.BackColor = System.Drawing.Color.White;
             this.tbxRules.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxRules.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tbxRules.Enabled = false;
             this.tbxRules.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxRules.ForeColor = System.Drawing.Color.Black;
             this.tbxRules.Location = new System.Drawing.Point(140, 167);
@@ -63,14 +63,28 @@
             this.lblGameRulesHeading.TabIndex = 37;
             this.lblGameRulesHeading.Text = "How to play";
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Gold;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 10;
+            this.btnExit.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(1052, 23);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(170, 55);
+            this.btnExit.TabIndex = 62;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // Game_Rules
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::WillBallingerBrockButtsworthAssgt.Properties.Resources.GameScreenBackground2;
             this.ClientSize = new System.Drawing.Size(1378, 644);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblGameRulesHeading);
             this.Controls.Add(this.tbxRules);
-            this.Enabled = false;
             this.Name = "Game_Rules";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game Rules";
@@ -82,5 +96,6 @@
         #endregion
         private System.Windows.Forms.TextBox tbxRules;
         private System.Windows.Forms.Label lblGameRulesHeading;
+        private System.Windows.Forms.Button btnExit;
     }
 }

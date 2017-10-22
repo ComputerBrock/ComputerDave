@@ -45,13 +45,14 @@
             this.horizontalRule = new System.Windows.Forms.Label();
             this.btn1Vs1 = new System.Windows.Forms.Button();
             this.btn1vsCPU = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnGameRules
             // 
             this.btnGameRules.BackColor = System.Drawing.Color.Gold;
-            this.btnGameRules.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGameRules.Location = new System.Drawing.Point(836, 217);
+            this.btnGameRules.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.btnGameRules.Location = new System.Drawing.Point(803, 285);
             this.btnGameRules.Name = "btnGameRules";
             this.btnGameRules.Size = new System.Drawing.Size(440, 80);
             this.btnGameRules.TabIndex = 3;
@@ -63,10 +64,10 @@
             // 
             this.lblGameMode.AutoSize = true;
             this.lblGameMode.BackColor = System.Drawing.Color.Transparent;
-            this.lblGameMode.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameMode.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGameMode.Location = new System.Drawing.Point(262, 151);
             this.lblGameMode.Name = "lblGameMode";
-            this.lblGameMode.Size = new System.Drawing.Size(159, 30);
+            this.lblGameMode.Size = new System.Drawing.Size(186, 35);
             this.lblGameMode.TabIndex = 4;
             this.lblGameMode.Text = "Game Mode:";
             // 
@@ -138,9 +139,9 @@
             // 
             // btnStartGame
             // 
-            this.btnStartGame.BackColor = System.Drawing.Color.Gold;
-            this.btnStartGame.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartGame.Location = new System.Drawing.Point(836, 331);
+            this.btnStartGame.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnStartGame.Font = new System.Drawing.Font("Showcard Gothic", 14F);
+            this.btnStartGame.Location = new System.Drawing.Point(803, 186);
             this.btnStartGame.Name = "btnStartGame";
             this.btnStartGame.Size = new System.Drawing.Size(440, 80);
             this.btnStartGame.TabIndex = 13;
@@ -241,6 +242,20 @@
             this.btn1vsCPU.UseVisualStyleBackColor = false;
             this.btn1vsCPU.Click += new System.EventHandler(this.btn1vsCPU_Click);
             // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Gold;
+            this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnExit.FlatAppearance.BorderSize = 10;
+            this.btnExit.Font = new System.Drawing.Font("Showcard Gothic", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.Location = new System.Drawing.Point(803, 384);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(440, 80);
+            this.btnExit.TabIndex = 62;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // welcomeScreen
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -249,6 +264,7 @@
             this.BackgroundImage = global::WillBallingerBrockButtsworthAssgt.Properties.Resources.GameScreenBackground2;
             this.ClientSize = new System.Drawing.Size(1378, 644);
             this.ControlBox = false;
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btn1vsCPU);
             this.Controls.Add(this.btn1Vs1);
             this.Controls.Add(this.lblGoalScoretbxError);
@@ -291,5 +307,6 @@
         private System.Windows.Forms.Label horizontalRule;
         private System.Windows.Forms.Button btn1Vs1;
         private System.Windows.Forms.Button btn1vsCPU;
+        private System.Windows.Forms.Button btnExit;
     }
 }

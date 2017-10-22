@@ -19,5 +19,10 @@ namespace WillBallingerBrockButtsworthAssgt.Forms
             winningPlayer = tempWinningPlayer;
             lblResultWinnerName.Text = winningPlayer.getPlayerName();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
